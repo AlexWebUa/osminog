@@ -1,0 +1,378 @@
+@import "assets/bootstrap/bootstrap";
+@import "../assets/fonts/gilroy/stylesheet.css";
+@import "../assets/fonts/bebasneue/Bebas Neue.css";
+
+$main-pink: #ff4878;
+$gold: #95763f;
+
+body {
+    background-color: #f4f8fb;
+}
+
+a {
+    color: inherit;
+    &:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+h2 {
+    font-family: "Gilroy Light", sans-serif;
+    font-size: 75px;
+}
+
+button.btn {
+    border-radius: 38px;
+    font-size: 22px;
+    padding: 15px;
+    max-width: 315px;
+    max-height: 65px;
+    width: 100%;
+    font-weight: 600;
+}
+
+button.btn-outline {
+    border: 1px solid $main-pink;
+    color: $main-pink;
+    &:hover {
+        background-color: $main-pink;
+        color: white;
+    }
+}
+
+button.btn-fill {
+    background-color: $main-pink;
+    border: 1px solid $main-pink;
+    color: white;
+}
+
+header {
+    background-color: #FFFFFF;
+    font-family: "Gilroy Medium", sans-serif;
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.075) !important;
+
+    .navbar-collapse {
+        .pages {
+            li {
+                position: relative;
+                &.active:before {
+                    content: url("../assets/img/marker.png");
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translate(-50%, -65%);
+                }
+                a {
+                    display: inline-block;
+                    padding: 10px 15px;
+                    border-radius: 23px;
+                    transition: 0.3s background-color;
+                    &:hover {
+                        background-color: lighten($main-pink, 30%);
+                    }
+                }
+            }
+        }
+
+        .icons {
+            li {
+                padding: 10px;
+            }
+        }
+
+        button {
+            border: 1px solid $main-pink;
+            color: $main-pink;
+            &:hover {
+                background-color: $main-pink;
+                color: white;
+            }
+        }
+    }
+
+}
+
+header.header-fixed {
+    background-color: transparent;
+    color: white;
+    box-shadow: none!important;
+    
+    .navbar-collapse {
+        .pages {
+            li {
+                a {
+                    &:hover {
+                        background-color: rgba(white, 0.4);
+                    }
+                }
+            }
+        }
+
+        button {
+            border: 1px solid white;
+            color: white;
+            &:hover {
+                background-color: white;
+                color: $main-pink;
+            }
+        }
+    }
+}
+
+#first-screen {
+    padding-top: 15rem;
+    background-image: url("../assets/img/city.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    .best-solutions {
+        position: relative;
+        .pink-line, .white-line {
+            height: 25px;
+            position: absolute;
+        }
+
+        .pink-line {
+            background-color: $main-pink;
+            right: 0;
+            top: 15.5%;
+            width: 66%;
+        }
+
+        img {
+            z-index: 2;
+        }
+
+        .white-line {
+            background-color: #e1e1e1;
+            left: 0;
+            bottom: 20%;
+            width: 67.8%;
+        }
+    }
+
+    .bottom-plank {
+        color: white;
+        padding: 160px;
+
+        .text {
+            font-family: "Gilroy Black Italic", sans-serif;
+            font-size: 45px;
+            font-weight: 900;
+            font-style: italic;
+        }
+        .details {
+            font-family: "Gilroy Bold", sans-serif;
+        }
+    }
+}
+
+
+#services {
+    margin: 100px 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    .service {
+        margin: 45px 15px;
+        max-width: calc(50% - 15px);
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+
+        &:nth-child(odd) {
+            margin-left: 0;
+        }
+        &:nth-child(even) {
+            margin-right: 0;
+        }
+
+        .black-bar {
+            position: absolute;
+            transform: translate(0, -50%);
+            top: 50%;
+            left: 70px;
+            width: 255px;
+            height: 600px;
+            background-color: #1d1d1d;
+            display: flex;
+            align-items: center;
+
+            .name {
+                display: flex;
+
+                span {
+                    font-family: "Gilroy Black", sans-serif;
+                    font-weight: 900;
+                    font-size: 90px;
+                    -webkit-text-fill-color: transparent;
+                    -webkit-text-stroke: 2px white;
+                }
+            }
+
+            .price {
+                transform: rotate(-45deg);
+                margin-top: 30px;
+
+                .price-number {
+                    font-family: "Bebas Neue Bold", sans-serif;
+                    font-weight: 600;
+                    font-size: 60px;
+                    color: $main-pink;
+                    float: left;
+                    margin-right: 15px;
+                }
+                .price-text {
+                    display: flex;
+                    flex-direction: column;
+
+                    .ot, .rub {
+                        font-family: "Gilroy Medium", sans-serif;
+                        font-size: 18px;
+                        color: #696969;
+                    }
+                }
+            }
+
+            .buttons {
+                transform: rotate(-45deg);
+                display: flex;
+                text-align: center;
+                margin-top: 30px;
+
+                .analyse {
+                    font-family: "Gilroy Medium", sans-serif;
+                    font-size: 20px;
+                    color: #7e7e7e;
+                    text-decoration: underline;
+                }
+
+                .details {
+                    font-family: "Gilroy Bold", sans-serif;
+                    font-weight: 600;
+                    font-size: 22px;
+                    color: $main-pink;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    #service-landing {
+        .name {
+            span {
+                &:nth-child(2) {
+                    position: absolute;
+                    right: -315px;
+                }
+            }
+        }
+    }
+
+    #service-corporate {
+        .name {
+            span {
+                &:nth-child(2) {
+                    position: absolute;
+                    top: 100px;
+                    right: -430px;
+                }
+            }
+        }
+    }
+
+    #service-shop {
+        .name {
+            span {
+                &:nth-child(2) {
+                    position: absolute;
+                    top: 115px;
+                    right: -440px;
+                }
+            }
+        }
+    }
+
+    #service-unique {
+        .name {
+            span {
+                &:nth-child(2) {
+                    position: absolute;
+                     top: 115px;
+                    right: -440px;
+                }
+            }
+        }
+    }
+
+}
+
+
+#about {
+    background:
+        url("../assets/img/tentacles-top_1.jpg") 0 0 no-repeat,
+        url("../assets/img/tentacles-bottom_1.jpg") 100% 100% no-repeat,
+        #2d2d2d;
+    text-align: center;
+    color: white;
+    padding: 100px 0 175px 0;
+
+    .about-heading {
+        max-width: 1000px;
+
+        .heading-heading {
+            position: relative;
+            width: 80%;
+            margin: auto;
+
+            .gold-line {
+                position: absolute;
+                height: 15px;
+                width: 56%;
+                background-color: $gold;
+                right: 0;
+                top: 50%;
+            }
+            h2 {
+                position: relative;
+                margin: 40px 0;
+                z-index: 2;
+            }
+        }
+
+        .heading-description {
+            font-family: "Gilroy SemiBold", sans-serif;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .about-slider {
+        display: flex;
+        width: 80%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .slider-item {
+            max-width: 325px;
+            margin-bottom: 50px;
+
+            img {
+                margin: 80px 0;
+            }
+
+            .slider-description {
+                font-family: "Gilroy Black", sans-serif;
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+
+/* TEMPORARY */
+body {
+    height: 10000px;
+}
