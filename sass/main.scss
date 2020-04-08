@@ -1,6 +1,8 @@
-@import "assets/bootstrap/bootstrap";
+//TODO: optimize bootstrap file import
+@import "../assets/bootstrap/bootstrap";
 @import "../assets/fonts/gilroy/stylesheet.css";
 @import "../assets/fonts/bebasneue/Bebas Neue.css";
+@import "../assets/slick/slick.scss";
 
 $main-pink: #ff4878;
 $gold: #95763f;
@@ -371,6 +373,63 @@ header.header-fixed {
     }
 }
 
+
+#advantages {
+    padding-top: 80px;
+    background: url("../assets/img/lines.png") no-repeat 0 0;
+    margin-top: 120px;
+
+    .carousel-item {
+
+        &.active {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        margin: 60px 0;
+        img {
+            height: 100%;
+        }
+
+        .description-heading {
+            font-family: "Gilroy Light", sans-serif;
+            font-size: 45px;
+            margin-bottom: 60px;
+        }
+
+        .description-description {
+            font-family: "Gilroy SemiBold", sans-serif;
+            font-weight: 400;
+            font-size: 20px;
+            color: #797979;
+        }
+    }
+
+    .carousel-controls {
+        padding: 0 15px;
+        a {
+            display: inline-block;
+            width: auto;
+            position: relative;
+        }
+
+        .carousel-control-prev-icon, .carousel-control-next-icon {
+            width: 25px;
+            height: 15px;
+        }
+
+        .carousel-control-prev-icon {
+            background: url("../assets/img/arrow-back_active.png") no-repeat;
+            margin-right: 15px;
+        }
+
+        .carousel-control-next-icon {
+            background: url("../assets/img/arrow-forward_active.png") no-repeat;
+            margin-left: 15px;
+        }
+    }
+}
 
 /* TEMPORARY */
 body {
