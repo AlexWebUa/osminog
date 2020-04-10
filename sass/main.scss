@@ -65,11 +65,64 @@ header {
                     left: 50%;
                     transform: translate(-50%, -65%);
                 }
-                a {
+
+                .dropdown {
+                    background: white;
+                    border-radius: 23px;
+                    position: absolute;
+                    top: 45px;
+                    width: 400px;
+                    padding: 30px;
+                    display: none;
+                    flex-direction: column;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: -10px;
+                        width: 25px;
+                        height: 20px;
+                        background: white;
+                        border-radius: 50%;
+                    }
+
+                    .close {
+                        content: "+";
+                        position: absolute;
+                        top: 0;
+                        right: 15px;
+                        transform: rotate(45deg);
+                        font-family: "Gilroy UltraLight", sans-serif;
+                        font-size: 34px;
+                        color: #bcbcbc;
+                        opacity: 1;
+                        cursor: pointer;
+
+                        &:hover {
+                            color: black;
+                        }
+                    }
+
+                    a {
+                        color: black;
+                        padding: 10px 20px;
+
+                        &:hover {
+                            color: $main-pink;
+                        }
+                    }
+
+                    hr {
+                        width: 100%;
+                    }
+                }
+
+                &>a, &>span {
                     display: inline-block;
                     padding: 10px 15px;
                     border-radius: 23px;
                     transition: 0.3s background-color;
+                    cursor: pointer;
                     &:hover {
                         background-color: lighten($main-pink, 30%);
                     }
@@ -126,7 +179,7 @@ header.header-fixed {
     padding-top: 15rem;
     background-image: url("../assets/img/city.jpg");
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
     .best-solutions {
         position: relative;
         .pink-line, .white-line {
@@ -177,6 +230,7 @@ header.header-fixed {
 
     .service {
         margin: 45px 15px;
+        width: 100%;
         max-width: calc(50% - 15px);
         position: relative;
 
@@ -317,6 +371,7 @@ header.header-fixed {
         url("../assets/img/tentacles-top_1.jpg") 0 0 no-repeat,
         url("../assets/img/tentacles-bottom_1.jpg") 100% 100% no-repeat,
         #2d2d2d;
+    background-size: contain;
     text-align: center;
     color: white;
     padding: 100px 0 175px 0;
@@ -377,6 +432,7 @@ header.header-fixed {
 #advantages {
     padding-top: 80px;
     background: url("../assets/img/lines.png") no-repeat 0 0;
+    background-size: contain;
     margin-top: 120px;
 
     .carousel-item {
@@ -438,6 +494,7 @@ header.header-fixed {
             url("../assets/img/tentacles-top_2.jpg") 0 0 no-repeat,
             url("../assets/img/tentacles-bottom_2.jpg") 100% 100% no-repeat,
             #2d2d2d;
+    background-size: contain;
     padding: 130px 0;
     color: white;
     text-align: center;
@@ -468,60 +525,62 @@ header.header-fixed {
         }
     }
 
-    .feedback-form {
-        width: 100%;
 
-        input, .select-wrap {
+}
+
+.feedback-form {
+    width: 100%;
+
+    input, .select-wrap {
+        background: none;
+        border: none;
+        border-radius: unset;
+        color: #7b7b7b;
+        border-bottom: 1px solid #7b7b7b;
+        outline: none;
+        text-align: center;
+        padding: 25px;
+        font-family: "Gilroy Medium", sans-serif;
+        font-size: 18px;
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    .select-wrap {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        select {
             background: none;
             border: none;
-            border-radius: unset;
+            box-shadow: none;
+            width: auto;
+            padding: 0;
+            margin: 0;
+            text-align-last: center;
             color: #7b7b7b;
-            border-bottom: 1px solid #7b7b7b;
-            outline: none;
-            text-align: center;
-            padding: 25px;
             font-family: "Gilroy Medium", sans-serif;
             font-size: 18px;
+        }
+    }
 
-            &:focus {
-                box-shadow: none;
-            }
-        }
+    .input-name {
+        background: url("../assets/img/form-circle.png") no-repeat 5% 0;
+    }
+    .input-select {
+        background: url("../assets/img/form-square.png") no-repeat 5% 0;
+    }
+    .input-phone {
+        background: url("../assets/img/form-triangle.png") no-repeat 5% 0;
+    }
 
-        .select-wrap {
-            padding: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            select {
-                background: none;
-                border: none;
-                box-shadow: none;
-                width: auto;
-                padding: 0;
-                margin: 0;
-                text-align-last: center;
-                color: #7b7b7b;
-                font-family: "Gilroy Medium", sans-serif;
-                font-size: 18px;
-            }
-        }
-
-        .input-name {
-            background: url("../assets/img/form-circle.png") no-repeat 5% 0;
-        }
-        .input-select {
-            background: url("../assets/img/form-square.png") no-repeat 5% 0;
-        }
-        .input-phone {
-            background: url("../assets/img/form-triangle.png") no-repeat 5% 0;
-        }
-
-        button {
-            margin: 75px 0;
-            box-shadow: 0 15px 20px 2px rgba($main-pink, 0.2);
-        }
+    button {
+        margin: 75px 0;
+        box-shadow: 0 15px 20px 2px rgba($main-pink, 0.2);
     }
 }
 
@@ -673,9 +732,224 @@ header.header-fixed {
     }
 }
 
+footer {
+    background:
+            url("../assets/img/tentacles-top_1.jpg") 0 0 no-repeat,
+            #2d2d2d;
+    background-size: contain;
+    padding-top: 150px;
+    color: white;
+    font-family: "Gilroy Medium", sans-serif;
+    font-size: 22px;
 
+    a:hover {
+        color: $main-pink;
+    }
 
-/* TEMPORARY */
-body {
-    height: 10000px;
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-links {
+        display: flex;
+        justify-content: space-between;
+
+        .heading {
+            padding: 15px 0;
+        }
+
+        ul {
+            font-size: 18px;
+
+            li {
+                padding: 10px 0;
+            }
+        }
+    }
+
+    .footer-contacts {
+        display: flex;
+        justify-content: flex-end;
+        height: fit-content;
+        padding: 15px 0;
+
+        .icons {
+            display: flex;
+            align-items: center;
+
+            li {
+                margin: 0 30px;
+            }
+        }
+    }
+
+    .bottom-section {
+        font-size: 18px;
+        justify-content: space-between;
+        padding: 45px 0;
+        margin-top: 40px;
+        border-top: 1px solid #424242;
+    }
+}
+
+.modal {
+    .modal-dialog {
+        max-width: 1560px;
+
+        .modal-content {
+
+            .modal-header, .modal-body, .modal-footer {
+                border: none;
+            }
+
+            .modal-header {
+                flex-wrap: wrap;
+
+                .modal-title {
+                    font-family: "Gilroy Medium", sans-serif;
+                    font-size: 33px;
+                    margin: 60px 0 50px auto;
+                }
+
+                .modal-description {
+                    width: 100%;
+                    text-align: center;
+
+                    p {
+                        font-family: "Gilroy Medium", sans-serif;
+                        font-size: 18px;
+                        padding: 10px 0;
+                        width: 100%;
+                        max-width: 600px;
+                        margin: auto;
+                    }
+                }
+            }
+
+            .modal-body {
+                form {
+                    font-family: "Gilroy", sans-serif;
+                    font-size: 18px;
+                    color: #333333;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    text-align: center;
+                    padding: 60px 50px;
+
+                    .custom-control-label::before {
+                        border: $main-pink solid 1px;
+                    }
+
+                    .custom-control-input:checked ~ .custom-control-label::before {
+                        border-color: $main-pink;
+                        background-color: transparent;
+                    }
+
+                    .custom-radio .custom-control-input:checked ~ .custom-control-label::after {
+                        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23ff4878'/%3e%3c/svg%3e");
+                    }
+
+                }
+            }
+
+            .modal-footer {
+                justify-content: center;
+
+                .promo {
+                    position: relative;
+                    display: block;
+                    text-align: center;
+
+                    .percent {
+                        font-family: "Bebas Neue Bold", sans-serif;
+                        font-weight: 900;
+                        color: $main-pink;
+                    }
+
+                    .promocode {
+                        position: relative;
+                        font-family: "Gilroy Medium", sans-serif;
+                        font-size: 33px;
+                    }
+
+                    &>div {
+                        position: relative;
+                    }
+
+                    .gold-line {
+                        position: absolute;
+                        height: 8px;
+                        width: 46%;
+                        background-color: #efd9b3;
+                        right: -10%;
+                        top: 50%;
+                    }
+                }
+
+                button {
+                    margin: 15px;
+                }
+            }
+        }
+    }
+}
+
+.quiz {
+    .modal-header {
+        &:before {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            content: " ";
+            background-color: $main-pink;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            color: white;
+            font-family: "Gilroy Medium", sans-serif;
+            font-size: 33px;
+            line-height: 50px;
+        }
+    }
+}
+
+#quiz1 {
+    .modal-header:before {
+        content: "1";
+    }
+}
+#quiz2 {
+    .modal-header:before {
+        content: "2";
+    }
+}
+#quiz3 {
+    .modal-header:before {
+        content: "3";
+    }
+}
+#quiz4 {
+    .modal-header:before {
+        content: "4";
+    }
+
+    .modal-title {
+        margin: 0 0 0 auto;
+    }
+
+    .modal-footer {
+        flex-direction: column;
+    }
+
+    .feedback-form {
+        padding: 50px 0;
+
+        &>.row {
+            width: 100%;
+        }
+
+    }
 }
