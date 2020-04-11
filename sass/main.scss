@@ -48,6 +48,10 @@ button.btn-fill {
     color: white;
 }
 
+.mobile-only {
+    display: none;
+}
+
 header {
     background-color: #FFFFFF;
     font-family: "Gilroy Medium", sans-serif;
@@ -997,3 +1001,99 @@ footer {
 
 
 /* Media queries */
+
+//576, 768, 992, 1200, 1560
+
+@media all and (max-width: 768px) {
+    .mobile-only {
+        display: inline-block;
+    }
+
+    button.btn {
+        max-width: 235px;
+        font-size: 17px;
+    }
+
+    header {
+        .navbar-brand {
+            max-width: 60%;
+
+            img {
+                width: 100%;
+            }
+        }
+        .navbar-toggler {
+            padding: 0;
+            margin: 0;
+            border: none;
+
+            .navbar-toggler-icon {
+                margin: 0;
+                padding: 0;
+                width: 40px;
+            }
+        }
+    }
+
+    #first-screen {
+        height: 100vh;
+        padding-top: 10rem;
+
+        .best-solutions {
+            img {
+                width: 100%;
+            }
+            .pink-line, .white-line {
+                height: 15px;
+            }
+            .pink-line {
+                right: -15px;
+                width: 50%;
+            }
+            .white-line {
+                left: -15px;
+                bottom: 10%;
+                width: 43%;
+            }
+        }
+
+        .bottom-plank {
+            padding: 0;
+
+            .text {
+                font-size: 16px;
+            }
+
+            button {
+                display: block;
+                margin: auto;
+            }
+        }
+    }
+}
+
+
+// Extra small devices (portrait phones)
+@media (max-width: 576px) {
+
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+}
