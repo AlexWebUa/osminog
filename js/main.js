@@ -66,6 +66,7 @@ $('#quiz3Back').on('click', () => {
     $('#quiz2').modal('show');
 });
 
+
 $('#quiz4Send').on('click', () => {
     let form = document.getElementById('quiz4Form');
     collectFormData(form);
@@ -81,4 +82,28 @@ $(document).on('click', (e) => {
 
     else
         $('#dropdown-menu').css('display', 'none');
+});
+
+$(document).ready(() => {
+    $('#advantagesSlider').slick({
+        infinite: true,
+        adaptiveHeight: true,
+        slidesToShow: 1,
+        prevArrow: $('#advantagesControls .prev')[0],
+        nextArrow: $('#advantagesControls .next')[0],
+        autoplay: true,
+        autoplaySpeed: 5000,
+        speed: 1000
+    });
+
+    $('#reviewsSlider').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        prevArrow: $('#reviewsControls .prev')[0],
+        nextArrow: $('#reviewsControls .next')[0],
+        autoplay: true,
+        autoplaySpeed: 5000,
+        speed: 1000
+    })
 });

@@ -2,19 +2,20 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
     <title>Осьминог</title>
-    <link rel="stylesheet" href="css/main.min.css">
+    <link href="css/main.min.css" rel="stylesheet">
 </head>
 <body>
 <header class="fixed-top">
     <nav class="navbar navbar-expand-md container">
-        <a href="index.html" class="navbar-brand">
-            <img src="assets/img/logo.png" alt="osminojek logo">
+        <a class="navbar-brand" href="index.html">
+            <img alt="osminojek logo" src="assets/img/logo.png">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
+                data-target="#navbarCollapse" data-toggle="collapse" type="button">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -50,139 +51,144 @@
             </ul>
             <ul class="icons navbar-nav  ml-auto">
                 <li class="nav-item instagram-icon">
-                    <a href="#"><img src="assets/img/instagram.png" alt="instagram icon"></a>
+                    <a href="#"><img alt="instagram icon" src="assets/img/instagram.png"></a>
                 </li>
                 <li class="nav-item phone-icon">
-                    <a href="#"><img src="assets/img/phone.png" alt="phone icon"></a>
+                    <a href="#"><img alt="phone icon" src="assets/img/phone.png"></a>
                 </li>
             </ul>
-            <button type="button" class="btn ml-auto w-25" data-toggle="modal" data-target="#quiz1">Консультация</button>
+            <button class="btn ml-auto w-25" data-target="#quiz1" data-toggle="modal" type="button">Консультация
+            </button>
         </div>
     </nav>
 </header>
 
-<div class="modal fade quiz" id="quiz1" tabindex="-1" role="dialog" aria-hidden="true">
+<div aria-hidden="true" class="modal fade quiz" id="quiz1" role="dialog" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Выберите тип сайта?</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
                 <form id="quiz1Form">
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="quiz1CorporateSite" name="customRadio" class="custom-control-input">
+                        <input class="custom-control-input" id="quiz1CorporateSite" name="customRadio" type="radio">
                         <label class="custom-control-label" for="quiz1CorporateSite">Корпоративный сайт</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="quiz1LandingPage" name="customRadio" class="custom-control-input">
+                        <input class="custom-control-input" id="quiz1LandingPage" name="customRadio" type="radio">
                         <label class="custom-control-label" for="quiz1LandingPage">Landing page</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="quiz1InternetShop" name="customRadio" class="custom-control-input">
+                        <input class="custom-control-input" id="quiz1InternetShop" name="customRadio" type="radio">
                         <label class="custom-control-label" for="quiz1InternetShop">Интернет-магазин</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="quiz1Other" name="customRadio" class="custom-control-input">
+                        <input class="custom-control-input" id="quiz1Other" name="customRadio" type="radio">
                         <label class="custom-control-label" for="quiz1Other">Другое</label>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-fill" id="quiz1Next">Далее</button>
+                <button class="btn btn-fill" id="quiz1Next" type="button">Далее</button>
             </div>
         </div>
     </div>
 </div>
-<div class="modal fade quiz" id="quiz2" tabindex="-1" role="dialog" aria-hidden="true">
+<div aria-hidden="true" class="modal fade quiz" id="quiz2" role="dialog" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Когда вы планируете запустить сайт?</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
                 <form id="quiz2Form">
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="quiz2ThreeFiveDays" name="customRadio" class="custom-control-input">
+                        <input class="custom-control-input" id="quiz2ThreeFiveDays" name="customRadio" type="radio">
                         <label class="custom-control-label" for="quiz2ThreeFiveDays">Через 3-5 дней</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="quiz2InMonth" name="customRadio" class="custom-control-input">
+                        <input class="custom-control-input" id="quiz2InMonth" name="customRadio" type="radio">
                         <label class="custom-control-label" for="quiz2InMonth">В течении месяца</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="quiz2OneThreeMonths" name="customRadio" class="custom-control-input">
+                        <input class="custom-control-input" id="quiz2OneThreeMonths" name="customRadio" type="radio">
                         <label class="custom-control-label" for="quiz2OneThreeMonths">Через 1-3 месяца</label>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" id="quiz2Back" class="btn btn-outline">Назад</button>
-                <button type="button" id="quiz2Next" class="btn btn-fill">Далее</button>
+                <button class="btn btn-outline" id="quiz2Back" type="button">Назад</button>
+                <button class="btn btn-fill" id="quiz2Next" type="button">Далее</button>
             </div>
         </div>
     </div>
 </div>
-<div class="modal fade quiz" id="quiz3" tabindex="-1" role="dialog" aria-hidden="true">
+<div aria-hidden="true" class="modal fade quiz" id="quiz3" role="dialog" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">У вас есть домен и хостинг?</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
                 <form id="quiz3Form">
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="quiz3No" name="customRadio" class="custom-control-input">
+                        <input class="custom-control-input" id="quiz3No" name="customRadio" type="radio">
                         <label class="custom-control-label" for="quiz3No">Нет, нужно подключить</label>
                     </div>
                     <div class="custom-control custom-radio">
-                        <input type="radio" id="quiz3Yes" name="customRadio" class="custom-control-input">
+                        <input class="custom-control-input" id="quiz3Yes" name="customRadio" type="radio">
                         <label class="custom-control-label" for="quiz3Yes">Да, уже есть</label>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" id="quiz3Back" class="btn btn-outline">Назад</button>
-                <button type="button" id="quiz3Next" class="btn btn-fill">Далее</button>
+                <button class="btn btn-outline" id="quiz3Back" type="button">Назад</button>
+                <button class="btn btn-fill" id="quiz3Next" type="button">Далее</button>
             </div>
         </div>
     </div>
 </div>
-<div class="modal fade quiz" id="quiz4" tabindex="-1" role="dialog" aria-hidden="true">
+<div aria-hidden="true" class="modal fade quiz" id="quiz4" role="dialog" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Заполните форму что бы получить персональное предложение</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
                     <span aria-hidden="true">&times;</span>
                 </button>
                 <div class="modal-description">
-                    <p>Мы рассчитаем стоимость создания сайта, подберем под вас тариф и свяжемся с вами в течении дня</p>
+                    <p>Мы рассчитаем стоимость создания сайта, подберем под вас тариф и свяжемся с вами в течении
+                        дня</p>
                 </div>
             </div>
             <div class="modal-body">
 
-                    <form class="feedback-form" id="quiz4Form">
-                        <div class="row">
-                            <div class="col">
-                                <input type="text" id="quiz4UserName" class="form-control input-name" placeholder="Меня зовут">
-                            </div>
-                            <div class="col">
-                                <input type="text" id="quiz4UserMail" class="form-control input-select" placeholder="Ваша почта">
-                            </div>
-                            <div class="col">
-                                <input type="tel" id="quiz4UserPhone" class="form-control input-phone" placeholder="Мой телефон">
-                            </div>
+                <form class="feedback-form" id="quiz4Form">
+                    <div class="row">
+                        <div class="col">
+                            <input class="form-control input-name" id="quiz4UserName" placeholder="Меня зовут"
+                                   type="text">
                         </div>
-                    </form>
+                        <div class="col">
+                            <input class="form-control input-select" id="quiz4UserMail" placeholder="Ваша почта"
+                                   type="text">
+                        </div>
+                        <div class="col">
+                            <input class="form-control input-phone" id="quiz4UserPhone" placeholder="Мой телефон"
+                                   type="tel">
+                        </div>
+                    </div>
+                </form>
 
             </div>
             <div class="modal-footer">
@@ -192,7 +198,7 @@
                         Получите <span class="percent">20%</span> скидку используя промокод: <span class="promocode">Awesome</span>
                     </div>
                 </div>
-                <button type="button" id="quiz4Send" class="btn btn-fill">Отправить</button>
+                <button class="btn btn-fill" id="quiz4Send" type="button">Отправить</button>
             </div>
         </div>
     </div>
@@ -202,7 +208,7 @@
     <div class="container justify-content-center align-items-center">
         <div class="best-solutions d-flex justify-content-center">
             <div class="pink-line"></div>
-            <img src="assets/img/best_solutions.png" alt="Best solutions">
+            <img alt="Best solutions" src="assets/img/best_solutions.png">
             <div class="white-line"></div>
         </div>
         <div class="bottom-plank d-flex justify-content-around align-items-center">
@@ -214,7 +220,7 @@
 
 <div id="services">
     <div class="service" id="service-landing">
-        <img src="assets/img/service-1.jpg" alt="Landing page">
+        <img alt="Landing page" src="assets/img/service-1.jpg">
         <div class="black-bar">
             <div class="w-100 position-relative">
                 <div class="name">
@@ -237,7 +243,7 @@
     </div>
 
     <div class="service" id="service-corporate">
-        <img src="assets/img/service-2.jpg" alt="Корпоративный сайт">
+        <img alt="Корпоративный сайт" src="assets/img/service-2.jpg">
         <div class="black-bar">
             <div class="w-100 position-relative">
                 <div class="name">
@@ -260,7 +266,7 @@
     </div>
 
     <div class="service" id="service-shop">
-        <img src="assets/img/service-3.jpg" alt="Интернет магазин">
+        <img alt="Интернет магазин" src="assets/img/service-3.jpg">
         <div class="black-bar">
             <div class="w-100 position-relative">
                 <div class="name">
@@ -283,7 +289,7 @@
     </div>
 
     <div class="service" id="service-unique">
-        <img src="assets/img/service-4.jpg" alt="Уникальный продукт">
+        <img alt="Уникальный продукт" src="assets/img/service-4.jpg">
         <div class="black-bar">
             <div class="w-100 position-relative">
                 <div class="name">
@@ -313,37 +319,39 @@
                 <div class="gold-line"></div>
                 <h2>О компании</h2>
             </div>
-            <div class="heading-description">Понимание потребностей онлайн-бизнеса, опыт взаимодействия с тысячами клиентов, высокая квалификация персонала, собственные &laquo;ноу-хау&raquo; и хороший объем заказов</div>
+            <div class="heading-description">Понимание потребностей онлайн-бизнеса, опыт взаимодействия с тысячами
+                клиентов, высокая квалификация персонала, собственные &laquo;ноу-хау&raquo; и хороший объем заказов
+            </div>
         </div>
         <div class="about-slider">
 
             <div class="slider-item">
-                <img src="assets/img/20.png" alt="20">
+                <img alt="20" src="assets/img/20.png">
                 <div class="slider-description">Занимаемся разработкой сайтов с 1997 года</div>
             </div>
 
             <div class="slider-item">
-                <img src="assets/img/700.png" alt="700">
+                <img alt="700" src="assets/img/700.png">
                 <div class="slider-description">Наши офисы находятся в разных городах и странах</div>
             </div>
 
             <div class="slider-item">
-                <img src="assets/img/120.png" alt="120">
+                <img alt="120" src="assets/img/120.png">
                 <div class="slider-description">Высокая квалификация персонала</div>
             </div>
 
             <div class="slider-item">
-                <img src="assets/img/20.png" alt="20">
+                <img alt="20" src="assets/img/20.png">
                 <div class="slider-description">Занимаемся разработкой сайтов с 1997 года</div>
             </div>
 
             <div class="slider-item">
-                <img src="assets/img/700.png" alt="700">
+                <img alt="700" src="assets/img/700.png">
                 <div class="slider-description">Наши офисы находятся в разных городах и странах</div>
             </div>
 
             <div class="slider-item">
-                <img src="assets/img/120.png" alt="120">
+                <img alt="120" src="assets/img/120.png">
                 <div class="slider-description">Высокая квалификация персонала</div>
             </div>
 
@@ -352,58 +360,218 @@
 </div>
 
 <div id="advantages">
-    <div class="container d-flex flex-column align-items-center">
+    <div class="container">
 
         <div class="advantages-heading">
             <h2>Преимущества</h2>
         </div>
 
-        <div id="advantagesSlider" class="carousel">
-            <div class="carousel-inner">
+        <div id="sliderWrapper">
+            <div id="advantagesSlider">
+                <div class="advantage row">
+                    <div class="col-4 image-wrap text-center">
+                        <img alt="" src="assets/img/advantages-icon_1.png">
+                    </div>
+                    <div class="col-8">
+                        <div class="advantage-heading">Экономия времени клиента</div>
+                        <div class="advantage-description">Давно выяснено, что при оценке дизайна и композиции читаемый
+                            текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или
+                            менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в
+                            абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст..
+                            Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem
+                            Ipsum в качестве текста по умолчанию,
+                        </div>
+                    </div>
+                </div>
 
-                <div class="carousel-item active row">
-                    <img class="col-2" src="assets/img/advantages-icon.png" alt="Иконка">
-                    <div class="item-description col-8">
-                        <div class="description-heading">Экономим время клиента</div>
-                        <div class="description-description">
-                            Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию,
+                <div class="advantage row">
+                    <div class="col-4 image-wrap text-center">
+                        <img alt="" src="assets/img/advantages-icon_2.png">
+                    </div>
+                    <div class="col-8">
+                        <div class="advantage-heading">Не держим клиента на крючке</div>
+                        <div class="advantage-description">Давно выяснено, что при оценке дизайна и композиции читаемый
+                            текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или
+                            менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в
+                            абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст..
+                            Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem
+                            Ipsum в качестве текста по умолчанию,
                         </div>
                     </div>
                 </div>
-                <!--
-                <div class="carousel-item row">
-                    <img class="col-2" src="assets/img/advantages-icon.png" alt="Иконка">
-                    <div class="item-description col-8">
-                        <div class="description-heading">Another heading</div>
-                        <div class="description-description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, dolorem esse et ex fugiat laboriosam laborum libero necessitatibus placeat rem? Aliquam consequuntur suscipit tempore? Asperiores blanditiis consequuntur deserunt distinctio harum, illo incidunt iste minus mollitia nemo non odio, provident, quos repudiandae voluptate. At blanditiis culpa cum eum facere ipsa laboriosam mollitia necessitatibus, neque, odio perferendis quas quia! Consectetur deserunt dicta distinctio doloribus dolorum enim facere facilis maiores placeat possimus quae quas quia quod, ratione recusandae soluta suscipit tempora ut, velit?
+
+                <div class="advantage row">
+                    <div class="col-4 image-wrap text-center">
+                        <img alt="" src="assets/img/advantages-icon_3.png">
+                    </div>
+                    <div class="col-8">
+                        <div class="advantage-heading">Все сайты мы делаем «под ключ»</div>
+                        <div class="advantage-description">Давно выяснено, что при оценке дизайна и композиции читаемый
+                            текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или
+                            менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в
+                            абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст..
+                            Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem
+                            Ipsum в качестве текста по умолчанию,
                         </div>
                     </div>
                 </div>
-                -->
+
+                <div class="advantage row">
+                    <div class="col-4 image-wrap text-center">
+                        <img alt="" src="assets/img/advantages-icon_4.png">
+                    </div>
+                    <div class="col-8">
+                        <div class="advantage-heading">Работаем по 50% предоплате</div>
+                        <div class="advantage-description">Давно выяснено, что при оценке дизайна и композиции читаемый
+                            текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или
+                            менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в
+                            абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст..
+                            Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem
+                            Ipsum в качестве текста по умолчанию,
+                        </div>
+                    </div>
+                </div>
+
+                <div class="advantage row">
+                    <div class="col-4 image-wrap text-center">
+                        <img alt="" src="assets/img/advantages-icon_5.png">
+                    </div>
+                    <div class="col-8">
+                        <div class="advantage-heading">Вдумываемся в ваш бизнес</div>
+                        <div class="advantage-description">Давно выяснено, что при оценке дизайна и композиции читаемый
+                            текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или
+                            менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в
+                            абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст..
+                            Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem
+                            Ipsum в качестве текста по умолчанию,
+                        </div>
+                    </div>
+                </div>
+
+                <div class="advantage row">
+                    <div class="col-4 image-wrap text-center">
+                        <img alt="" src="assets/img/advantages-icon_6.png">
+                    </div>
+                    <div class="col-8">
+                        <div class="advantage-heading">Экономим время клиента</div>
+                        <div class="advantage-description">Давно выяснено, что при оценке дизайна и композиции читаемый
+                            текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или
+                            менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в
+                            абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст..
+                            Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem
+                            Ipsum в качестве текста по умолчанию,
+                        </div>
+                    </div>
+                </div>
+
+                <div class="advantage row">
+                    <div class="col-4 image-wrap text-center">
+                        <img alt="" src="assets/img/advantages-icon_7.png">
+                    </div>
+                    <div class="col-8">
+                        <div class="advantage-heading">Пожизненная гарантия</div>
+                        <div class="advantage-description">Давно выяснено, что при оценке дизайна и композиции читаемый
+                            текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или
+                            менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в
+                            абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст..
+                            Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem
+                            Ipsum в качестве текста по умолчанию,
+                        </div>
+                    </div>
+                </div>
+
+                <div class="advantage row">
+                    <div class="col-4 image-wrap text-center">
+                        <img alt="" src="assets/img/advantages-icon_8.png">
+                    </div>
+                    <div class="col-8">
+                        <div class="advantage-heading">Визуализируем идеи клиента</div>
+                        <div class="advantage-description">Давно выяснено, что при оценке дизайна и композиции читаемый
+                            текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или
+                            менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в
+                            абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст..
+                            Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem
+                            Ipsum в качестве текста по умолчанию,
+                        </div>
+                    </div>
+                </div>
+
+                <div class="advantage row">
+                    <div class="col-4 image-wrap text-center">
+                        <img alt="" src="assets/img/advantages-icon_9.png">
+                    </div>
+                    <div class="col-8">
+                        <div class="advantage-heading">Своих не бросаем</div>
+                        <div class="advantage-description">Давно выяснено, что при оценке дизайна и композиции читаемый
+                            текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или
+                            менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в
+                            абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст..
+                            Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem
+                            Ipsum в качестве текста по умолчанию,
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <div class="carousel-controls row d-flex justify-content-around align-items-center">
-                <div class="col-2">
 
-                </div>
-                <div class="col-8">
-                    <a class="carousel-control-prev" href="#advantagesSlider" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#advantagesSlider" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-
+            <div class="sliderControls col-8" id="advantagesControls">
+                <div class="prev"></div>
+                <div class="next"></div>
             </div>
         </div>
 
     </div>
 </div>
 
-<!--<div id="reviews"></div>-->
+<div id="reviews">
+    <div class="container">
+        <div class="reviews-heading">
+            <h2>Отзывы</h2>
+        </div>
+
+        <div class="sliderWrapper">
+            <div id="reviewsSlider">
+
+                <div class="review">
+                    <img src="assets/img/reviews-review_1.png" alt="">
+                </div>
+
+                <div class="review">
+                    <img src="assets/img/reviews-review_2.png" alt="">
+                </div>
+
+                <div class="review">
+                    <img src="assets/img/reviews-review_3.png" alt="">
+                </div>
+
+                <div class="review">
+                    <img src="assets/img/reviews-review_1.png" alt="">
+                </div>
+
+                <div class="review">
+                    <img src="assets/img/reviews-review_2.png" alt="">
+                </div>
+
+                <div class="review">
+                    <img src="assets/img/reviews-review_3.png" alt="">
+                </div>
+
+            </div>
+
+            <div class="slider-footer">
+                <div class="buttons">
+                    <button class="btn btn-fill">Оставить отзыв</button>
+                    <button class="btn btn-outline">Все отзывы</button>
+                </div>
+                <div class="sliderControls" id="reviewsControls">
+                    <div class="prev"></div>
+                    <div class="next"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
 
 <div id="feedback">
     <div class="container d-flex flex-column align-items-center">
@@ -419,7 +587,7 @@
             <form>
                 <div class="row">
                     <div class="col">
-                        <input type="text" class="form-control input-name" placeholder="Меня зовут">
+                        <input class="form-control input-name" placeholder="Меня зовут" type="text">
                     </div>
                     <div class="col select-wrap input-select">
                         <select class="form-control">
@@ -430,7 +598,7 @@
                         </select>
                     </div>
                     <div class="col">
-                        <input type="tel" class="form-control input-phone" placeholder="Мой телефон">
+                        <input class="form-control input-phone" placeholder="Мой телефон" type="tel">
                     </div>
                 </div>
                 <button class="btn btn-fill" type="submit">Отправить</button>
@@ -446,7 +614,7 @@
         </div>
         <div class="clients-services row">
             <div class="clients-service clients-service-1 col">
-                <img src="assets/img/client-service-1.png" alt="client-service-1.png">
+                <img alt="client-service-1.png" src="assets/img/client-service-1.png">
                 <div class="service-description">
                     <div class="description-heading">Администрирование сайта</div>
                     <div class="description-subheading">Лучший выбор клиентов</div>
@@ -457,7 +625,7 @@
                 </div>
             </div>
             <div class="clients-service clients-service-2 col">
-                <img src="assets/img/client-service-2.png" alt="client-service-2.png">
+                <img alt="client-service-2.png" src="assets/img/client-service-2.png">
                 <div class="service-description">
                     <div class="description-heading">Продвижение сайта</div>
                     <div class="description-subheading">Лучший выбор клиентов</div>
@@ -468,7 +636,7 @@
                 </div>
             </div>
             <div class="clients-service clients-service-3 col">
-                <img src="assets/img/client-service-3.png" alt="client-service-2.png">
+                <img alt="client-service-2.png" src="assets/img/client-service-3.png">
                 <div class="service-description">
                     <div class="description-heading">SMM</div>
                     <div class="description-subheading">Лучший выбор клиентов</div>
@@ -492,12 +660,14 @@
     <div class="portfolio-works">
         <div class="row w-100">
             <div class="col">
-                <img src="assets/img/portfolio-1.jpg" alt="portfolio-1.jpg">
+                <img alt="portfolio-1.jpg" src="assets/img/portfolio-1.jpg">
             </div>
             <div class="col work">
                 <div class="work-description work-description-1">
                     <div class="description-heading">Сайт для компании Лев <span class="lion-icon"></span></div>
-                    <div class="description-description">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому</div>
+                    <div class="description-description">Давно выяснено, что при оценке дизайна и композиции читаемый
+                        текст мешает сосредоточиться. Lorem Ipsum используют потому
+                    </div>
                     <div class="row">
                         <div class="col">
                             <button class="btn btn-outline">Подробнее</button>
@@ -512,7 +682,9 @@
             <div class="col work">
                 <div class="work-description work-description-2">
                     <div class="description-heading">Сайт для компании Лев <span class="lion-icon"></span></div>
-                    <div class="description-description">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому</div>
+                    <div class="description-description">Давно выяснено, что при оценке дизайна и композиции читаемый
+                        текст мешает сосредоточиться. Lorem Ipsum используют потому
+                    </div>
                     <div class="row">
                         <div class="col">
                             <button class="btn btn-outline">Подробнее</button>
@@ -524,7 +696,7 @@
                 </div>
             </div>
             <div class="col">
-                <img src="assets/img/portfolio-2.jpg" alt="portfolio-2.jpg">
+                <img alt="portfolio-2.jpg" src="assets/img/portfolio-2.jpg">
             </div>
         </div>
         <button class="btn btn-fill">Больше работ<span class="line"></span><span class="arrow"></span></button>
@@ -536,7 +708,7 @@
         <div class="content row">
             <div class="col-3 footer-logo">
                 <a href="index.html">
-                    <img src="assets/img/logo_contrast.png" alt="osminojek logo">
+                    <img alt="osminojek logo" src="assets/img/logo_contrast.png">
                 </a>
             </div>
 
@@ -571,10 +743,10 @@
             <div class="col-3 footer-contacts">
                 <ul class="icons">
                     <li class="instagram-icon">
-                        <a href="#"><img src="assets/img/instagram_color.png" alt="instagram icon"></a>
+                        <a href="#"><img alt="instagram icon" src="assets/img/instagram_color.png"></a>
                     </li>
                     <li class="phone-icon">
-                        <a href="#"><img src="assets/img/phone_white.png" alt="phone icon"></a>
+                        <a href="#"><img alt="phone icon" src="assets/img/phone_white.png"></a>
                     </li>
                 </ul>
                 <ul class="phones">
@@ -592,7 +764,6 @@
 
 
 <script src="js/jquery-3.4.1.min.js"></script>
-<!--<script src="https://unpkg.com/@popperjs/core@2"></script>-->
 <script src="js/bootstrap.min.js"></script>
 <script src="assets/slick/slick.min.js"></script>
 <script src="js/main.js"></script>
@@ -600,9 +771,6 @@
 </html>
 
 
-<!--TODO: remake sliders in #about , #advantages and #reviews on slick.js-->
-<!--TODO: add advantages to #advantages-->
-<!--TODO: make #reviews block-->
 <!--TODO: make it all adaptive-->
 <!--TODO: add animations-->
 <!--TODO: optimize images-->
