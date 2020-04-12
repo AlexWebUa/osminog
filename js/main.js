@@ -114,5 +114,16 @@ $(document).ready(() => {
         autoplay: true,
         autoplaySpeed: 5000,
         speed: 1000
-    })
+    });
+
+    if ($(window).width() <= 768) {
+        $('#aboutSlider').slick({
+            infinite: false,
+            rows: 2,
+            slidesPerRow: 1,
+            prevArrow: $('#aboutControls .prev')[0],
+            nextArrow: $('#aboutControls .next')[0],
+            speed: 1000
+        })
+    }
 });

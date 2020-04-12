@@ -471,6 +471,7 @@ header.header-fixed {
 
                 img {
                     display: inline-block;
+                    max-width: 100%;
                 }
             }
 
@@ -603,6 +604,7 @@ header.header-fixed {
             background: none;
             border: none;
             box-shadow: none;
+            max-width: 80%;
             width: auto;
             padding: 0;
             margin: 0;
@@ -1014,6 +1016,14 @@ footer {
         font-size: 17px;
     }
 
+    h2 {
+        font-size: 30px;
+    }
+
+    .gold-line, .white-line, .pink-line {
+        height: 7px;
+    }
+
     header {
         .navbar-brand {
             max-width: 60%;
@@ -1037,7 +1047,14 @@ footer {
 
     #first-screen {
         height: 100vh;
-        padding-top: 10rem;
+        padding: 0;
+
+        &>.container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: space-evenly;
+        }
 
         .best-solutions {
             img {
@@ -1065,13 +1082,271 @@ footer {
             }
 
             button {
+                position: absolute;
+                bottom: 20px;
+                left: 0;
+                right: 0;
                 display: block;
                 margin: auto;
             }
         }
     }
-}
 
+    #services {
+        flex-direction: column;
+        margin: 10px 0;
+
+        .service {
+            margin: 1px 0;
+            max-width: 100%;
+            width: 100%;
+            height: 100%;
+
+            img {
+                position: unset;
+            }
+
+            .black-bar {
+                width: 100%;
+                max-height: unset;
+                height: auto;
+                position: unset;
+                display: block;
+                transform: unset;
+                padding: 20px;
+
+                .name {
+                    display: block;
+                    width: 50%;
+
+                    span {
+                        position: relative!important;
+                        right: unset!important;
+                        left: unset!important;
+                        top: unset!important;
+                        bottom: unset!important;
+                        font-size: 30px;
+                    }
+                }
+
+                .price {
+                    display: none;
+                }
+
+                .buttons {
+                    transform: unset;
+                    display: flex;
+                    flex-direction: row-reverse;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: 0;
+                    padding: 10px 0;
+
+                    .analyse {
+                        font-size: 16px;
+                        transform: rotate(-45deg) translate(-10%,-50%);
+                        width: min-content;
+                    }
+
+                    .details {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    #about {
+        background-size: auto;
+        padding: 50px 0 150px 0;
+
+        .about-heading {
+            .heading-heading {
+                width: 100%;
+                .gold-line {
+                    height: 7px;
+                    right: -15px;
+                    width: 47%;
+                }
+            }
+
+            .heading-description {
+                font-size: 16px;
+                margin-bottom: 50px;
+            }
+        }
+
+        .about-slider {
+            width: 100%;
+
+            .slider-item {
+                img {
+                    margin: 0 auto;
+                }
+
+                .slider-description {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    #advantages {
+        background: none;
+        margin: 30px 0;
+
+        .advantages-heading {
+            margin-bottom: 10px;
+        }
+
+        #advantagesSlider {
+            .advantage {
+                .image-wrap {
+                    img {
+                        max-height: 200px;
+                    }
+                }
+
+                .advantage-heading {
+                    font-size: 25px;
+                    text-align: center;
+                }
+
+                .advantage-description {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    #reviews {
+        margin: 50px 0;
+
+        #reviewsSlider {
+            margin: 20px 0;
+        }
+
+        .slider-footer {
+            .buttons {
+                button {
+                    margin: 5px auto;
+                }
+            }
+        }
+    }
+
+    #feedback {
+        background-size: auto;
+        .feedback-heading {
+            .gold-line {
+                height: 7px;
+                left: -15px;
+                width: 45%;
+            }
+
+            .heading-subheading {
+                font-size: 25px;
+                margin: 40px 0;
+            }
+        }
+
+        .feedback-form {
+            .col {
+                padding: 0;
+                margin: 15px 0;
+            }
+
+            button {
+                margin: 40px 0;
+            }
+        }
+    }
+
+    #clients {
+        &>.container {
+            padding: 0;
+        }
+        .clients-services {
+            width: 100%;
+            flex-direction: column;
+
+            .clients-service-2 {
+                flex-direction: column;
+            }
+            .clients-service {
+                padding: 0;
+                align-items: center;
+                background: none;
+
+                img {
+                    width: 100%;
+                    margin: 0;
+                }
+
+                .service-description {
+                    .description-heading {
+                        font-size: 25px;
+                        margin: 25px 0;
+                    }
+                    .description-subheading {
+                        font-size: 18px;
+                    }
+                    .description-price {
+                        display: none;
+                    }
+
+                    button {
+                        margin: 40px 0;
+                    }
+                }
+            }
+        }
+    }
+
+    #portfolio {
+        .portfolio-heading {
+            margin: 40px;
+
+            .gold-line {
+                height: 7px;
+                right: -50%;
+                width: 100%;
+            }
+        }
+    }
+
+    footer {
+        background-size: auto;
+        padding-top: 100px;
+
+        .footer-contacts {
+            flex-direction: row-reverse;
+            justify-content: center;
+            align-items: center;
+            border-top: 1px solid #424242;
+
+            .icons {
+                margin: 0;
+                li {
+                    margin: 0 15px;
+                }
+            }
+
+            .phones {
+                margin: 0;
+            }
+        }
+
+        .bottom-section {
+            margin-top: 0;
+            padding: 15px;
+
+            &>div {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
 
 // Extra small devices (portrait phones)
 @media (max-width: 576px) {
