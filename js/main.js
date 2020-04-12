@@ -124,6 +124,13 @@ $(document).ready(() => {
             prevArrow: $('#aboutControls .prev')[0],
             nextArrow: $('#aboutControls .next')[0],
             speed: 1000
+        });
+
+        $('#portfolioSlider').slick({
+            infinite: false,
+            prevArrow: $('#portfolioControls .prev')[0],
+            nextArrow: $('#portfolioControls .next')[0],
+            speed: 1000
         })
     }
 });

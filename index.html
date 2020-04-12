@@ -669,47 +669,42 @@
             <h2>Портфолио</h2>
         </div>
     </div>
-    <div class="portfolio-works">
-        <div class="row w-100">
-            <div class="col">
+    <div class="portfolio-wrapper">
+        <div class="portfolio-works" id="portfolioSlider">
+            <div class="work work-1">
                 <img alt="portfolio-1.jpg" src="assets/img/portfolio-1.jpg">
-            </div>
-            <div class="col work">
-                <div class="work-description work-description-1">
-                    <div class="description-heading">Сайт для компании Лев <span class="lion-icon"></span></div>
-                    <div class="description-description">Давно выяснено, что при оценке дизайна и композиции читаемый
-                        текст мешает сосредоточиться. Lorem Ipsum используют потому
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <button class="btn btn-outline">Подробнее</button>
+                <div class="work-description-wrap">
+                    <div class="work-description">
+                        <div class="description-heading">Сайт для компании Лев <span class="lion-icon"></span></div>
+                        <div class="description-description">Давно выяснено, что при оценке дизайна и композиции читаемый
+                            текст мешает сосредоточиться. Lorem Ipsum используют потому
                         </div>
-                        <div class="col site-link">
-                            <a href="#">На сайт компании</a>
+                        <div class="description-footer">
+                            <button class="btn btn-outline">Подробнее</button>
+                            <a href="#" class="site-link">На сайт компании</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="w-100"></div>
-            <div class="col work">
-                <div class="work-description work-description-2">
-                    <div class="description-heading">Сайт для компании Лев <span class="lion-icon"></span></div>
-                    <div class="description-description">Давно выяснено, что при оценке дизайна и композиции читаемый
-                        текст мешает сосредоточиться. Lorem Ipsum используют потому
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <button class="btn btn-outline">Подробнее</button>
+            <div class="work work-2">
+                <img alt="portfolio-1.jpg" src="assets/img/portfolio-1.jpg">
+                <div class="work-description-wrap">
+                    <div class="work-description">
+                        <div class="description-heading">Сайт для компании Лев <span class="lion-icon"></span></div>
+                        <div class="description-description">Давно выяснено, что при оценке дизайна и композиции читаемый
+                            текст мешает сосредоточиться. Lorem Ipsum используют потому
                         </div>
-                        <div class="col site-link">
-                            <a href="#">На сайт компании</a>
+                        <div class="description-footer">
+                            <button class="btn btn-outline">Подробнее</button>
+                            <a href="#" class="site-link">На сайт компании</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <img alt="portfolio-2.jpg" src="assets/img/portfolio-2.jpg">
-            </div>
+        </div>
+        <div class="sliderControls mobile-only" id="portfolioControls">
+            <div class="prev"></div>
+            <div class="next"></div>
         </div>
         <button class="btn btn-fill">Больше работ<span class="line"></span><span class="arrow"></span></button>
     </div>
@@ -784,7 +779,6 @@
 
 
 <!--TODO: remake #reviews (3 types of review)-->
-<!--TODO: remake #portfolio (like a slider)-->
 <!--TODO: make mobile accordeons in footer-->
 <!--TODO: use non-rounded images in #clients-->
 <!--TODO: make it all adaptive-->
