@@ -22,7 +22,8 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="pages navbar-nav ml-auto w-50 justify-content-between">
+            <span aria-controls="navbarCollapse" class="navbar-toggler close" data-target="#navbarCollapse" data-toggle="collapse" type="button">&times;</span>
+            <ul class="pages navbar-nav justify-content-between">
                 <li class="nav-item">
                     <a href="#">Команда</a>
                 </li>
@@ -57,6 +58,18 @@
                     <a href="#"><img alt="instagram icon" src="assets/img/instagram.png"></a>
                 </li>
                 <li class="nav-item phone-icon">
+                    <a href="#"><img alt="phone icon" src="assets/img/phone.png"></a>
+                </li>
+                <li class="phones mobile-only">
+                    <div>
+                        8 800 555-77-78
+                    </div>
+                    <div>
+                        8 800 555-77-78
+                    </div>
+                </li>
+                <li class="social-icons mobile-only">
+                    <a href="#"><img alt="phone icon" src="assets/img/instagram.png"></a>
                     <a href="#"><img alt="phone icon" src="assets/img/phone.png"></a>
                 </li>
             </ul>
@@ -713,13 +726,13 @@
 <footer>
     <div class="container">
         <div class="content row">
-            <div class="col-12 col-lg-3 footer-logo">
+            <div class="col-12 col-xl-3 footer-logo">
                 <a href="index.html">
                     <img alt="osminojek logo" src="assets/img/logo_contrast.png">
                 </a>
             </div>
 
-            <div class="col-12 col-lg-6 footer-links">
+            <div class="col-12 col-xl-6 footer-links">
                 <div class="company">
                     <div class="heading" id="companyHeading">Компания</div>
                     <ul id="companyCollapse" class="collapse show">
@@ -747,7 +760,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-lg-3 footer-contacts">
+            <div class="col-12 col-xl-3 footer-contacts">
                 <ul class="icons">
                     <li class="instagram-icon">
                         <a href="#"><img alt="instagram icon" src="assets/img/instagram_color.png"></a>
@@ -779,7 +792,6 @@
 
 
 <!--TODO?: remake #reviews-->
-<!--TODO: make it all adaptive-->
 <!--TODO: remake button in #portfolio-->
 <!--TODO: add animations-->
 <!--TODO: optimize images-->
