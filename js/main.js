@@ -106,17 +106,29 @@ $(document).ready(() => {
     });
 
     $('#reviewsSlider').slick({
-        infinite: true,
+        infinite: false,
         slidesToShow: 3,
         slidesToScroll: 1,
         prevArrow: $('#reviewsControls .prev')[0],
         nextArrow: $('#reviewsControls .next')[0],
         autoplay: true,
         autoplaySpeed: 5000,
-        speed: 1000
+        speed: 1000,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
 
-    if ($(window).width() <= 768) {
+    $('#reviewsSlider').on('edge', (event, slick, direction) => {
+        console.log(event, slick, direction)
+    });
+
+    if ($(window).width() < 768) {
         $('#aboutSlider').slick({
             infinite: false,
             rows: 2,
@@ -131,6 +143,22 @@ $(document).ready(() => {
             prevArrow: $('#portfolioControls .prev')[0],
             nextArrow: $('#portfolioControls .next')[0],
             speed: 1000
-        })
+        });
+
+        $('#companyCollapse').collapse('hide');
+        $('#siteMakingCollapse').collapse('hide');
+        $('#forClientsCollapse').collapse('hide');
+
+        $('#companyHeading').on('click', () => {
+            $('#companyCollapse').collapse('toggle');
+        });
+
+        $('#siteMakingHeading').on('click', () => {
+            $('#siteMakingCollapse').collapse('toggle');
+        });
+
+        $('#forClientsHeading').on('click', () => {
+            $('#forClientsCollapse').collapse('toggle');
+        });
     }
 });

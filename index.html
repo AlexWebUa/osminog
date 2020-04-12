@@ -363,7 +363,7 @@
 
             </div>
 
-            <div class="sliderControls" id="aboutControls">
+            <div class="sliderControls mobile-only" id="aboutControls">
                 <div class="prev"></div>
                 <div class="next"></div>
             </div>
@@ -571,13 +571,13 @@
             </div>
 
             <div class="slider-footer">
-                <div class="buttons">
-                    <button class="btn btn-fill">Оставить отзыв</button>
-                    <button class="btn btn-outline">Все отзывы</button>
-                </div>
                 <div class="sliderControls" id="reviewsControls">
                     <div class="prev"></div>
                     <div class="next"></div>
+                </div>
+                <div class="buttons">
+                    <button class="btn btn-fill">Оставить отзыв</button>
+                    <button class="btn btn-outline">Все отзывы</button>
                 </div>
             </div>
         </div>
@@ -626,7 +626,7 @@
         </div>
         <div class="clients-services row">
             <div class="clients-service clients-service-1 col">
-                <img alt="client-service-1.png" src="assets/img/client-service-1.png">
+                <img alt="client-service-1.jpg" src="assets/img/client-service-1.jpg">
                 <div class="service-description">
                     <div class="description-heading">Администрирование сайта</div>
                     <div class="description-subheading">Лучший выбор клиентов</div>
@@ -637,7 +637,7 @@
                 </div>
             </div>
             <div class="clients-service clients-service-2 col">
-                <img alt="client-service-2.png" src="assets/img/client-service-2.png">
+                <img alt="client-service-2.jpg" src="assets/img/client-service-2.jpg">
                 <div class="service-description">
                     <div class="description-heading">Продвижение сайта</div>
                     <div class="description-subheading">Лучший выбор клиентов</div>
@@ -648,7 +648,7 @@
                 </div>
             </div>
             <div class="clients-service clients-service-3 col">
-                <img alt="client-service-2.png" src="assets/img/client-service-3.png">
+                <img alt="client-service-2.jpg" src="assets/img/client-service-3.jpg">
                 <div class="service-description">
                     <div class="description-heading">SMM</div>
                     <div class="description-subheading">Лучший выбор клиентов</div>
@@ -713,24 +713,24 @@
 <footer>
     <div class="container">
         <div class="content row">
-            <div class="col-12 col-md-3 footer-logo">
+            <div class="col-12 col-lg-3 footer-logo">
                 <a href="index.html">
                     <img alt="osminojek logo" src="assets/img/logo_contrast.png">
                 </a>
             </div>
 
-            <div class="col-12 col-md-6 footer-links">
+            <div class="col-12 col-lg-6 footer-links">
                 <div class="company">
-                    <div class="heading">Компания</div>
-                    <ul>
+                    <div class="heading" id="companyHeading">Компания</div>
+                    <ul id="companyCollapse" class="collapse show">
                         <li><a href="#">Об Осьминожке</a></li>
                         <li><a href="#">Наша команда</a></li>
                     </ul>
                 </div>
 
                 <div class="site-making">
-                    <div class="heading">Разработка сайтов</div>
-                    <ul>
+                    <div class="heading" id="siteMakingHeading">Разработка сайтов</div>
+                    <ul id="siteMakingCollapse" class="collapse show">
                         <li><a href="#">Лендинг</a></li>
                         <li><a href="#">Корпоративный сайт</a></li>
                         <li><a href="#">Интернет-магазин</a></li>
@@ -739,15 +739,15 @@
                 </div>
 
                 <div class="for-clients">
-                    <div class="heading">Клиентам</div>
-                    <ul>
+                    <div class="heading" id="forClientsHeading">Клиентам</div>
+                    <ul id="forClientsCollapse" class="collapse show">
                         <li><a href="#">Отзывы</a></li>
                         <li><a href="#">Портфолио</a></li>
                     </ul>
                 </div>
             </div>
 
-            <div class="col-12 col-md-3 footer-contacts">
+            <div class="col-12 col-lg-3 footer-contacts">
                 <ul class="icons">
                     <li class="instagram-icon">
                         <a href="#"><img alt="instagram icon" src="assets/img/instagram_color.png"></a>
@@ -778,11 +778,10 @@
 </html>
 
 
-<!--TODO: remake #reviews (3 types of review)-->
-<!--TODO: make mobile accordeons in footer-->
-<!--TODO: use non-rounded images in #clients-->
+<!--TODO?: remake #reviews-->
 <!--TODO: make it all adaptive-->
+<!--TODO: remake button in #portfolio-->
 <!--TODO: add animations-->
 <!--TODO: optimize images-->
 <!--TODO: divide and optimize imports of scss-->
-<!--TODO: make custom select on nSelect https://github.com/edbond88/nselect-->
+<!--TODO?: make custom select on nSelect https://github.com/edbond88/nselect-->
