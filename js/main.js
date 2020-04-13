@@ -95,7 +95,7 @@ $(document).on('click', (e) => {
 
 $(document).ready(() => {
     $('#advantagesSlider').slick({
-        infinite: true,
+        infinite: false,
         adaptiveHeight: true,
         slidesToShow: 1,
         prevArrow: $('#advantagesControls .prev')[0],

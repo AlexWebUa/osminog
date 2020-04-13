@@ -7,6 +7,7 @@
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
     <title>Осьминог</title>
     <link href="css/main.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
 </head>
 <body>
 <header class="fixed-top">
@@ -223,12 +224,11 @@
 <div id="first-screen">
     <div class="container justify-content-md-center align-items-center">
         <div class="best-solutions d-flex justify-content-center">
-            <div class="pink-line"></div>
-
-            <img alt="Best solutions" src="assets/img/best_solutions.png">
-            <div class="white-line"></div>
+            <div class="pink-line wow fadeInRightBig" data-wow-delay="1s"></div>
+            <img class="wow fadeInDownBig" alt="Best solutions" src="assets/img/best_solutions.png">
+            <div class="white-line wow fadeInLeftBig" data-wow-delay="1s"></div>
         </div>
-        <div class="bottom-plank d-md-flex justify-content-around align-items-center">
+        <div class="bottom-plank d-md-flex justify-content-around align-items-center wow fadeIn" data-wow-delay="2s" data-wow-duration="1s">
             <div class="text">Мы стараемся создать лучшие решения на рынке</div>
             <button class="btn btn-fill details" type="button">Подробнее</button>
         </div>
@@ -236,7 +236,7 @@
 </div>
 
 <div id="services">
-    <div class="service" id="service-landing">
+    <div class="service wow slideInLeft" id="service-landing">
         <img alt="Landing page" src="assets/img/service-1.jpg">
         <div class="black-bar">
             <div class="w-100 position-relative">
@@ -259,7 +259,7 @@
         </div>
     </div>
 
-    <div class="service" id="service-corporate">
+    <div class="service wow slideInRight" data-wow-delay="1s" id="service-corporate">
         <img alt="Корпоративный сайт" src="assets/img/service-2.jpg">
         <div class="black-bar">
             <div class="w-100 position-relative">
@@ -282,7 +282,7 @@
         </div>
     </div>
 
-    <div class="service" id="service-shop">
+    <div class="service wow slideInLeft" id="service-shop">
         <img alt="Интернет магазин" src="assets/img/service-3.jpg">
         <div class="black-bar">
             <div class="w-100 position-relative">
@@ -305,7 +305,7 @@
         </div>
     </div>
 
-    <div class="service" id="service-unique">
+    <div class="service wow slideInRight" data-wow-delay="1s" id="service-unique">
         <img alt="Уникальный продукт" src="assets/img/service-4.jpg">
         <div class="black-bar">
             <div class="w-100 position-relative">
@@ -344,32 +344,32 @@
         <div class="slider-wrapper">
             <div class="about-slider" id="aboutSlider">
 
-                <div class="slider-item">
+                <div class="slider-item wow fadeIn">
                     <img alt="20" src="assets/img/20.png">
                     <div class="slider-description">Занимаемся разработкой сайтов с 1997 года</div>
                 </div>
 
-                <div class="slider-item">
+                <div class="slider-item wow fadeIn" data-wow-delay="1s">
                     <img alt="700" src="assets/img/700.png">
                     <div class="slider-description">Наши офисы находятся в разных городах и странах</div>
                 </div>
 
-                <div class="slider-item">
+                <div class="slider-item wow fadeIn" data-wow-delay="2s">
                     <img alt="120" src="assets/img/120.png">
                     <div class="slider-description">Высокая квалификация персонала</div>
                 </div>
 
-                <div class="slider-item">
+                <div class="slider-item wow fadeIn" data-wow-delay="3s">
                     <img alt="20" src="assets/img/20.png">
                     <div class="slider-description">Занимаемся разработкой сайтов с 1997 года</div>
                 </div>
 
-                <div class="slider-item">
+                <div class="slider-item wow fadeIn" data-wow-delay="4s">
                     <img alt="700" src="assets/img/700.png">
                     <div class="slider-description">Наши офисы находятся в разных городах и странах</div>
                 </div>
 
-                <div class="slider-item">
+                <div class="slider-item wow fadeIn" data-wow-delay="5s">
                     <img alt="120" src="assets/img/120.png">
                     <div class="slider-description">Высокая квалификация персонала</div>
                 </div>
@@ -638,7 +638,7 @@
             <h2>Для клиентов</h2>
         </div>
         <div class="clients-services row">
-            <div class="clients-service clients-service-1 col">
+            <div class="clients-service clients-service-1 col wow fadeInUpBig">
                 <img alt="client-service-1.jpg" src="assets/img/client-service-1.jpg">
                 <div class="service-description">
                     <div class="description-heading">Администрирование сайта</div>
@@ -649,7 +649,7 @@
                     <button class="btn btn-outline">Подробнее</button>
                 </div>
             </div>
-            <div class="clients-service clients-service-2 col">
+            <div class="clients-service clients-service-2 col wow fadeInDownBig" data-wow-delay="0.5s">
                 <img alt="client-service-2.jpg" src="assets/img/client-service-2.jpg">
                 <div class="service-description">
                     <div class="description-heading">Продвижение сайта</div>
@@ -660,7 +660,7 @@
                     <button class="btn btn-outline">Подробнее</button>
                 </div>
             </div>
-            <div class="clients-service clients-service-3 col">
+            <div class="clients-service clients-service-3 col wow fadeInUpBig" data-wow-delay="1s">
                 <img alt="client-service-2.jpg" src="assets/img/client-service-3.jpg">
                 <div class="service-description">
                     <div class="description-heading">SMM</div>
@@ -685,8 +685,8 @@
     <div class="portfolio-wrapper">
         <div class="portfolio-works" id="portfolioSlider">
             <div class="work work-1">
-                <img alt="portfolio-1.jpg" src="assets/img/portfolio-1.jpg">
-                <div class="work-description-wrap">
+                <img class="wow fadeInLeft" alt="portfolio-1.jpg" src="assets/img/portfolio-1.jpg">
+                <div class="work-description-wrap wow fadeInRight">
                     <div class="work-description">
                         <div class="description-heading">Сайт для компании Лев <span class="lion-icon"></span></div>
                         <div class="description-description">Давно выяснено, что при оценке дизайна и композиции читаемый
@@ -700,8 +700,8 @@
                 </div>
             </div>
             <div class="work work-2">
-                <img alt="portfolio-1.jpg" src="assets/img/portfolio-1.jpg">
-                <div class="work-description-wrap">
+                <img class="wow fadeInRight" data-wow-delay="1s" alt="portfolio-1.jpg" src="assets/img/portfolio-1.jpg">
+                <div class="work-description-wrap wow fadeInLeft" data-wow-delay="1s" >
                     <div class="work-description">
                         <div class="description-heading">Сайт для компании Лев <span class="lion-icon"></span></div>
                         <div class="description-description">Давно выяснено, что при оценке дизайна и композиции читаемый
@@ -719,7 +719,7 @@
             <div class="prev"></div>
             <div class="next"></div>
         </div>
-        <button class="btn btn-fill">Больше работ<span class="line"></span><span class="arrow"></span></button>
+        <button class="btn btn-fill"><span class="text">Больше работ</span> <span class="vertical-line"></span> <span class="line"></span><span class="arrow">&rarr;</span></button>
     </div>
 </div>
 
@@ -786,14 +786,15 @@
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="assets/slick/slick.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script>
+    new WOW({
+        offset: 15
+    }).init();
+</script>
 <script src="js/main.js"></script>
 </body>
 </html>
 
-
-<!--TODO?: remake #reviews-->
-<!--TODO: remake button in #portfolio-->
-<!--TODO: add animations-->
-<!--TODO: optimize images-->
-<!--TODO: divide and optimize imports of scss-->
+<!--TODO: remake #reviews-->
 <!--TODO?: make custom select on nSelect https://github.com/edbond88/nselect-->
