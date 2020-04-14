@@ -588,7 +588,7 @@
         }
     }
 
-    #reviews {
+    /*#reviews {
         margin: 40px 0;
 
         #reviewsSlider {
@@ -608,7 +608,7 @@
                 }
             }
         }
-    }
+    }*/
 
     #feedback {
         background-size: auto;
@@ -724,9 +724,9 @@
         margin: 50px 0;
     }
 
-    #reviews {
+    /*#reviews {
         margin: 100px 0;
-    }
+    }*/
 
     #feedback {
         padding: 100px 0;
@@ -850,9 +850,29 @@
 }
 
 @media (min-width: 1201px) and (max-width: 1560px) {
+    button.btn {
+        font-size: 20px;
+        padding: 10px;
+        max-width: 270px;
+        max-height: 65px;
+    }
+
+    header {
+        .navbar-collapse {
+            .pages {
+                width: auto;
+            }
+        }
+    }
+
     #first-screen {
+        .best-solutions {
+            img {
+                width: 100%;
+            }
+        }
         .bottom-plank {
-            flex-direction: column;
+            padding: 160px 0;
             .text {
                 margin-bottom: 30px;
             }
@@ -917,5 +937,15 @@
 
     #portfolio .portfolio-heading {
         margin: 80px 0;
+    }
+}
+
+@media (max-width: 1560px) {
+    #first-screen {
+        .bottom-plank {
+            .text {
+                max-width: 100%;
+            }
+        }
     }
 }

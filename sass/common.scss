@@ -1,37 +1,37 @@
 /* Common styles */
 
-@import "../assets/bootstrap/functions";
-@import "../assets/bootstrap/variables";
-@import "../assets/bootstrap/mixins";
-@import "../assets/bootstrap/root";
-@import "../assets/bootstrap/reboot";
-@import "../assets/bootstrap/type";
-@import "../assets/bootstrap/images";
-@import "../assets/bootstrap/code";
-@import "../assets/bootstrap/grid";
-@import "../assets/bootstrap/forms";
-@import "../assets/bootstrap/buttons";
-@import "../assets/bootstrap/transitions";
-@import "../assets/bootstrap/dropdown";
-@import "../assets/bootstrap/button-group";
-@import "../assets/bootstrap/input-group";
-@import "../assets/bootstrap/custom-forms";
-@import "../assets/bootstrap/nav";
-@import "../assets/bootstrap/navbar";
-@import "../assets/bootstrap/card";
-@import "../assets/bootstrap/breadcrumb";
-@import "../assets/bootstrap/pagination";
-@import "../assets/bootstrap/badge";
-@import "../assets/bootstrap/media";
-@import "../assets/bootstrap/list-group";
-@import "../assets/bootstrap/close";
-@import "../assets/bootstrap/modal";
-@import "../assets/bootstrap/utilities";
+@import "../assets/libs/bootstrap/functions";
+@import "../assets/libs/bootstrap/variables";
+@import "../assets/libs/bootstrap/mixins";
+@import "../assets/libs/bootstrap/root";
+@import "../assets/libs/bootstrap/reboot";
+@import "../assets/libs/bootstrap/type";
+@import "../assets/libs/bootstrap/images";
+@import "../assets/libs/bootstrap/code";
+@import "../assets/libs/bootstrap/grid";
+@import "../assets/libs/bootstrap/forms";
+@import "../assets/libs/bootstrap/buttons";
+@import "../assets/libs/bootstrap/transitions";
+@import "../assets/libs/bootstrap/dropdown";
+@import "../assets/libs/bootstrap/button-group";
+@import "../assets/libs/bootstrap/input-group";
+@import "../assets/libs/bootstrap/custom-forms";
+@import "../assets/libs/bootstrap/nav";
+@import "../assets/libs/bootstrap/navbar";
+@import "../assets/libs/bootstrap/card";
+@import "../assets/libs/bootstrap/breadcrumb";
+@import "../assets/libs/bootstrap/pagination";
+@import "../assets/libs/bootstrap/badge";
+@import "../assets/libs/bootstrap/media";
+@import "../assets/libs/bootstrap/list-group";
+@import "../assets/libs/bootstrap/close";
+@import "../assets/libs/bootstrap/modal";
+@import "../assets/libs/bootstrap/utilities";
 
-//@import "../assets/bootstrap/bootstrap";
+//@import "../assets/libs/bootstrap/bootstrap";
 @import "../assets/fonts/gilroy/stylesheet.css";
 @import "../assets/fonts/bebasneue/Bebas Neue.css";
-@import "../assets/slick/slick.scss";
+@import "../assets/libs/slick/slick.scss";
 
 $main-pink: #ff4878;
 $gold: #95763f;
@@ -55,11 +55,12 @@ h2 {
 }
 
 button.btn {
+    font-family: "Gilroy", sans-serif;
     border-radius: 38px;
     font-size: 22px;
     padding: 15px;
     max-width: 315px;
-    max-height: 65px;
+    max-height: 75px;
     width: 100%;
     font-weight: 600;
 }
@@ -117,18 +118,17 @@ button.btn-fill {
         align-items: center;
         justify-content: center;
 
-        select {
-            background: none;
-            border: none;
-            box-shadow: none;
-            max-width: 80%;
-            width: auto;
-            padding: 0;
-            margin: 0;
-            text-align-last: center;
-            color: #7b7b7b;
-            font-family: "Gilroy Medium", sans-serif;
-            font-size: 18px;
+        .nselect {
+            .nselect__head {
+                background: transparent;
+                color: #7b7b7b;
+                font-size: 18px;
+
+                &:after {
+                    border-color: #7b7b7b transparent transparent transparent;
+                    top: 18px;
+                }
+            }
         }
     }
 
@@ -145,85 +145,6 @@ button.btn-fill {
     button {
         margin: 75px 0;
         box-shadow: 0 15px 20px 2px rgba($main-pink, 0.2);
-    }
-}
-
-//Expanded mobile menu
-header {
-    .navbar-collapse.show {
-        color: black;
-        border-radius: 23px;
-        background: white;
-        position: relative;
-
-        .close {
-            position: absolute;
-            right: 15px;
-            top: 8px;
-            font-size: 22px;
-        }
-
-
-        .pages {
-            margin: 10px 0;
-            .nav-item {
-                a {
-                    padding: 5px 15px;
-                }
-            }
-        }
-
-        .icons {
-            padding-top: 30px;
-            flex-direction: row;
-            border-top: 1px solid #e6e6e6;
-            justify-content: space-around;
-            align-items: center;
-
-            .nav-item {
-                display: none;
-            }
-
-            .social-icons {
-                a {
-                    margin: 0 10px;
-                }
-            }
-        }
-
-        button {
-            width: 80%!important;
-            display: block;
-            margin: 35px auto;
-            border: 1px solid #ff4878!important;
-            color: #ff4878!important;
-        }
-    }
-}
-
-.sliderControls {
-
-    .prev, .next {
-        display: inline-block;
-        width: 25px;
-        height: 25px;
-        margin: 0 10px;
-        cursor: pointer;
-    }
-    .prev {
-        background: url("../assets/img/arrow-back_active.png") center center no-repeat;
-    }
-
-    .next {
-        background: url("../assets/img/arrow-forward_active.png") center center no-repeat;
-    }
-
-    .prev.slick-disabled {
-        background: url("../assets/img/arrow-back_inactive.png") center center no-repeat;
-    }
-
-    .next.slick-disabled {
-        background: url("../assets/img/arrow-forward_inactive.png") center center no-repeat;
     }
 }
 
@@ -320,17 +241,75 @@ header {
                 padding: 10px;
             }
         }
+    }
 
-        button {
-            border: 1px solid $main-pink;
-            color: $main-pink;
-            &:hover {
-                background-color: $main-pink;
-                color: white;
+    .navbar-collapse.show {
+        color: black;
+        border-radius: 23px;
+        background: white;
+        position: relative;
+
+        .close {
+            position: absolute;
+            right: 15px;
+            top: 8px;
+            font-size: 22px;
+        }
+
+
+        .pages {
+            margin: 10px 0;
+            .nav-item {
+                a {
+                    padding: 5px 15px;
+                }
+            }
+        }
+
+        .icons {
+            padding-top: 30px;
+            flex-direction: row;
+            border-top: 1px solid #e6e6e6;
+            justify-content: space-around;
+            align-items: center;
+
+            .nav-item {
+                display: none;
+            }
+
+            .social-icons {
+                a {
+                    margin: 0 10px;
+                }
             }
         }
     }
+}
 
+.sliderControls {
+
+    .prev, .next {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        margin: 0 10px;
+        cursor: pointer;
+    }
+    .prev {
+        background: url("../assets/img/arrow-back_active.png") center center no-repeat;
+    }
+
+    .next {
+        background: url("../assets/img/arrow-forward_active.png") center center no-repeat;
+    }
+
+    .prev.slick-disabled {
+        background: url("../assets/img/arrow-back_inactive.png") center center no-repeat;
+    }
+
+    .next.slick-disabled {
+        background: url("../assets/img/arrow-forward_inactive.png") center center no-repeat;
+    }
 }
 
 footer {

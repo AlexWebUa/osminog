@@ -105,27 +105,59 @@ $(document).ready(() => {
         speed: 1000
     });
 
-    $('#reviewsSlider').slick({
+    $('#textReviewsSlider').slick({
         infinite: false,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        prevArrow: $('#reviewsControls .prev')[0],
-        nextArrow: $('#reviewsControls .next')[0],
+        slidesToShow: 1,
+        arrows: false,
         autoplay: true,
         autoplaySpeed: 5000,
         speed: 1000,
         responsive: [
             {
-                breakpoint: 768,
+                breakpoint: 767,
                 settings: {
-                    slidesToShow: 1
+                    prevArrow: $('#textReviewsControls .prev')[0],
+                    nextArrow: $('#textReviewsControls .next')[0],
                 }
             }
         ]
     });
 
-    $('#reviewsSlider').on('edge', (event, slick, direction) => {
-        console.log(event, slick, direction)
+    $('#blackReviewsSlider').slick({
+        infinite: false,
+        slidesToShow: 1,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        speed: 1000,
+        responsive: [
+            {
+                breakpoint: 767,
+                settings: {
+                    prevArrow: $('#blackReviewsControls .prev')[0],
+                    nextArrow: $('#blackReviewsControls .next')[0],
+
+                }
+            }
+        ]
+    });
+
+    $('#grayReviewsSlider').slick({
+        infinite: false,
+        slidesToShow: 1,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        speed: 1000,
+        responsive: [
+            {
+                breakpoint: 767,
+                settings: {
+                    prevArrow: $('#grayReviewsControls .prev')[0],
+                    nextArrow: $('#grayReviewsControls .next')[0],
+                }
+            }
+        ]
     });
 
     if ($(window).width() < 768) {

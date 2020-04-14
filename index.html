@@ -5,9 +5,29 @@
     <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
           name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
-    <title>Осьминог</title>
+    <title>Осьминожка</title>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="msapplication-TileColor" content="#ff4878">
+    <meta name="msapplication-TileImage" content="assets/img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ff4878">
+
     <link href="css/main.min.css" rel="stylesheet">
-    <link href="css/animate.css" rel="stylesheet">
+    <link href="assets/libs/wow/animate.css" rel="stylesheet">
+    <link href="assets/libs/nSelect/jquery.nselect.css" rel="stylesheet">
 </head>
 <body>
 <header class="fixed-top">
@@ -74,7 +94,7 @@
                     <a href="#"><img alt="phone icon" src="assets/img/phone.png"></a>
                 </li>
             </ul>
-            <button class="btn ml-auto w-25" data-target="#quiz1" data-toggle="modal" type="button">Консультация
+            <button class="btn btn-outline ml-auto" data-target="#quiz1" data-toggle="modal" type="button">Консультация
             </button>
         </div>
     </nav>
@@ -550,48 +570,88 @@
 
 <div id="reviews">
     <div class="container">
+
         <div class="reviews-heading">
             <h2>Отзывы</h2>
         </div>
 
-        <div class="sliderWrapper">
-            <div id="reviewsSlider">
-
-                <div class="review">
-                    <img src="assets/img/reviews-review_1.png" alt="">
+        <div id="textReviewsSlider">
+            <div class="review text-review">
+                <div class="text-review-heading">Александр Иванов</div>
+                <div class="text-review-main">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также</div>
+                <div class="text-review-footer">
+                    <a class="review-link" href="#">Смотреть оригинал</a>
+                    <div class="review-video">
+                        <a href="#"></a>
+                    </div>
+                    <div class="review-icon">
+                        <a href="#"></a>
+                    </div>
                 </div>
-
-                <div class="review">
-                    <img src="assets/img/reviews-review_2.png" alt="">
-                </div>
-
-                <div class="review">
-                    <img src="assets/img/reviews-review_3.png" alt="">
-                </div>
-
-                <div class="review">
-                    <img src="assets/img/reviews-review_1.png" alt="">
-                </div>
-
-                <div class="review">
-                    <img src="assets/img/reviews-review_2.png" alt="">
-                </div>
-
-                <div class="review">
-                    <img src="assets/img/reviews-review_3.png" alt="">
-                </div>
-
             </div>
 
-            <div class="slider-footer">
-                <div class="sliderControls" id="reviewsControls">
-                    <div class="prev"></div>
-                    <div class="next"></div>
+            <div class="review text-review">
+                <div class="text-review-heading">Александр Иванов</div>
+                <div class="text-review-main">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также</div>
+                <div class="text-review-footer">
+                    <a class="review-link" href="#">Смотреть оригинал</a>
+                    <div class="review-video">
+                        <a href="#"></a>
+                    </div>
+                    <div class="review-icon">
+                        <a href="#"></a>
+                    </div>
                 </div>
-                <div class="buttons">
-                    <button class="btn btn-fill">Оставить отзыв</button>
-                    <button class="btn btn-outline">Все отзывы</button>
-                </div>
+            </div>
+        </div>
+
+        <div class="sliderControls mobile-only" id="textReviewsControls">
+            <div class="prev"></div>
+            <div class="next"></div>
+        </div>
+
+        <div id="blackReviewsSlider">
+            <div class="review black-review">
+                <img src="assets/img/review-example_1.png" alt="Review 1">
+                <a class="review-link" href="#">Смотреть оригинал</a>
+            </div>
+
+            <div class="review black-review">
+                <img src="assets/img/review-example_1.png" alt="Review 1">
+                <a class="review-link" href="#">Смотреть оригинал</a>
+            </div>
+        </div>
+
+        <div class="sliderControls mobile-only" id="blackReviewsControls">
+            <div class="prev"></div>
+            <div class="next"></div>
+        </div>
+
+        <div id="grayReviewsSlider">
+            <div class="review gray-review">
+                <img src="assets/img/review-example_2.png" alt="Review 2">
+                <a class="review-link" href="#">Смотреть оригинал</a>
+            </div>
+
+            <div class="review gray-review">
+                <img src="assets/img/review-example_2.png" alt="Review 2">
+                <a class="review-link" href="#">Смотреть оригинал</a>
+            </div>
+        </div>
+
+        <div class="sliderControls mobile-only" id="grayReviewsControls">
+            <div class="prev"></div>
+            <div class="next"></div>
+        </div>
+
+        <div class="reviews-footer">
+            <div class="buttons">
+                <button class="btn btn-fill">Оставить отзыв</button>
+                <button class="btn btn-outline">Все отзывы</button>
+            </div>
+            <div class="sliderControls" id="reviewsControls">
+                <div class="prev"></div>
+                <div class="next"></div>
             </div>
         </div>
 
@@ -616,7 +676,6 @@
                     </div>
                     <div class="col select-wrap input-select">
                         <select class="form-control">
-                            <option value="default">Я хочу</option>
                             <option value="opt1">Option 1</option>
                             <option value="opt2">Option 2</option>
                             <option value="opt3">Very long option for adaptiveness test</option>
@@ -782,19 +841,24 @@
     </div>
 </footer>
 
-
 <script src="js/jquery-3.4.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="assets/slick/slick.min.js"></script>
-<script src="js/wow.min.js"></script>
+<script src="assets/libs/bootstrap/bootstrap.min.js"></script>
+<script src="assets/libs/slick/slick.min.js"></script>
+<script src="assets/libs/wow/wow.min.js"></script>
+<script src="assets/libs/nSelect/jquery.nselect.min.js"></script>
 <script>
     new WOW({
         offset: 15
     }).init();
+
+    $('.select-wrap select').nSelect({
+        firstTitle : 'Я хочу'
+    });
 </script>
 <script src="js/main.js"></script>
 </body>
 </html>
 
 <!--TODO: remake #reviews-->
-<!--TODO?: make custom select on nSelect https://github.com/edbond88/nselect-->
+<!--TODO: remake #advantages (animate dots!?)-->
+<!--TODO: adapt layout-->
