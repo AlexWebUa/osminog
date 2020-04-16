@@ -6,7 +6,7 @@
     }
 
     .desktop-only {
-        display: none!important;
+        display: none !important;
     }
 
     button.btn {
@@ -22,6 +22,7 @@
     .modal {
         .modal-dialog {
             margin: auto;
+
             .modal-content {
                 .modal-header {
                     &:before {
@@ -32,17 +33,20 @@
                         font-size: 16px;
                         line-height: 20px;
                     }
+
                     .modal-title {
                         width: 100%;
                         display: block;
-                        margin: 30px auto!important;
+                        margin: 30px auto !important;
                         text-align: center;
                         font-size: 20px;
                     }
+
                     .modal-description p {
                         font-size: 16px;
                         padding: 0;
                     }
+
                     .close {
                         position: absolute;
                         top: 5px;
@@ -54,6 +58,7 @@
                     form {
                         justify-content: flex-start;
                         align-items: flex-start;
+
                         .custom-control {
                             margin: 10px 0;
                         }
@@ -68,7 +73,7 @@
         padding: 70px 0;
 
         #quiz4Form {
-            &>.row {
+            & > .row {
                 flex-direction: column;
                 max-width: 100%;
                 width: 100%;
@@ -101,7 +106,7 @@
     }
 
     .gold-line, .white-line, .pink-line {
-        height: 7px!important;
+        height: 7px !important;
     }
 
     header {
@@ -112,6 +117,7 @@
                 width: 100%;
             }
         }
+
         .navbar-toggler {
             padding: 0;
             margin: 0;
@@ -129,7 +135,7 @@
         height: 100vh;
         padding: 0;
 
-        &>.container {
+        & > .container {
             display: flex;
             flex-direction: column;
             height: 100%;
@@ -140,13 +146,16 @@
             img {
                 width: 100%;
             }
+
             .pink-line, .white-line {
-                height: 15px!important;
+                height: 15px !important;
             }
+
             .pink-line {
                 right: -15px;
                 width: 33%;
             }
+
             .white-line {
                 left: -15px;
                 bottom: 10%;
@@ -199,12 +208,12 @@
                     line-height: 180%;
 
                     span {
-                        position: relative!important;
-                        right: unset!important;
-                        left: unset!important;
-                        top: unset!important;
-                        bottom: unset!important;
-                        margin: 0!important;
+                        position: relative !important;
+                        right: unset !important;
+                        left: unset !important;
+                        top: unset !important;
+                        bottom: unset !important;
+                        margin: 0 !important;
                         font-size: 30px;
                     }
                 }
@@ -225,7 +234,7 @@
                     .analyse {
                         margin-top: -10px;
                         font-size: 16px;
-                        transform: rotate(-45deg) translate(-10%,-50%);
+                        transform: rotate(-45deg) translate(-10%, -50%);
                         width: min-content;
                     }
 
@@ -244,6 +253,7 @@
         .about-heading {
             .heading-heading {
                 width: 100%;
+
                 .gold-line {
                     height: 7px;
                     right: -15px;
@@ -285,78 +295,22 @@
 
         .review-footer {
             margin: 0;
+
             button {
                 margin: 15px 0;
             }
         }
     }
 
-    /*#reviews {
-        margin: 50px 0;
-        .mobile-only {
-            display: block;
-            margin: 20px auto;
-        }
-
-        .review {
-            border-radius: 10px;
-        }
-
-        #textReviewsSlider {
-            .text-review-wrapper {
-                justify-content: space-around;
-                min-height: 450px;
-
-                .text-review-heading {
-                    font-size: 20px;
-                    margin: 0;
-                }
-                .text-review-main {
-                    font-size: 14px;
-                    margin: 15px 0;
-                }
-                .text-review-footer {
-                    .review-link {
-                        font-size: 12px;
-                    }
-                    .review-video a, .review-icon a {
-                        max-width: 25px;
-                    }
-                }
-            }
-        }
-
-        #blackReviewsSlider, #grayReviewsSlider {
-            .review {
-                img {
-                    border-radius: 10px;
-                    border-width: 10px;
-                }
-                .review-link {
-                    font-size: 16px;
-                    bottom: 15px;
-                }
-            }
-        }
-
-        .reviews-footer {
-            margin: 10px 0;
-            .buttons {
-                button {
-                    margin: 15px 0;
-                }
-            }
-        }
-    }*/
-
     #clients {
         .clients-heading {
             padding: 30px 0;
         }
 
-        &>.container {
+        & > .container {
             padding: 0;
         }
+
         .clients-services {
             width: 100%;
             flex-direction: column;
@@ -364,6 +318,7 @@
             .clients-service-2 {
                 flex-direction: column;
             }
+
             .clients-service {
                 padding: 0;
                 align-items: center;
@@ -380,9 +335,11 @@
                         font-size: 25px;
                         margin: 25px 0;
                     }
+
                     .description-subheading {
                         font-size: 18px;
                     }
+
                     .description-price {
                         display: none;
                     }
@@ -404,6 +361,7 @@
                 width: 100%;
             }
         }
+
         .portfolio-works {
             .work {
                 flex-direction: column;
@@ -444,6 +402,7 @@
                 }
             }
         }
+
         .sliderControls {
             display: block;
             text-align: center;
@@ -452,7 +411,7 @@
 
     footer {
         .footer-links {
-            display: block!important;
+            display: block !important;
         }
 
         .footer-logo {
@@ -481,6 +440,7 @@
         .navbar {
             max-width: 100%;
         }
+
         .navbar-brand {
             max-width: 20%;
             margin: 0;
@@ -498,7 +458,7 @@
             .pages {
                 max-width: 50%;
 
-                li>a, li>span {
+                li > a, li > span {
                     padding: 0 5px;
                     font-size: 14px;
                 }
@@ -511,6 +471,7 @@
                     max-width: 50%;
                     padding: 0;
                     margin: 0 5px;
+
                     i {
                         font-size: 16px;
                     }
@@ -522,7 +483,7 @@
                 width: 100%;
                 font-size: 16px;
                 padding: 5px;
-                margin: 0!important;
+                margin: 0 !important;
             }
         }
     }
@@ -532,12 +493,15 @@
             img {
                 width: 100%;
             }
+
             .pink-line, .white-line {
                 height: 15px;
             }
+
             .pink-line {
                 width: 45%;
             }
+
             .white-line {
                 width: 39%;
             }
@@ -547,6 +511,7 @@
             .text {
                 font-size: 25px;
             }
+
             button {
                 display: block;
             }
@@ -576,7 +541,7 @@
                 transform: unset;
                 padding: 20px;
 
-                &>.w-100 {
+                & > .w-100 {
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: space-between;
@@ -587,11 +552,11 @@
                         margin: 0;
 
                         span {
-                            position: relative!important;
-                            right: unset!important;
-                            left: unset!important;
-                            top: unset!important;
-                            bottom: unset!important;
+                            position: relative !important;
+                            right: unset !important;
+                            left: unset !important;
+                            top: unset !important;
+                            bottom: unset !important;
                             font-size: 50px;
                         }
                     }
@@ -613,7 +578,7 @@
                         margin: 0;
                         padding: 10px 0;
 
-                        &>div {
+                        & > div {
                             margin: 0 10px;
                         }
 
@@ -631,12 +596,6 @@
             }
         }
     }
-
-    /*#reviews {
-        .slick-slider {
-            margin: 20px 0;
-        }
-    }*/
 
     #about {
         padding: 50px 0 100px 0;
@@ -681,11 +640,14 @@
                     .description-heading {
                         font-size: 24px;
                     }
+
                     .description-subheading {
                         font-size: 18px;
                     }
+
                     .description-price {
                         font-size: 16px;
+
                         span {
                             font-size: 40px;
                         }
@@ -703,6 +665,7 @@
         .portfolio-heading {
             margin: 40px;
         }
+
         .portfolio-works {
             .work {
                 flex-direction: column;
@@ -742,28 +705,13 @@
         }
     }
 
-    /*#reviews {
-        margin: 50px 0;
-        #textReviewsSlider {
-            .text-review-wrapper {
-                max-width: 370px;
-                display: block;
-                margin: auto;
-            }
-        }
-    }
-
-    #reviews .reviews-footer .sliderControls {
-        position: relative;
-        margin: 10px 0;
-    }*/
-
     footer {
         font-size: 19px;
 
 
         .footer-links {
             justify-content: space-around;
+
             ul {
                 font-size: 14px;
             }
@@ -818,6 +766,7 @@
 
     #feedback {
         background-size: auto;
+
         .feedback-heading {
             .gold-line {
                 height: 7px;
@@ -835,6 +784,7 @@
             .row {
                 flex-direction: column;
             }
+
             .col {
                 padding: 0;
                 margin: 15px 0;
@@ -868,14 +818,13 @@
     #first-screen {
         .best-solutions {
             width: 80%;
-            //margin: auto;
+
             img {
                 width: 100%;
             }
         }
 
         .bottom-plank {
-            //padding: 100px 0;
             .text {
                 font-size: 38px;
             }
@@ -891,7 +840,7 @@
                 height: 120%;
                 padding: 10px;
 
-                &>.w-100 {
+                & > .w-100 {
                     height: 90%;
                 }
 
@@ -899,11 +848,11 @@
                     display: block;
 
                     span {
-                        position: relative!important;
-                        right: unset!important;
-                        left: unset!important;
-                        top: unset!important;
-                        bottom: unset!important;
+                        position: relative !important;
+                        right: unset !important;
+                        left: unset !important;
+                        top: unset !important;
+                        bottom: unset !important;
                         font-size: 36px;
                     }
                 }
@@ -912,6 +861,7 @@
                     .price-number {
                         font-size: 40px;
                     }
+
                     .price-text {
                         span {
                             font-size: 16px;
@@ -923,6 +873,7 @@
                     .analyse {
                         font-size: 16px;
                     }
+
                     .details {
                         font-size: 18px;
                     }
@@ -934,6 +885,7 @@
     #advantages {
         background: none;
         margin: 50px 0;
+
         .advantage-heading {
             font-size: 40px;
         }
@@ -942,16 +894,6 @@
             font-size: 18px;
         }
     }
-
-    /*#reviews {
-        margin: 100px 0 50px 0;
-
-        .review {
-            .review-link {
-                font-size: 12px;
-            }
-        }
-    }*/
 
     #feedback {
         padding: 100px 0;
@@ -987,11 +929,14 @@
                     .description-heading {
                         font-size: 24px;
                     }
+
                     .description-subheading {
                         font-size: 18px;
                     }
+
                     .description-price {
                         font-size: 16px;
+
                         span {
                             font-size: 40px;
                         }
@@ -1015,8 +960,10 @@
                 img {
                     max-width: 80%;
                 }
+
                 .work-description-wrap {
                     max-width: 80%;
+
                     .work-description {
                         width: 100%;
 
@@ -1034,6 +981,7 @@
 
         .footer-links {
             justify-content: space-around;
+
             ul {
                 font-size: 16px;
             }
@@ -1046,7 +994,7 @@
 }
 
 @media (max-width: 1200px) {
-    header .navbar-collapse .pages li>a, header .navbar-collapse .pages li>span {
+    header .navbar-collapse .pages li > a, header .navbar-collapse .pages li > span {
         padding: 0 5px;
         font-size: 0.9rem;
     }
@@ -1082,6 +1030,7 @@
 
             .icons {
                 margin: 0;
+
                 li {
                     margin: 0 15px;
                 }
@@ -1096,7 +1045,7 @@
             margin-top: 0;
             padding: 15px;
 
-            &>div {
+            & > div {
                 margin-bottom: 15px;
             }
         }
@@ -1106,7 +1055,7 @@
 @media (min-width: 1201px) and (max-width: 1560px) {
 
     h2 {
-        font-size:  62px;
+        font-size: 62px;
     }
 
     button.btn {
@@ -1122,15 +1071,18 @@
                 max-width: 150px;
             }
         }
+
         .navbar-collapse {
             .pages {
                 width: auto;
                 font-size: 0.9rem;
             }
+
             .icons {
                 .nav-item {
                     a {
                         vertical-align: middle;
+
                         img {
                             max-width: 21px;
                         }
@@ -1154,8 +1106,10 @@
                 width: 100%;
             }
         }
+
         .bottom-plank {
             width: 80%;
+
             .text {
                 font-size: 36px;
             }
@@ -1170,30 +1124,27 @@
         width: 70.3%;
     }
 
-    #services   {
+    #services {
         margin: 20px 0;
 
         .service {
             max-width: calc(50% - 20px);
             margin: 50px 20px;
+
             .black-bar {
                 width: 25%;
                 height: 120%;
                 padding: 5px;
 
-                &>.w-100 {
+                & > .w-100 {
                     height: 90%;
                 }
 
                 .name {
                     margin-top: 75%;
                     margin-left: -15%;
+
                     span {
-                        /*position: relative!important;
-                        right: unset!important;
-                        left: unset!important;
-                        top: unset!important;
-                        bottom: unset!important;*/
                         font-size: 60px;
                     }
                 }
@@ -1202,6 +1153,7 @@
                     .price-number {
                         font-size: 40px;
                     }
+
                     .price-text {
                         span {
                             font-size: 20px;
@@ -1211,9 +1163,11 @@
 
                 .buttons {
                     margin-top: 25%;
+
                     .analyse {
                         font-size: 18px;
                     }
+
                     .details {
                         font-size: 16px;
                     }
@@ -1256,7 +1210,7 @@
             }
         }
 
-        #service-unique {
+        #service-individualSolutions {
             .name {
                 span {
                     &:nth-child(2) {
@@ -1281,15 +1235,18 @@
                 font-size: 20px;
             }
         }
+
         .about-slider {
             width: 100%;
 
             .slider-item {
                 margin-bottom: 30px;
+
                 img {
                     margin: 60px 0;
                     max-height: 100px;
                 }
+
                 .slider-description {
                     font-size: 20px;
                 }
@@ -1301,6 +1258,7 @@
         background: url(../assets/img/lines.png) no-repeat 0 35%;
         background-size: 25%;
         margin: 50px 0;
+
         .advantage-heading {
             font-size: 40px;
         }
@@ -1317,21 +1275,13 @@
 
     #feedback {
         padding: 80px 0;
+
         .feedback-heading {
             .gold-line {
                 height: 10px;
             }
         }
     }
-
-    /*#reviews {
-        margin: 50px 0;
-        .review {
-            .review-link {
-                font-size: 15px;
-            }
-        }
-    }*/
 
     #clients .clients-services .clients-service {
         margin-bottom: 20px;
@@ -1352,6 +1302,7 @@
 
             .description-price {
                 font-size: 16px;
+
                 span {
                     font-size: 36px;
                 }

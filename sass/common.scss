@@ -47,6 +47,7 @@ body {
 
 a {
     color: inherit;
+
     &:hover {
         text-decoration: none;
         color: inherit;
@@ -72,6 +73,7 @@ button.btn {
 button.btn-outline {
     border: 1px solid $main-pink;
     color: $main-pink;
+
     &:hover {
         background-color: $main-pink;
         color: white;
@@ -128,6 +130,7 @@ button.btn-fill {
 
         .nselect {
             width: 100%;
+
             .nselect__head {
                 background: transparent;
                 color: #7b7b7b;
@@ -152,6 +155,7 @@ button.btn-fill {
                     right: 0;
                     margin: auto;
                 }
+
                 width: 100%;
             }
 
@@ -166,9 +170,11 @@ button.btn-fill {
     .input-name {
         background: url("../assets/img/form-circle.png") no-repeat 5% 0;
     }
+
     .input-select {
         background: url("../assets/img/form-square.png") no-repeat 5% 0;
     }
+
     .input-phone {
         background: url("../assets/img/form-triangle.png") no-repeat 5% 0;
     }
@@ -182,7 +188,7 @@ button.btn-fill {
 header {
     background-color: #FFFFFF;
     font-family: "Gilroy Medium", sans-serif;
-    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.075) !important;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
 
     .navbar-toggler-icon {
         background: url("../assets/img/menu.png") center center no-repeat;
@@ -197,7 +203,7 @@ header {
                 position: relative;
 
                 &.active {
-                    &>a, &>span {
+                    & > a, & > span {
                         background-color: lighten($main-pink, 30%);
                     }
                 }
@@ -253,12 +259,13 @@ header {
                     }
                 }
 
-                &>a, &>span {
+                & > a, & > span {
                     display: inline-block;
                     padding: 10px 15px;
                     border-radius: 23px;
                     transition: 0.3s background-color;
                     cursor: pointer;
+
                     &:hover {
                         background-color: lighten($main-pink, 30%);
                     }
@@ -269,9 +276,11 @@ header {
         .icons {
             li {
                 padding: 10px;
+
                 i {
                     font-size: 28px;
                     vertical-align: middle;
+
                     &:hover {
                         color: $main-pink;
                     }
@@ -291,9 +300,11 @@ header {
                     margin: 0 5%;
                     top: 0;
                     font-size: 0.9em;
+
                     hr, .close {
                         display: none;
                     }
+
                     &:before {
                         display: none;
                     }
@@ -318,6 +329,7 @@ header {
 
         .pages {
             margin: 10px 0;
+
             .nav-item {
                 a, span {
                     padding: 5px 15px;
@@ -362,6 +374,7 @@ header {
         margin: 0 10px;
         cursor: pointer;
     }
+
     .prev {
         background: url("../assets/img/arrow-back_active.png") center center no-repeat;
     }
@@ -380,9 +393,8 @@ header {
 }
 
 footer {
-    background:
-            url("../assets/img/tentacles-top_1.jpg") 0 0 no-repeat,
-            #2d2d2d;
+    background: url("../assets/img/tentacles-top_1.jpg") 0 0 no-repeat,
+    #2d2d2d;
     background-size: contain;
     padding-top: 150px;
     color: white;
@@ -445,7 +457,7 @@ footer {
 header.header-fixed {
     background-color: #2d2d2de3;
     color: white;
-    box-shadow: none!important;
+    box-shadow: none !important;
 
     .navbar-collapse {
         .pages {
@@ -461,6 +473,7 @@ header.header-fixed {
         button {
             border: 1px solid white;
             color: white;
+
             &:hover {
                 background-color: white;
                 color: $main-pink;
@@ -514,7 +527,6 @@ header.header-fixed {
                     flex-wrap: wrap;
                     justify-content: space-evenly;
                     text-align: center;
-                    //padding: 60px 50px;
 
                     .custom-control-label::before {
                         border: $main-pink solid 1px;
@@ -554,7 +566,7 @@ header.header-fixed {
                         font-size: 33px;
                     }
 
-                    &>div {
+                    & > div {
                         position: relative;
                     }
 

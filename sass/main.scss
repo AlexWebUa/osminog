@@ -8,16 +8,18 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-    &>.container {
+    & > .container {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         align-items: center;
         height: 100%;
     }
+
     .best-solutions {
         width: 100%;
         position: relative;
+
         .pink-line, .white-line {
             height: 25px;
             position: absolute;
@@ -79,6 +81,7 @@
         &:nth-child(odd) {
             margin-left: 0;
         }
+
         &:nth-child(even) {
             margin-right: 0;
         }
@@ -119,6 +122,7 @@
                     float: left;
                     margin-right: 15px;
                 }
+
                 .price-text {
                     display: flex;
                     flex-direction: column;
@@ -197,7 +201,7 @@
         }
     }
 
-    #service-unique {
+    #service-individualSolutions {
         .name {
             span {
                 &:nth-child(2) {
@@ -212,10 +216,9 @@
 }
 
 #about {
-    background:
-        url("../assets/img/tentacles-top_1.jpg") 0 0 no-repeat,
-        url("../assets/img/tentacles-bottom_1.jpg") 100% 100% no-repeat,
-        #2d2d2d;
+    background: url("../assets/img/tentacles-top_1.jpg") 0 0 no-repeat,
+    url("../assets/img/tentacles-bottom_1.jpg") 100% 100% no-repeat,
+    #2d2d2d;
     background-size: contain;
     text-align: center;
     color: white;
@@ -237,6 +240,7 @@
                 right: 0;
                 top: 50%;
             }
+
             h2 {
                 position: relative;
                 margin: 40px 0;
@@ -318,7 +322,7 @@
 
     .dots {
         width: 200px;
-        transform: rotate(30deg) translate(30%,0%);
+        transform: rotate(30deg) translate(30%, 0%);
         display: flex;
         justify-content: space-between;
         height: 30px;
@@ -356,6 +360,7 @@
 
     .review {
         position: relative;
+
         .review-link {
             font-family: "Gilroy Medium", sans-serif;
             font-size: 18px;
@@ -404,6 +409,7 @@
 
             .review-video {
                 margin: 0 15px;
+
                 a {
                     content: url("../assets/img/video-icon.png");
                     vertical-align: middle;
@@ -412,6 +418,7 @@
 
             .review-icon {
                 margin-left: auto;
+
                 a {
                     content: url("../assets/img/lion-icon.png");
                     vertical-align: middle;
@@ -426,6 +433,7 @@
         .slick-track {
             margin: 0 -15px;
             display: flex;
+
             .slick-slide {
                 margin: 0 15px;
                 display: flex;
@@ -433,7 +441,7 @@
             }
         }
 
-        .review>.wrapper, .review>img {
+        .review > .wrapper, .review > img {
             border-width: 30px;
             border-radius: 30px;
             border-style: solid;
@@ -469,12 +477,14 @@
         position: relative;
         display: flex;
         justify-content: center;
+
         .buttons {
             display: block;
             width: 100%;
             margin: auto;
             text-align: center;
         }
+
         .sliderControls {
             position: absolute;
             top: 50%;
@@ -512,6 +522,7 @@
                 border-radius: 15px;
                 border-style: solid;
             }
+
             .review-link {
                 position: absolute;
                 left: 0;
@@ -544,229 +555,10 @@
     }
 }
 
-/*#reviews {
-    margin: 150px 0 50px 0;
-
-    &>.container {
-        margin: auto;
-        justify-content: space-between;
-    }
-
-    .reviews-heading {
-        text-align: center;
-        margin-bottom: 50px;
-    }
-
-    .review {
-        position: relative;
-        .review-link {
-            font-family: "Gilroy Medium", sans-serif;
-            font-size: 18px;
-            color: #999999;
-            text-decoration: underline;
-            transition: color 0.3s;
-
-            &:hover {
-                color: $main-pink;
-            }
-        }
-    }
-
-    #commonReviewsSlider {
-        width: 100%;
-
-        .slick-track {
-            display: flex;
-        }
-
-        .review {
-            display: flex;
-            height: auto;
-        }
-
-        .text-review {
-            .text-review-wrapper {
-                max-width: 490px;
-                width: 100%;
-                margin: auto;
-
-                display: flex;
-                flex-direction: column;
-                border-radius: 30px;
-                background: white;
-                border: 30px solid white;
-
-
-                !*.text-review-heading, .text-review-main, .text-review-footer {
-                    padding: 30px;
-                }*!
-
-                .text-review-heading {
-                    margin-top: auto;
-                    font-family: "Gilroy", sans-serif;
-                    font-size: 30px;
-                    font-weight: 600;
-                }
-
-                .text-review-main {
-                    margin: auto;
-                    font-family: "Gilroy", sans-serif;
-                    font-size: 18px;
-                    font-style: italic;
-                }
-
-                .text-review-footer {
-                    display: flex;
-                    align-items: center;
-                    margin-bottom: 15px;
-                    .review-video {
-                        margin: 0 15px;
-                    }
-                    .review-icon {
-                        margin-left: auto;
-                    }
-                }
-
-                .review-video a {
-                    content: url("../assets/img/video-icon.png");
-                    vertical-align: middle;
-                }
-
-                .review-icon a {
-                    content: url("../assets/img/lion-icon.png");
-                    vertical-align: middle;
-                }
-            }
-        }
-
-        .black-review {
-            img {
-                border: 30px solid #5a656e;
-            }
-        }
-
-        .gray-review {
-            img {
-                border: 30px solid #97a3ac;
-            }
-        }
-
-        .black-review, .gray-review {
-            position: relative;
-            img {
-                margin: auto;
-                border-radius: 30px;
-            }
-            .review-link {
-                position: absolute;
-                left: 0;
-                right: 0;
-                bottom: 45px;
-                text-align: center;
-            }
-        }
-    }
-
-    #textReviewsSlider {
-        .slick-list {
-            height: 100%;
-
-            .slick-track {
-                height: 100%;
-            }
-        }
-
-        .text-review-wrapper {
-            border-radius: 40px;
-            background: white;
-            height: 100%;
-            padding: 30px;
-            display: flex;
-            flex-direction: column;
-
-            .text-review-heading {
-                margin-top: auto;
-                font-family: "Gilroy", sans-serif;
-                font-size: 30px;
-                font-weight: 600;
-            }
-
-            .text-review-main {
-                margin: auto;
-                font-family: "Gilroy", sans-serif;
-                font-size: 18px;
-                font-style: italic;
-            }
-
-            .text-review-footer {
-                display: flex;
-                align-items: center;
-                margin-bottom: 15px;
-                .review-video {
-                    margin: 0 15px;
-                }
-                .review-icon {
-                    margin-left: auto;
-                }
-            }
-
-            .review-video a {
-                content: url("../assets/img/video-icon.png");
-                vertical-align: middle;
-            }
-
-            .review-icon a {
-                content: url("../assets/img/lion-icon.png");
-                vertical-align: middle;
-            }
-        }
-    }
-
-    #blackReviewsSlider .review img {
-        border-color: #5a656e;
-    }
-
-    #grayReviewsSlider .review img {
-        border-color: #97a3ac;
-    }
-
-    #blackReviewsSlider, #grayReviewsSlider {
-        .review {
-            img {
-                border-width: 30px;
-                border-style: solid;
-                border-radius: 40px;
-                width: 100%;
-            }
-            .review-link {
-                position: absolute;
-                left: 0;
-                right: 0;
-                bottom: 45px;
-                text-align: center;
-            }
-        }
-    }
-
-    .reviews-footer {
-        width: 100%;
-        position: relative;
-        margin: 100px 0;
-        text-align: center;
-
-        .sliderControls {
-            position: absolute;
-            top: 25%;
-            right: 0;
-        }
-    }
-}*/
-
 #feedback {
-    background:
-            url("../assets/img/tentacles-top_2.jpg") 0 0 no-repeat,
-            url("../assets/img/tentacles-bottom_2.jpg") 100% 100% no-repeat,
-            #2d2d2d;
+    background: url("../assets/img/tentacles-top_2.jpg") 0 0 no-repeat,
+    url("../assets/img/tentacles-bottom_2.jpg") 100% 100% no-repeat,
+    #2d2d2d;
     background-size: contain;
     padding: 130px 0;
     color: white;
@@ -846,6 +638,7 @@
                     font-family: "Gilroy Light", sans-serif;
                     font-size: 45px;
                 }
+
                 .description-subheading {
                     font-family: "Gilroy Medium", sans-serif;
                     font-size: 22px;
@@ -854,6 +647,7 @@
                 .description-price {
                     font-family: "Gilroy Medium", sans-serif;
                     font-size: 18px;
+
                     span {
                         font-family: "Bebas Neue", sans-serif;
                         font-size: 90px;
@@ -898,7 +692,7 @@
             display: flex;
             flex-direction: row;
 
-            img  {
+            img {
                 max-width: 50%;
             }
 
@@ -954,16 +748,18 @@
         }
     }
 
-    .portfolio-wrapper>button {
+    .portfolio-wrapper > button {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
         margin: 60px auto;
         padding: 10px 0;
+
         .text {
             margin-left: auto;
         }
+
         .line {
             height: 35px;
             max-height: 100%;
@@ -971,6 +767,7 @@
             background: #f67496;
             margin: auto;
         }
+
         .arrow {
             font-size: 24px;
             margin-right: auto;
@@ -983,16 +780,19 @@
         content: "1";
     }
 }
+
 #quiz2 {
     .modal-header:before {
         content: "2";
     }
 }
+
 #quiz3 {
     .modal-header:before {
         content: "3";
     }
 }
+
 #quiz4 {
     .modal-header:before {
         content: "4";
@@ -1009,7 +809,7 @@
     .feedback-form {
         //padding: 50px 0;
 
-        &>.row {
+        & > .row {
             width: 100%;
         }
 

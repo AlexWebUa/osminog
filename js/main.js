@@ -1,6 +1,6 @@
-
 /* Functions */
 let formsData = {};
+
 function collectFormData(form) {
     let inputs = form.getElementsByTagName('input');
     for (let i = 0; i < inputs.length; i++) {
@@ -86,13 +86,12 @@ $(document).on('click', (e) => {
     if (e.target === $('#dropdown-menu .close')[0])
         $('#dropdown-menu').css('display', 'none');
 
-    else if (e.target === document.getElementById('dropdown-menu') || (e.target === document.getElementById('dropdown-link') && $('#dropdown-menu').css('display') == 'none'))
+    else if (e.target === document.getElementById('dropdown-menu') || (e.target === document.getElementById('dropdown-link') && $('#dropdown-menu').css('display') === 'none'))
         $('#dropdown-menu').css('display', 'flex');
 
     else
         $('#dropdown-menu').css('display', 'none');
 });
-
 
 
 $(document).ready(() => {
@@ -129,16 +128,6 @@ $(document).ready(() => {
         nextArrow: $('#reviewsControls .next')[0],
         speed: 1000
     });
-
-    /*$('#commonReviewsSlider').slick({
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        prevArrow: $('#reviewsControls .prev')[0],
-        nextArrow: $('#reviewsControls .next')[0],
-        speed: 1000
-    });*/
-
 
     /* Mobile only sliders */
     if ($(window).width() < 768) {
@@ -179,66 +168,6 @@ $(document).ready(() => {
             speed: 1000,
         });
 
-
-
-        /* Reviews */
-        /*$('#textReviewsSlider').slick({
-            infinite: true,
-            slidesToShow: 1,
-            arrows: false,
-            autoplay: true,
-            autoplaySpeed: 5000,
-            speed: 1000,
-            responsive: [
-                {
-                    breakpoint: 767,
-                    settings: {
-                        infinite: false,
-                        arrows: true,
-                        prevArrow: $('#textReviewsControls .prev')[0],
-                        nextArrow: $('#textReviewsControls .next')[0],
-                    }
-                }
-            ]
-        });
-        $('#blackReviewsSlider').slick({
-            infinite: true,
-            slidesToShow: 1,
-            arrows: false,
-            autoplay: true,
-            autoplaySpeed: 5000,
-            speed: 1000,
-            responsive: [
-                {
-                    breakpoint: 767,
-                    settings: {
-                        infinite: false,
-                        arrows: true,
-                        prevArrow: $('#blackReviewsControls .prev')[0],
-                        nextArrow: $('#blackReviewsControls .next')[0],
-                    }
-                }
-            ]
-        });
-        $('#grayReviewsSlider').slick({
-            infinite: true,
-            slidesToShow: 1,
-            arrows: false,
-            autoplay: true,
-            autoplaySpeed: 5000,
-            speed: 1000,
-            responsive: [
-                {
-                    breakpoint: 767,
-                    settings: {
-                        infinite: false,
-                        arrows: true,
-                        prevArrow: $('#grayReviewsControls .prev')[0],
-                        nextArrow: $('#grayReviewsControls .next')[0],
-                    }
-                }
-            ]
-        });*/
 
         /* Footer */
         $('#companyCollapse').collapse('hide');
