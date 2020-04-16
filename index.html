@@ -25,7 +25,7 @@
     <meta name="msapplication-TileImage" content="assets/img/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ff4878">
 
-    <link href="css/main.min.css" rel="stylesheet">
+    <link href="css/main.min.css?v=0.1" rel="stylesheet">
     <link href="assets/libs/wow/animate.css" rel="stylesheet">
     <link href="assets/libs/nSelect/jquery.nselect.css" rel="stylesheet">
 </head>
@@ -76,17 +76,17 @@
             </ul>
             <ul class="icons navbar-nav  ml-auto">
                 <li class="nav-item instagram-icon">
-                    <a href="#"><img alt="instagram icon" src="assets/img/instagram.png"></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
                 </li>
                 <li class="nav-item phone-icon">
-                    <a href="#"><img alt="phone icon" src="assets/img/phone.png"></a>
+                    <a href="#"><i class="fal fa-phone-alt"></i></a>
                 </li>
                 <li class="phones mobile-only">
                     <div>
-                        8 800 555-77-78
+                        <a href="tel:88005557778">8 800 555-77-78</a>
                     </div>
                     <div>
-                        8 800 555-77-78
+                        <a href="tel:88005557778">8 800 555-77-78</a>
                     </div>
                 </li>
                 <li class="social-icons mobile-only">
@@ -242,10 +242,11 @@
 </div>
 
 <div id="first-screen">
-    <div class="container justify-content-md-center align-items-center">
+    <div class="container">
         <div class="best-solutions d-flex justify-content-center">
             <div class="pink-line wow fadeInRightBig" data-wow-delay="1s"></div>
-            <img class="wow fadeInDownBig" alt="Best solutions" src="assets/img/best_solutions.png">
+            <img class="wow fadeInDownBig desktop-only" alt="Best solutions" src="assets/img/best_solutions.png">
+            <img class="wow fadeInDownBig mobile-only" src="assets/img/best_solutions_mobile.png" alt="Best solutions">
             <div class="white-line wow fadeInLeftBig" data-wow-delay="1s"></div>
         </div>
         <div class="bottom-plank d-md-flex justify-content-around align-items-center wow fadeIn" data-wow-delay="2s" data-wow-duration="1s">
@@ -259,13 +260,13 @@
     <div class="service wow slideInLeft" id="service-landing">
         <img alt="Landing page" src="assets/img/service-1.jpg">
         <div class="black-bar">
-            <div class="w-100 position-relative">
+            <div class="w-100">
                 <div class="name">
                     <span>Landing</span>
                     <span>page</span>
                 </div>
                 <div class="price clearfix d-md-flex align-items-center">
-                    <span class="price-number">10000</span>
+                    <span class="price-number">10 000</span>
                     <div class="price-text">
                         <span class="ot">От</span>
                         <span class="rub">Руб.</span>
@@ -282,13 +283,13 @@
     <div class="service wow slideInRight" data-wow-delay="1s" id="service-corporate">
         <img alt="Корпоративный сайт" src="assets/img/service-2.jpg">
         <div class="black-bar">
-            <div class="w-100 position-relative">
+            <div class="w-100">
                 <div class="name">
                     <span>Корпоративный</span>
                     <span>сайт</span>
                 </div>
                 <div class="price clearfix d-md-flex align-items-center">
-                    <span class="price-number">10000</span>
+                    <span class="price-number">10 000</span>
                     <div class="price-text">
                         <span class="ot">От</span>
                         <span class="rub">Руб.</span>
@@ -305,13 +306,13 @@
     <div class="service wow slideInLeft" id="service-shop">
         <img alt="Интернет магазин" src="assets/img/service-3.jpg">
         <div class="black-bar">
-            <div class="w-100 position-relative">
+            <div class="w-100">
                 <div class="name">
                     <span>Интернет</span>
                     <span>магазин</span>
                 </div>
                 <div class="price clearfix d-md-flex align-items-center">
-                    <span class="price-number">10000</span>
+                    <span class="price-number">10 000</span>
                     <div class="price-text">
                         <span class="ot">От</span>
                         <span class="rub">Руб.</span>
@@ -328,13 +329,13 @@
     <div class="service wow slideInRight" data-wow-delay="1s" id="service-unique">
         <img alt="Уникальный продукт" src="assets/img/service-4.jpg">
         <div class="black-bar">
-            <div class="w-100 position-relative">
+            <div class="w-100">
                 <div class="name">
                     <span>Уникальный</span>
                     <span>продукт</span>
                 </div>
                 <div class="price clearfix d-md-flex align-items-center">
-                    <span class="price-number">10000</span>
+                    <span class="price-number">10 000</span>
                     <div class="price-text">
                         <span class="ot">От</span>
                         <span class="rub">Руб.</span>
@@ -556,9 +557,13 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-
+            <div class="dots" id="dots">
+                <div class="dot dot-1 current" data-index="1"></div>
+                <div class="dot dot-2" data-index="2"></div>
+                <div class="dot dot-3" data-index="3"></div>
+                <div class="dot dot-4" data-index="4"></div>
+            </div>
             <div class="sliderControls col-8" id="advantagesControls">
                 <div class="prev"></div>
                 <div class="next"></div>
@@ -571,35 +576,285 @@
 <div id="reviews">
     <div class="container">
 
-        <div class="reviews-heading">
-            <h2>Отзывы</h2>
+        <div class="row">
+            <div class="col-12 reviews-heading">
+                <h2>Отзывы</h2>
+            </div>
         </div>
 
-        <div id="textReviewsSlider">
-            <div class="review text-review">
-                <div class="text-review-heading">Александр Иванов</div>
-                <div class="text-review-main">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также</div>
-                <div class="text-review-footer">
-                    <a class="review-link" href="#">Смотреть оригинал</a>
-                    <div class="review-video">
-                        <a href="#"></a>
+        <div class="row desktop-only d-flex">
+            <div class="col-12" id="reviewsSlider">
+
+                <div class="review text-review">
+                    <div class="wrapper">
+                        <div class="text-review-heading">Александр Иванов</div>
+                        <div class="text-review-description">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также</div>
+                        <div class="text-review-footer">
+                            <a class="review-link" href="#">Смотреть оригинал</a>
+                            <div class="review-video">
+                                <a href="#"></a>
+                            </div>
+                            <div class="review-icon desktop-only">
+                                <a href="#"></a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="review-icon">
-                        <a href="#"></a>
+                </div>
+
+                <div class="review dark-review">
+                    <img src="assets/img/review-example_1.png" alt="Review 1">
+                    <a class="review-link" href="#">Смотреть оригинал</a>
+                </div>
+
+                <div class="review light-review">
+                    <img src="assets/img/review-example_2.png" alt="Review 2">
+                    <a class="review-link" href="#">Смотреть оригинал</a>
+                </div>
+
+
+                <div class="review text-review">
+                    <div class="wrapper">
+                        <div class="text-review-heading">2Александр Иванов2</div>
+                        <div class="text-review-description">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также</div>
+                        <div class="text-review-footer">
+                            <a class="review-link" href="#">Смотреть оригинал</a>
+                            <div class="review-video">
+                                <a href="#"></a>
+                            </div>
+                            <div class="review-icon desktop-only">
+                                <a href="#"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review dark-review">
+                    <img src="assets/img/review-example_1.png" alt="Review 1">
+                    <a class="review-link" href="#">Смотреть оригинал</a>
+                </div>
+
+                <div class="review light-review">
+                    <img src="assets/img/review-example_2.png" alt="Review 2">
+                    <a class="review-link" href="#">Смотреть оригинал</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row mobile-only">
+            <div class="col-12" id="textReviewsSlider">
+                <div class="review text-review">
+                    <div class="wrapper">
+                        <div class="text-review-heading">Александр Иванов</div>
+                        <div class="text-review-description">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также</div>
+                        <div class="text-review-footer">
+                            <a class="review-link" href="#">Смотреть оригинал</a>
+                            <div class="review-video">
+                                <a href="#"></a>
+                            </div>
+                            <div class="review-icon desktop-only">
+                                <a href="#"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review text-review">
+                    <div class="wrapper">
+                        <div class="text-review-heading">2Александр Иванов2</div>
+                        <div class="text-review-description">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также</div>
+                        <div class="text-review-footer">
+                            <a class="review-link" href="#">Смотреть оригинал</a>
+                            <div class="review-video">
+                                <a href="#"></a>
+                            </div>
+                            <div class="review-icon desktop-only">
+                                <a href="#"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review text-review">
+                    <div class="wrapper">
+                        <div class="text-review-heading">3Александр Иванов3</div>
+                        <div class="text-review-description">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также</div>
+                        <div class="text-review-footer">
+                            <a class="review-link" href="#">Смотреть оригинал</a>
+                            <div class="review-video">
+                                <a href="#"></a>
+                            </div>
+                            <div class="review-icon desktop-only">
+                                <a href="#"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sliderControls mobile-only" id="textReviewsControls">
+                <div class="prev"></div>
+                <div class="next"></div>
+            </div>
+
+            <div class="col-12" id="darkReviewsSlider">
+                <div class="review dark-review">
+                    <img src="assets/img/review-example_1.png" alt="Review 1">
+                    <a class="review-link" href="#">Смотреть оригинал</a>
+                </div>
+                <div class="review dark-review">
+                    <img src="assets/img/review-example_1.png" alt="Review 1">
+                    <a class="review-link" href="#">Смотреть оригинал</a>
+                </div>
+                <div class="review dark-review">
+                    <img src="assets/img/review-example_1.png" alt="Review 1">
+                    <a class="review-link" href="#">Смотреть оригинал</a>
+                </div>
+            </div>
+            <div class="sliderControls mobile-only" id="darkReviewsControls">
+                <div class="prev"></div>
+                <div class="next"></div>
+            </div>
+
+            <div class="col-12" id="lightReviewsSlider">
+                <div class="review light-review">
+                    <img src="assets/img/review-example_1.png" alt="Review 1">
+                    <a class="review-link" href="#">Смотреть оригинал</a>
+                </div>
+                <div class="review light-review">
+                    <img src="assets/img/review-example_1.png" alt="Review 1">
+                    <a class="review-link" href="#">Смотреть оригинал</a>
+                </div>
+                <div class="review light-review">
+                    <img src="assets/img/review-example_1.png" alt="Review 1">
+                    <a class="review-link" href="#">Смотреть оригинал</a>
+                </div>
+            </div>
+            <div class="sliderControls mobile-only" id="lightReviewsControls">
+                <div class="prev"></div>
+                <div class="next"></div>
+            </div>
+
+        </div>
+
+        <div class="row review-footer">
+            <div class="buttons">
+                <button class="btn btn-fill">Оставить отзыв</button>
+                <button class="btn btn-outline">Все отзывы</button>
+            </div>
+            <div class="sliderControls desktop-only" id="reviewsControls">
+                <div class="prev"></div>
+                <div class="next"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--<div id="reviews">
+    <div class="container row">
+
+        <div class="reviews-heading col-12">
+            <h2>Отзывы</h2>
+        </div>
+        <div class="col-12 slider-wrapper">
+            <div class="desktop-slider desktop-only" id="commonReviewsSlider">
+
+                <div class="review text-review">
+                    <div class="text-review-wrapper">
+                        <div class="text-review-heading">Александр Иванов</div>
+                        <div class="text-review-main">Давно выяснено, что при оценке дизайна и композиции читаемый текст
+                            мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее
+                            стандартное заполнение шаблона, а также
+                        </div>
+                        <div class="text-review-footer">
+                            <a class="review-link" href="#">Смотреть оригинал</a>
+                            <div class="review-video">
+                                <a href="#"></a>
+                            </div>
+                            <div class="review-icon">
+                                <a href="#"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review black-review">
+                    <img src="assets/img/review-example_1.png" alt="Review 1">
+                    <a class="review-link" href="#">Смотреть оригинал</a>
+                </div>
+
+                <div class="review gray-review">
+                    <img src="assets/img/review-example_2.png" alt="Review 2">
+                    <a class="review-link" href="#">Смотреть оригинал</a>
+                </div>
+
+                <div class="review text-review">
+                    <div class="text-review-wrapper">
+                        <div class="text-review-heading">Александр Иванов</div>
+                        <div class="text-review-main">Давно выяснено, что при оценке дизайна и композиции читаемый текст
+                            мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее
+                            стандартное заполнение шаблона, а также
+                        </div>
+                        <div class="text-review-footer">
+                            <a class="review-link" href="#">Смотреть оригинал</a>
+                            <div class="review-video">
+                                <a href="#"></a>
+                            </div>
+                            <div class="review-icon">
+                                <a href="#"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review black-review">
+                    <img src="assets/img/review-example_1.png" alt="Review 1">
+                    <a class="review-link" href="#">Смотреть оригинал</a>
+                </div>
+
+                <div class="review gray-review">
+                    <img src="assets/img/review-example_2.png" alt="Review 2">
+                    <a class="review-link" href="#">Смотреть оригинал</a>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <div class="col-12 col-lg-4 mobile-only" id="textReviewsSlider">
+            <div class="review text-review">
+                <div class="text-review-wrapper">
+                    <div class="text-review-heading">Александр Иванов</div>
+                    <div class="text-review-main">Давно выяснено, что при оценке дизайна и композиции читаемый текст
+                        мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее
+                        стандартное заполнение шаблона, а также
+                    </div>
+                    <div class="text-review-footer">
+                        <a class="review-link" href="#">Смотреть оригинал</a>
+                        <div class="review-video">
+                            <a href="#"></a>
+                        </div>
+                        <div class="review-icon">
+                            <a href="#"></a>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="review text-review">
-                <div class="text-review-heading">Александр Иванов</div>
-                <div class="text-review-main">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также</div>
-                <div class="text-review-footer">
-                    <a class="review-link" href="#">Смотреть оригинал</a>
-                    <div class="review-video">
-                        <a href="#"></a>
+                <div class="text-review-wrapper">
+                    <div class="text-review-heading">Александр Иванов</div>
+                    <div class="text-review-main">Давно выяснено, что при оценке дизайна и композиции читаемый текст
+                        мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее
+                        стандартное заполнение шаблона, а также
                     </div>
-                    <div class="review-icon">
-                        <a href="#"></a>
+                    <div class="text-review-footer">
+                        <a class="review-link" href="#">Смотреть оригинал</a>
+                        <div class="review-video">
+                            <a href="#"></a>
+                        </div>
+                        <div class="review-icon">
+                            <a href="#"></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -610,7 +865,7 @@
             <div class="next"></div>
         </div>
 
-        <div id="blackReviewsSlider">
+        <div class="col-12 col-lg-4 mobile-only" id="blackReviewsSlider">
             <div class="review black-review">
                 <img src="assets/img/review-example_1.png" alt="Review 1">
                 <a class="review-link" href="#">Смотреть оригинал</a>
@@ -627,7 +882,7 @@
             <div class="next"></div>
         </div>
 
-        <div id="grayReviewsSlider">
+        <div class="col-12 col-lg-4 mobile-only" id="grayReviewsSlider">
             <div class="review gray-review">
                 <img src="assets/img/review-example_2.png" alt="Review 2">
                 <a class="review-link" href="#">Смотреть оригинал</a>
@@ -649,14 +904,14 @@
                 <button class="btn btn-fill">Оставить отзыв</button>
                 <button class="btn btn-outline">Все отзывы</button>
             </div>
-            <div class="sliderControls" id="reviewsControls">
+            <div class="sliderControls desktop-only" id="reviewsControls">
                 <div class="prev"></div>
                 <div class="next"></div>
             </div>
         </div>
 
     </div>
-</div>
+</div>-->
 
 <div id="feedback">
     <div class="container d-flex flex-column align-items-center">
@@ -697,7 +952,7 @@
             <h2>Для клиентов</h2>
         </div>
         <div class="clients-services row">
-            <div class="clients-service clients-service-1 col wow fadeInUpBig">
+            <div class="clients-service clients-service-1 col col-xl-4 wow fadeInUpBig">
                 <img alt="client-service-1.jpg" src="assets/img/client-service-1.jpg">
                 <div class="service-description">
                     <div class="description-heading">Администрирование сайта</div>
@@ -708,7 +963,7 @@
                     <button class="btn btn-outline">Подробнее</button>
                 </div>
             </div>
-            <div class="clients-service clients-service-2 col wow fadeInDownBig" data-wow-delay="0.5s">
+            <div class="clients-service clients-service-2 col col-xl-4 wow fadeInDownBig" data-wow-delay="0.5s">
                 <img alt="client-service-2.jpg" src="assets/img/client-service-2.jpg">
                 <div class="service-description">
                     <div class="description-heading">Продвижение сайта</div>
@@ -719,7 +974,7 @@
                     <button class="btn btn-outline">Подробнее</button>
                 </div>
             </div>
-            <div class="clients-service clients-service-3 col wow fadeInUpBig" data-wow-delay="1s">
+            <div class="clients-service clients-service-3 col col-xl-4 wow fadeInUpBig" data-wow-delay="1s">
                 <img alt="client-service-2.jpg" src="assets/img/client-service-3.jpg">
                 <div class="service-description">
                     <div class="description-heading">SMM</div>
@@ -778,7 +1033,7 @@
             <div class="prev"></div>
             <div class="next"></div>
         </div>
-        <button class="btn btn-fill"><span class="text">Больше работ</span> <span class="vertical-line"></span> <span class="line"></span><span class="arrow">&rarr;</span></button>
+        <button class="btn btn-fill"><span class="text">Больше работ</span> <span class="vertical-line"></span> <span class="line"></span><i class="fal fa-long-arrow-right arrow"></i></button>
     </div>
 </div>
 
@@ -822,10 +1077,10 @@
             <div class="col-12 col-xl-3 footer-contacts">
                 <ul class="icons">
                     <li class="instagram-icon">
-                        <a href="#"><img alt="instagram icon" src="assets/img/instagram_color.png"></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
                     </li>
                     <li class="phone-icon">
-                        <a href="#"><img alt="phone icon" src="assets/img/phone_white.png"></a>
+                        <a href="#"><i class="fal fa-phone-alt"></i></a>
                     </li>
                 </ul>
                 <ul class="phones">
@@ -846,6 +1101,7 @@
 <script src="assets/libs/slick/slick.min.js"></script>
 <script src="assets/libs/wow/wow.min.js"></script>
 <script src="assets/libs/nSelect/jquery.nselect.min.js"></script>
+<script src="assets/libs/jquery.maskedinput/jquery.maskedinput.min.js"></script>
 <script>
     new WOW({
         offset: 15
@@ -854,11 +1110,9 @@
     $('.select-wrap select').nSelect({
         firstTitle : 'Я хочу'
     });
+
+    $(".input-phone").mask("+7(999) 999-99-99");
 </script>
 <script src="js/main.js"></script>
 </body>
 </html>
-
-<!--TODO: remake #reviews-->
-<!--TODO: remake #advantages (animate dots!?)-->
-<!--TODO: adapt layout-->

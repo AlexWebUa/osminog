@@ -29,9 +29,13 @@
 @import "../assets/libs/bootstrap/utilities";
 
 //@import "../assets/libs/bootstrap/bootstrap";
-@import "../assets/fonts/gilroy/stylesheet.css";
-@import "../assets/fonts/bebasneue/Bebas Neue.css";
+@import "fonts";
 @import "../assets/libs/slick/slick.scss";
+
+@import "../assets/libs/fontawesome/scss/fontawesome";
+@import "../assets/libs/fontawesome/scss/brands";
+@import "../assets/libs/fontawesome/scss/solid";
+@import "../assets/libs/fontawesome/scss/light";
 
 $main-pink: #ff4878;
 $gold: #95763f;
@@ -84,6 +88,10 @@ button.btn-fill {
     display: none;
 }
 
+.desktop-only {
+    display: inline-block;
+}
+
 .fade {
     transition: opacity 0.3s linear;
 }
@@ -99,7 +107,7 @@ button.btn-fill {
         background: none;
         border: none;
         border-radius: unset;
-        color: #7b7b7b;
+        color: white;
         border-bottom: 1px solid #7b7b7b;
         outline: none;
         text-align: center;
@@ -119,6 +127,7 @@ button.btn-fill {
         justify-content: center;
 
         .nselect {
+            width: 100%;
             .nselect__head {
                 background: transparent;
                 color: #7b7b7b;
@@ -127,6 +136,28 @@ button.btn-fill {
                 &:after {
                     border-color: #7b7b7b transparent transparent transparent;
                     top: 18px;
+                }
+            }
+
+            &.nsOrange._checked {
+                .nselect__head {
+                    background: none;
+                    color: white;
+                }
+            }
+
+            .nselect__inner {
+                &:before {
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                }
+                width: 100%;
+            }
+
+            .nselect__list {
+                li._active span {
+                    color: $main-pink;
                 }
             }
         }
@@ -164,12 +195,11 @@ header {
 
             li {
                 position: relative;
-                &.active:before {
-                    content: url("../assets/img/marker.png");
-                    position: absolute;
-                    top: 0;
-                    left: 50%;
-                    transform: translate(-50%, -65%);
+
+                &.active {
+                    &>a, &>span {
+                        background-color: lighten($main-pink, 30%);
+                    }
                 }
 
                 .dropdown {
@@ -239,11 +269,40 @@ header {
         .icons {
             li {
                 padding: 10px;
+                i {
+                    font-size: 28px;
+                    vertical-align: middle;
+                    &:hover {
+                        color: $main-pink;
+                    }
+                }
             }
         }
     }
 
     .navbar-collapse.show {
+        .pages {
+            .nav-item {
+                .dropdown {
+                    display: flex;
+                    position: relative;
+                    width: fit-content;
+                    padding: 0 5px;
+                    margin: 0 5%;
+                    top: 0;
+                    font-size: 0.9em;
+                    hr, .close {
+                        display: none;
+                    }
+                    &:before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .navbar-collapse.show, .navbar-collapse.collapsing {
         color: black;
         border-radius: 23px;
         background: white;
@@ -260,7 +319,7 @@ header {
         .pages {
             margin: 10px 0;
             .nav-item {
-                a {
+                a, span {
                     padding: 5px 15px;
                 }
             }
@@ -282,6 +341,14 @@ header {
                     margin: 0 10px;
                 }
             }
+        }
+
+        button.btn {
+            max-width: 200px;
+            margin: 15px auto;
+            display: block;
+            border: 1px solid #ff4878;
+            color: #ff4878;
         }
     }
 }
@@ -358,6 +425,7 @@ footer {
         .icons {
             display: flex;
             align-items: center;
+            font-size: 28px;
 
             li {
                 margin-right: 30px;
@@ -375,7 +443,7 @@ footer {
 }
 
 header.header-fixed {
-    background-color: transparent;
+    background-color: #2d2d2de3;
     color: white;
     box-shadow: none!important;
 
@@ -403,7 +471,8 @@ header.header-fixed {
 
 .modal {
     .modal-dialog {
-        max-width: 1560px;
+        max-width: 1200px;
+        width: 80%;
 
         .modal-content {
 
@@ -442,9 +511,10 @@ header.header-fixed {
                     color: #333333;
                     display: flex;
                     flex-direction: row;
+                    flex-wrap: wrap;
                     justify-content: space-evenly;
                     text-align: center;
-                    padding: 60px 50px;
+                    //padding: 60px 50px;
 
                     .custom-control-label::before {
                         border: $main-pink solid 1px;
@@ -469,11 +539,13 @@ header.header-fixed {
                     position: relative;
                     display: block;
                     text-align: center;
+                    font-size: 20px;
 
                     .percent {
                         font-family: "Bebas Neue Bold", sans-serif;
                         font-weight: 900;
                         color: $main-pink;
+                        font-size: 22px;
                     }
 
                     .promocode {

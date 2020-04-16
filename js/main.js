@@ -1,5 +1,6 @@
-let formsData = {};
 
+/* Functions */
+let formsData = {};
 function collectFormData(form) {
     let inputs = form.getElementsByTagName('input');
     for (let i = 0; i < inputs.length; i++) {
@@ -15,23 +16,23 @@ function sticky_header() {
             if (!$("header").hasClass('header-fixed')) {
                 $("header").addClass("header-fixed");
                 $("header .navbar-brand img").attr('src', 'assets/img/logo_white.png');
-                $(".navbar-collapse .icons .instagram-icon a img").attr('src', 'assets/img/instagram_white.png');
-                $(".navbar-collapse .icons .phone-icon a img").attr('src', 'assets/img/phone_white.png');
+                /*$(".navbar-collapse .icons .instagram-icon a img").attr('src', 'assets/img/instagram_white.png');
+                $(".navbar-collapse .icons .phone-icon a img").attr('src', 'assets/img/phone_white.png');*/
             } else return;
         } else {
             if ($("header").hasClass('header-fixed')) {
                 $("header").removeClass("header-fixed");
                 $("header .navbar-brand img").attr('src', 'assets/img/logo.png');
-                $(".navbar-collapse .icons .instagram-icon a img").attr('src', 'assets/img/instagram.png');
-                $(".navbar-collapse .icons .phone-icon a img").attr('src', 'assets/img/phone.png');
+                /*$(".navbar-collapse .icons .instagram-icon a img").attr('src', 'assets/img/instagram.png');
+                $(".navbar-collapse .icons .phone-icon a img").attr('src', 'assets/img/phone.png');*/
             } else return;
         }
     } else {
         if (!$("header").hasClass('header-fixed')) {
             $("header").addClass("header-fixed");
             $("header .navbar-brand img").attr('src', 'assets/img/logo_white.png');
-            $(".navbar-collapse .icons .instagram-icon a img").attr('src', 'assets/img/instagram_white.png');
-            $(".navbar-collapse .icons .phone-icon a img").attr('src', 'assets/img/phone_white.png');
+            /*$(".navbar-collapse .icons .instagram-icon a img").attr('src', 'assets/img/instagram_white.png');
+            $(".navbar-collapse .icons .phone-icon a img").attr('src', 'assets/img/phone_white.png');*/
         } else return;
     }
 }
@@ -43,20 +44,19 @@ $(window).on('load', () => {
     });
 });
 
+/* Quiz buttons */
 $('#quiz1Next').on('click', () => {
     let form = document.getElementById('quiz1Form');
     collectFormData(form);
     $('#quiz1').modal('hide');
     $('#quiz2').modal('show');
 });
-
 $('#quiz2Next').on('click', () => {
     let form = document.getElementById('quiz2Form');
     collectFormData(form);
     $('#quiz2').modal('hide');
     $('#quiz3').modal('show');
 });
-
 $('#quiz3Next').on('click', () => {
     let form = document.getElementById('quiz3Form');
     collectFormData(form);
@@ -64,17 +64,14 @@ $('#quiz3Next').on('click', () => {
     $('#quiz4').modal('show');
 });
 
-
 $('#quiz2Back').on('click', () => {
     $('#quiz2').modal('hide');
     $('#quiz1').modal('show');
 });
-
 $('#quiz3Back').on('click', () => {
     $('#quiz3').modal('hide');
     $('#quiz2').modal('show');
 });
-
 
 $('#quiz4Send').on('click', () => {
     let form = document.getElementById('quiz4Form');
@@ -82,21 +79,27 @@ $('#quiz4Send').on('click', () => {
     console.log(formsData);
 });
 
+/* Events */
+
+// Header dropdowns
 $(document).on('click', (e) => {
     if (e.target === $('#dropdown-menu .close')[0])
         $('#dropdown-menu').css('display', 'none');
 
-    else if (e.target === document.getElementById('dropdown-menu') || e.target === document.getElementById('dropdown-link'))
+    else if (e.target === document.getElementById('dropdown-menu') || (e.target === document.getElementById('dropdown-link') && $('#dropdown-menu').css('display') == 'none'))
         $('#dropdown-menu').css('display', 'flex');
 
     else
         $('#dropdown-menu').css('display', 'none');
 });
 
+
+
 $(document).ready(() => {
+
+    /* Advantages */
     $('#advantagesSlider').slick({
         infinite: false,
-        adaptiveHeight: true,
         slidesToShow: 1,
         prevArrow: $('#advantagesControls .prev')[0],
         nextArrow: $('#advantagesControls .next')[0],
@@ -105,61 +108,39 @@ $(document).ready(() => {
         speed: 1000
     });
 
-    $('#textReviewsSlider').slick({
-        infinite: false,
-        slidesToShow: 1,
-        arrows: false,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        speed: 1000,
-        responsive: [
-            {
-                breakpoint: 767,
-                settings: {
-                    prevArrow: $('#textReviewsControls .prev')[0],
-                    nextArrow: $('#textReviewsControls .next')[0],
-                }
-            }
-        ]
+    $('#advantagesSlider').on('beforeChange', () => {
+        if ($('#dots').css('display') !== 'none') {
+            let dots = $('#dots');
+            let currentDot = dots.find('.dot.current');
+            let index = currentDot.data('index');
+            if (index < 4) index++;
+            else index = 1;
+            let nextDot = dots.find(`[data-index=${index}]`);
+            currentDot.removeClass('current');
+            nextDot.addClass('current');
+        }
     });
 
-    $('#blackReviewsSlider').slick({
+    $('#reviewsSlider').slick({
         infinite: false,
-        slidesToShow: 1,
-        arrows: false,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        speed: 1000,
-        responsive: [
-            {
-                breakpoint: 767,
-                settings: {
-                    prevArrow: $('#blackReviewsControls .prev')[0],
-                    nextArrow: $('#blackReviewsControls .next')[0],
-
-                }
-            }
-        ]
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        prevArrow: $('#reviewsControls .prev')[0],
+        nextArrow: $('#reviewsControls .next')[0],
+        speed: 1000
     });
 
-    $('#grayReviewsSlider').slick({
-        infinite: false,
-        slidesToShow: 1,
-        arrows: false,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        speed: 1000,
-        responsive: [
-            {
-                breakpoint: 767,
-                settings: {
-                    prevArrow: $('#grayReviewsControls .prev')[0],
-                    nextArrow: $('#grayReviewsControls .next')[0],
-                }
-            }
-        ]
-    });
+    /*$('#commonReviewsSlider').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        prevArrow: $('#reviewsControls .prev')[0],
+        nextArrow: $('#reviewsControls .next')[0],
+        speed: 1000
+    });*/
 
+
+    /* Mobile only sliders */
     if ($(window).width() < 768) {
         $('#aboutSlider').slick({
             infinite: false,
@@ -177,6 +158,89 @@ $(document).ready(() => {
             speed: 1000
         });
 
+        $('#reviewsSlider').slick('unslick');
+
+        $('#textReviewsSlider').slick({
+            infinite: false,
+            prevArrow: $('#textReviewsControls .prev')[0],
+            nextArrow: $('#textReviewsControls .next')[0],
+            speed: 1000,
+        });
+        $('#darkReviewsSlider').slick({
+            infinite: false,
+            prevArrow: $('#darkReviewsControls .prev')[0],
+            nextArrow: $('#darkReviewsControls .next')[0],
+            speed: 1000,
+        });
+        $('#lightReviewsSlider').slick({
+            infinite: false,
+            prevArrow: $('#lightReviewsControls .prev')[0],
+            nextArrow: $('#lightReviewsControls .next')[0],
+            speed: 1000,
+        });
+
+
+
+        /* Reviews */
+        /*$('#textReviewsSlider').slick({
+            infinite: true,
+            slidesToShow: 1,
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            speed: 1000,
+            responsive: [
+                {
+                    breakpoint: 767,
+                    settings: {
+                        infinite: false,
+                        arrows: true,
+                        prevArrow: $('#textReviewsControls .prev')[0],
+                        nextArrow: $('#textReviewsControls .next')[0],
+                    }
+                }
+            ]
+        });
+        $('#blackReviewsSlider').slick({
+            infinite: true,
+            slidesToShow: 1,
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            speed: 1000,
+            responsive: [
+                {
+                    breakpoint: 767,
+                    settings: {
+                        infinite: false,
+                        arrows: true,
+                        prevArrow: $('#blackReviewsControls .prev')[0],
+                        nextArrow: $('#blackReviewsControls .next')[0],
+                    }
+                }
+            ]
+        });
+        $('#grayReviewsSlider').slick({
+            infinite: true,
+            slidesToShow: 1,
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            speed: 1000,
+            responsive: [
+                {
+                    breakpoint: 767,
+                    settings: {
+                        infinite: false,
+                        arrows: true,
+                        prevArrow: $('#grayReviewsControls .prev')[0],
+                        nextArrow: $('#grayReviewsControls .next')[0],
+                    }
+                }
+            ]
+        });*/
+
+        /* Footer */
         $('#companyCollapse').collapse('hide');
         $('#siteMakingCollapse').collapse('hide');
         $('#forClientsCollapse').collapse('hide');
