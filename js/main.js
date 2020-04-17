@@ -1,3 +1,7 @@
+/* Mobile hack for correct vh calculation */
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
 /* Functions */
 let formsData = {};
 

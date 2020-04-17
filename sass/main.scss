@@ -28,19 +28,56 @@
         .pink-line {
             background-color: $main-pink;
             right: 0;
-            top: 15.5%;
-            width: 66%;
+            top: 20%;
+            width: 62%;
         }
 
-        img {
-            z-index: 1;
+        .title {
+            position: relative;
+            font-family: "Gilroy Black", sans-serif;
+            color: white;
+            font-size: 13rem;
+            text-transform: uppercase;
+            display: flex;
+            flex-direction: column;
+            line-height: 95%;
+            width: 100%;
+            font-weight: 900;
+
+            .best, .solutions {
+                opacity: 0.3;
+            }
+
+            .best {
+                align-self: flex-start;
+            }
+
+            .solutions {
+                align-self: flex-end;
+            }
+
+            .best-copy, .solutions-copy {
+                position: absolute;
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke: 2px white;
+            }
+
+            .best-copy {
+                top: -10px;
+                left: -10px;
+            }
+
+            .solutions-copy {
+                bottom: 10px;
+                right: 10px;
+            }
         }
 
         .white-line {
             background-color: #e1e1e1;
             left: 0;
-            bottom: 20%;
-            width: 67.8%;
+            bottom: 25%;
+            width: 66%;
         }
     }
 
@@ -589,7 +626,6 @@
             margin: 50px 0;
         }
     }
-
 
 }
 

@@ -116,6 +116,7 @@ button.btn-fill {
         padding: 25px;
         font-family: "Gilroy Medium", sans-serif;
         font-size: 18px;
+        height: 51px;
 
         &:focus {
             box-shadow: none;
@@ -130,6 +131,7 @@ button.btn-fill {
 
         .nselect {
             width: 100%;
+            height: 100%;
 
             .nselect__head {
                 background: transparent;
@@ -311,6 +313,9 @@ header {
                 }
             }
         }
+        .close {
+            text-shadow: none;
+        }
     }
 
     .navbar-collapse.show, .navbar-collapse.collapsing {
@@ -318,6 +323,8 @@ header {
         border-radius: 23px;
         background: white;
         position: relative;
+        max-height: 75vh;
+        overflow: scroll;
 
         .close {
             position: absolute;
@@ -325,7 +332,6 @@ header {
             top: 8px;
             font-size: 22px;
         }
-
 
         .pages {
             margin: 10px 0;

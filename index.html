@@ -25,7 +25,7 @@
     <meta content="assets/img/favicon/ms-icon-144x144.png" name="msapplication-TileImage">
     <meta content="#ff4878" name="theme-color">
 
-    <link href="css/main.min.css?v=0.2" rel="stylesheet">
+    <link href="css/main.min.css?v=0.3" rel="stylesheet">
     <link href="assets/libs/wow/animate.css" rel="stylesheet">
     <link href="assets/libs/nSelect/jquery.nselect.css" rel="stylesheet">
 </head>
@@ -44,8 +44,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <span aria-controls="navbarCollapse" class="navbar-toggler close" data-target="#navbarCollapse"
-                  data-toggle="collapse" type="button">&times;</span>
+            <span aria-controls="navbarCollapse" class="navbar-toggler close" data-target="#navbarCollapse" data-toggle="collapse">&times;</span>
             <ul class="pages navbar-nav justify-content-between">
                 <li class="nav-item">
                     <a href="team.html">Команда</a>
@@ -248,8 +247,23 @@
     <div class="container">
         <div class="best-solutions d-flex justify-content-center">
             <div class="pink-line wow fadeInRightBig" data-wow-delay="1s"></div>
-            <img alt="Best solutions" class="wow fadeInDownBig desktop-only" src="assets/img/best_solutions.png">
-            <img alt="Best solutions" class="wow fadeInDownBig mobile-only" src="assets/img/best_solutions_mobile.png">
+            <div class="wow fadeInDownBig title">
+                <span class="best">
+                    Лучшие
+                </span>
+                <span class="best-copy">
+                    Лучшие
+                </span>
+
+                <span class="solutions">
+                    Решения
+                </span>
+                <span class="solutions-copy">
+                    Решения
+                </span>
+            </div>
+            <!--<img alt="Best solutions" class="wow fadeInDownBig desktop-only" src="assets/img/best_solutions.png">
+            <img alt="Best solutions" class="wow fadeInDownBig mobile-only" src="assets/img/best_solutions_mobile.png">-->
             <div class="white-line wow fadeInLeftBig" data-wow-delay="1s"></div>
         </div>
         <div class="bottom-plank d-md-flex justify-content-around align-items-center wow fadeIn" data-wow-delay="2s"
@@ -961,7 +975,10 @@
 <script src="assets/libs/jquery.maskedinput/jquery.maskedinput.min.js"></script>
 <script>
     new WOW({
-        offset: 15
+        offset: 15,
+        callback: (box) => {
+            console.log(box);
+        }
     }).init();
 
     $('.select-wrap select').nSelect({
@@ -973,3 +990,10 @@
 <script src="js/main.js"></script>
 </body>
 </html>
+
+<!--(DONE)Best solutions not a text-->
+<!--(DONE)First screen height-->
+<!--(DONE)Wierd close at menu-->
+<!--(DONE)Max height of expanded menu > phone height (not scrolling)-->
+<!--Wierd height of form-->
+<!--ForClients floating on form-->
