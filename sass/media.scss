@@ -146,6 +146,7 @@
         .best-solutions {
             .title {
                 font-size: 3.5rem;
+
                 .best-copy {
                     top: -5px;
                     left: -5px;
@@ -156,6 +157,7 @@
                     right: 5px;
                 }
             }
+
             .pink-line, .white-line {
                 height: 15px !important;
             }
@@ -311,6 +313,14 @@
         }
     }
 
+    #feedback {
+        .feedback-form {
+            .select-wrap {
+                display: block;
+            }
+        }
+    }
+
     #clients {
         .clients-heading {
             padding: 30px 0;
@@ -332,6 +342,7 @@
                 padding: 0;
                 align-items: center;
                 background: none;
+                display: block;
 
                 img {
                     width: 100%;
@@ -1350,6 +1361,11 @@
 
     #portfolio .portfolio-heading {
         margin: 80px 0;
+    }
+
+    .modal .modal-dialog .modal-content .modal-header .modal-title {
+        max-width: 85%;
+        text-align: center;
     }
 
     footer {
