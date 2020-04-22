@@ -76,7 +76,7 @@ button.btn-outline {
     border: 1px solid $main-pink;
     color: $main-pink;
 
-    &:hover {
+    &:hover, &.active {
         background-color: $main-pink;
         color: white !important;
     }
