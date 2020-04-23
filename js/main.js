@@ -28,12 +28,37 @@ function sticky_header() {
     }
 }
 
+function animateCSS(element, animationName, startEvent, endEvent) {
+    const node = document.querySelector(element)
+    node.classList.add('animated', animationName)
+
+    function handleAnimationEnd() {
+        node.classList.remove('animated', animationName)
+        node.removeEventListener('animationend', handleAnimationEnd)
+
+        if (typeof endEvent === 'function') endEvent(node)
+    }
+
+    function handleAnimationStart() {
+        if (typeof startEvent === 'function') startEvent(node)
+    }
+
+    node.addEventListener('animationstart', handleAnimationStart)
+    node.addEventListener('animationend', handleAnimationEnd)
+}
+
+function clearStyles(el) {
+    el.style.visibility = 'visible';
+}
+
 $(window).on('load', () => {
     sticky_header();
     $(window).on("scroll", function () {
         sticky_header();
     });
 });
+
+
 
 /* Quiz buttons */
 $('#quiz1Next').on('click', () => {
@@ -70,7 +95,10 @@ $('#quiz4Send').on('click', () => {
     console.log(formsData);
 });
 
+
+
 /* Events */
+
 
 // Header dropdowns
 $(document).on('click', (e) => {
@@ -83,6 +111,8 @@ $(document).on('click', (e) => {
     else
         $('#dropdown-menu').css('display', 'none');
 });
+
+
 
 $(document).ready(() => {
 
@@ -176,8 +206,58 @@ $(document).ready(() => {
             $('#forClientsCollapse').collapse('toggle');
         });
     }
+
+    /* Services page */
+    let tabs = $('.tabs button');
+    let cards = $('.cards .row');
+
+    $('#landing').on('click', (e)=>{
+
+        $(tabs).each((i, el)=>{
+            $(el).removeClass('active');
+        });
+
+        $(cards).each((i, el)=>{
+            el.style.display = "none";
+        })
+
+        $(e.target).addClass('active');
+        document.getElementById('card-landing').style = '';
+    });
+
+    $('#corporate').on('click', (e)=>{
+
+        $(tabs).each((i, el)=>{
+            $(el).removeClass('active');
+        });
+
+        $(cards).each((i, el)=>{
+            el.style.display = "none";
+        })
+
+        $(e.target).addClass('active');
+        document.getElementById('card-corporate').style = '';
+    });
+
+    $('#internetShop').on('click', (e)=>{
+
+        $(tabs).each((i, el)=>{
+            $(el).removeClass('active');
+        });
+
+        $(cards).each((i, el)=>{
+            el.style.display = "none";
+        })
+
+        $(e.target).addClass('active');
+        document.getElementById('card-internetShop').style = '';
+    });
 });
 
-
-/* Services page */
+$(window).on('load', ()=>{
+    animateCSS('#page-header .fill','fadeInDown', clearStyles);
+    animateCSS('#page-header .outline','fadeInUp', clearStyles,()=>{
+        animateCSS('#page-header .pink-line','fadeInRight', clearStyles);
+    });
+})
 
