@@ -131,128 +131,18 @@
         }
     }
 
-    #first-screen {
-        max-height: 100vh;
-        max-height: calc(var(--vh, 1vh) * 100);
-        padding: 0;
-
-        & > .container {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            justify-content: flex-end;
-        }
-
-        .best-solutions {
-            .title {
-                font-size: 3.5rem;
-
-                .best-copy {
-                    top: -5px;
-                    left: -5px;
-                }
-
-                .solutions-copy {
-                    bottom: 5px;
-                    right: 5px;
-                }
-            }
-
-            .pink-line, .white-line {
-                height: 15px !important;
-            }
-
+    #page-header {
+        height: 250px;
+        .page-title {
+            font-size: 50px;
+            top: 60%;
             .pink-line {
-                right: -15px;
-                width: 58%;
+                top: 30px;
+                height: 8px;
             }
-
-            .white-line {
-                left: -15px;
-                bottom: 25%;
-                width: 48%;
-            }
-        }
-
-        .bottom-plank {
-            padding: 0;
-
-            .text {
-                font-size: 18px;
-                margin: 30px auto;
-            }
-
-            button {
-                display: block;
-                margin: auto;
-            }
-        }
-    }
-
-    #services {
-        flex-direction: column;
-        margin: 10px 0;
-
-        .service {
-            margin: 1px 0;
-            max-width: 100%;
-            width: 100%;
-            height: 100%;
-
-            img {
-                position: unset;
-            }
-
-            .black-bar {
-                width: 100%;
-                max-height: unset;
-                height: auto;
-                position: unset;
-                display: block;
-                transform: unset;
-                padding: 20px;
-
-                .name {
-                    display: block;
-                    width: 50%;
-                    margin: 0;
-                    line-height: 180%;
-
-                    span {
-                        position: relative !important;
-                        right: unset !important;
-                        left: unset !important;
-                        top: unset !important;
-                        bottom: unset !important;
-                        margin: 0 !important;
-                        font-size: 30px;
-                    }
-                }
-
-                .price {
-                    display: none;
-                }
-
-                .buttons {
-                    transform: unset;
-                    display: flex;
-                    flex-direction: row-reverse;
-                    justify-content: space-between;
-                    align-items: center;
-                    margin: 0;
-                    padding: 10px 0;
-
-                    .analyse {
-                        margin-top: -10px;
-                        font-size: 16px;
-                        transform: rotate(-45deg) translate(-10%, -50%);
-                        width: min-content;
-                    }
-
-                    .details {
-                        font-size: 18px;
-                    }
-                }
+            .outline {
+                top: -5px;
+                left: -5px;
             }
         }
     }
@@ -293,10 +183,6 @@
         }
     }
 
-    #advantages {
-        margin: 30px 0;
-    }
-
     #reviews {
         margin: 50px 0;
 
@@ -316,57 +202,6 @@
     .feedback-form {
         .select-wrap {
             display: block;
-        }
-    }
-
-    #clients {
-        .clients-heading {
-            padding: 30px 0;
-        }
-
-        & > .container {
-            padding: 0;
-        }
-
-        .clients-services {
-            width: 100%;
-            flex-direction: column;
-
-            .clients-service-2 {
-                flex-direction: column;
-            }
-
-            .clients-service {
-                padding: 0;
-                align-items: center;
-                background: none;
-                display: block;
-
-                img {
-                    width: 100%;
-                    margin: 0;
-                    border-radius: 0;
-                }
-
-                .service-description {
-                    .description-heading {
-                        font-size: 25px;
-                        margin: 25px 0;
-                    }
-
-                    .description-subheading {
-                        font-size: 18px;
-                    }
-
-                    .description-price {
-                        display: none;
-                    }
-
-                    button {
-                        margin: 40px 0;
-                    }
-                }
-            }
         }
     }
 
@@ -451,188 +286,6 @@
             }
         }
     }
-
-    /* Services */
-
-    #page-header {
-        height: 250px;
-        .page-title {
-            font-size: 50px;
-            top: 60%;
-            .pink-line {
-                top: 30px;
-                height: 8px;
-            }
-            .outline {
-                top: -5px;
-                left: -5px;
-            }
-        }
-    }
-
-    #service-cards {
-        .tabs {
-            justify-content: center;
-            button.btn {
-                margin: 10px 0;
-            }
-        }
-        .cards {
-            &>.row {
-                justify-content: center;
-            }
-            .card {
-                margin-bottom: 20px;
-                .image {
-                    margin-bottom: 10px;
-                }
-                .title {
-                    font-size: 24px;
-                    margin: 20px 0;
-                }
-                .key-points {
-                    margin: 30px 0;
-                    padding-right: 30px;
-                    li {
-                        font-size: 19px;
-                    }
-                }
-
-                .advantages {
-                    padding: 0 5px;
-                    ul {
-                        list-style-image: url("../assets/img/card-advanteges-bullet_small.png");
-                        padding-left: 40px;
-                        li {
-                            margin: 75px 0;
-                        }
-                    }
-                }
-
-                .footer {
-                    display: flex;
-                    width: 80%;
-                    flex-direction: column;
-                    margin: 15px auto;
-                    button.btn {
-                        font-size: 18px;
-                        max-width: unset;
-                        margin: 10px 0;
-                    }
-                }
-            }
-        }
-    }
-
-    #banners {
-        .heading-wrap {
-            margin: 30px 0;
-            .banners-heading .gold-line {
-                top: 40%;
-                height: 8px;
-            }
-        }
-        &>.row {
-            margin-bottom: 0;
-            margin-top: 0;
-        }
-
-        .banner {
-            img {
-                width: 100%;
-                height: auto;
-            }
-            .description {
-                position: relative;
-                color: #333333;
-                text-align: center;
-                font-size: 22px;
-                max-width: 80%;
-                margin: 10px auto 30px;
-                top: unset;
-                bottom: unset;
-                left: unset;
-                right: unset;
-
-            }
-        }
-    }
-
-    #offers {
-        margin-top: 50px;
-        .heading-wrap {
-            .offers-heading .gold-line {
-                height: 8px;
-                width: 60%;
-            }
-        }
-        .offers-subheading {
-            font-size: 18px;
-            max-width: 90%;
-            margin: 25px auto;
-        }
-        .offer {
-            margin-bottom: 20px;
-            .offer-title {
-                font-size: 52px;
-                padding: 0 30px;
-            }
-        }
-        .offers-footer {
-            margin: 30px 0;
-        }
-    }
-
-    #stages {
-        margin-bottom: 40px;
-        .path {
-            background: none;
-            margin: 0;
-
-            .row {
-                margin: 0;
-            }
-
-            .stage {
-                .stage-description {
-                    margin: 15px auto;
-                }
-                &-1 {
-                    .stage-description {
-                        max-width: 100%;
-                    }
-                }
-            }
-        }
-    }
-
-    #stillHere {
-        padding: 150px 0 50px;
-        background-size: auto;
-
-        .feedback-heading {
-            margin-bottom: 20px;
-            .gold-line {
-                height: 7px;
-                left: -15px;
-                width: 45%;
-            }
-        }
-        .feedback-form {
-            .row {
-                flex-direction: column;
-            }
-
-            .col {
-                padding: 0;
-                margin: 15px 0;
-            }
-
-            button {
-                margin: 40px 0;
-            }
-        }
-    }
 }
 
 @media (min-width: 767px) and (max-width: 991px) {
@@ -688,117 +341,19 @@
         }
     }
 
-    h2 {
-        font-size: 50px;
-    }
-
-    #first-screen {
-        .best-solutions {
-            .title {
-                font-size: 8rem;
-            }
-
-            .pink-line, .white-line {
+    #page-header {
+        height: 270px;
+        .page-title {
+            font-size: 72px;
+            .pink-line {
+                top: 40px;
                 height: 15px;
             }
-
-            .pink-line {
-                width: 45%;
-            }
-
-            .white-line {
-                width: 39%;
-            }
-        }
-
-        .bottom-plank {
-            .text {
-                font-size: 25px;
-            }
-
-            button {
-                display: block;
-            }
         }
     }
 
-    #services {
-        flex-direction: column;
-        margin: 10px 0 50px 0;
-
-        .service {
-            margin: 1px 0;
-            max-width: 100%;
-            width: 100%;
-            height: 100%;
-
-            img {
-                position: unset;
-            }
-
-            .black-bar {
-                width: 100%;
-                max-height: unset;
-                height: auto;
-                position: unset;
-                display: block;
-                transform: unset;
-                padding: 20px;
-
-                & > .w-100 {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: space-between;
-
-                    .name {
-                        display: block;
-                        width: 50%;
-                        margin: 0;
-
-                        span {
-                            position: relative !important;
-                            right: unset !important;
-                            left: unset !important;
-                            top: unset !important;
-                            bottom: unset !important;
-                            font-size: 50px;
-                        }
-                    }
-
-                    .price {
-                        max-width: 50%;
-                        transform: none;
-                        margin: 0;
-                        justify-content: flex-end;
-                    }
-
-                    .buttons {
-                        transform: unset;
-                        display: flex;
-                        width: 100%;
-                        flex-direction: row;
-                        justify-content: flex-end;
-                        align-items: center;
-                        margin: 0;
-                        padding: 10px 0;
-
-                        & > div {
-                            margin: 0 10px;
-                        }
-
-                        .analyse {
-                            font-size: 16px;
-                        }
-
-                        .details {
-                            font-size: 18px;
-                        }
-                    }
-                }
-
-
-            }
-        }
+    h2 {
+        font-size: 50px;
     }
 
     #about {
@@ -810,57 +365,6 @@
 
             .slider-item {
                 max-width: 50%;
-            }
-        }
-    }
-
-    #clients {
-        .clients-heading {
-            padding: 40px 0;
-        }
-
-        .clients-services {
-            flex-direction: column;
-
-            .clients-service {
-                flex-direction: row;
-                justify-content: center;
-                align-content: center;
-                background: none;
-
-                img {
-                    width: 50%;
-                    border-radius: unset;
-                    margin: 0;
-                }
-
-                .service-description {
-                    width: 50%;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-
-                    .description-heading {
-                        font-size: 24px;
-                    }
-
-                    .description-subheading {
-                        font-size: 18px;
-                    }
-
-                    .description-price {
-                        font-size: 16px;
-
-                        span {
-                            font-size: 40px;
-                        }
-                    }
-                }
-            }
-
-            .clients-service-2 {
-                flex-direction: row-reverse;
             }
         }
     }
@@ -925,108 +429,6 @@
             font-size: 12px;
         }
     }
-
-
-    /* Services */
-
-    #page-header {
-        height: 270px;
-        .page-title {
-            font-size: 72px;
-            .pink-line {
-                top: 40px;
-                height: 15px;
-            }
-        }
-    }
-
-    #service-cards {
-        .tabs {
-            justify-content: center;
-            button.btn {
-                margin: 10px 0;
-            }
-        }
-        .cards {
-            &>.row {
-                justify-content: center;
-            }
-            .card {
-                margin-bottom: 20px;
-                .image {
-                    margin-bottom: 10px;
-                }
-                .title {
-                    font-size: 35px;
-                    margin: 20px 0;
-                }
-                .key-points {
-                    margin: 30px 0;
-                    li {
-                        font-size: 20px;
-                    }
-                }
-
-                .advantages {
-                    ul {
-                        padding-left: 70px;
-                    }
-                }
-
-                .footer {
-                    margin: 30px 0;
-                    button.btn {
-                        max-width: 45%;
-                        font-size: 18px;
-                    }
-                }
-            }
-        }
-    }
-
-    #banners {
-        .banner {
-            &-4 .description {
-                top: 0;
-            }
-        }
-        .heading-wrap {
-            margin: 30px 0;
-            .banners-heading .gold-line {
-                top: 45%;
-                height: 8px;
-            }
-        }
-        &>.row {
-            margin-bottom: 0;
-            margin-top: 0;
-        }
-    }
-
-    #offers {
-        margin-top: 50px;
-        .heading-wrap {
-            .offers-heading .gold-line {
-                height: 8px;
-                width: 60%;
-            }
-        }
-        .offers-subheading {
-            font-size: 32px;
-            max-width: 90%;
-            margin: 35px auto;
-        }
-        .offer {
-            margin-bottom: 20px;
-            .offer-title {
-                font-size: 125px;
-                padding: 0 30px;
-            }
-        }
-        .offers-footer {
-            margin: 50px 0;
-        }
-    }
 }
 
 @media (max-width: 991px) {
@@ -1034,40 +436,6 @@
         padding: 10px;
         max-height: 60px;
         font-size: 16px;
-    }
-
-    #advantages {
-        margin: 0;
-        background: none;
-        padding-top: 0;
-
-        .advantages-heading {
-            margin-bottom: 10px;
-        }
-
-        #advantagesSlider {
-            .advantage {
-                .image-wrap {
-                    img {
-                        max-height: 200px;
-                    }
-                }
-
-                .advantage-heading {
-                    font-size: 25px;
-                    text-align: center;
-                }
-
-                .advantage-description {
-                    font-size: 16px;
-                }
-            }
-        }
-
-        .sliderControls {
-            margin: 30px auto;
-            text-align: center;
-        }
     }
 
     #feedback {
@@ -1101,7 +469,6 @@
             }
         }
     }
-
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
@@ -1121,137 +488,19 @@
         }
     }
 
-    #first-screen {
-        .best-solutions {
-            .title {
-                font-size: 10rem;
+    #page-header {
+        height: 300px;
+        .page-title {
+            font-size: 80px;
+            .pink-line {
+                top: 45px;
+                height: 15px;
             }
-        }
-
-        .bottom-plank {
-            .text {
-                font-size: 38px;
-            }
-        }
-    }
-
-    #services {
-        margin: 20px 0;
-
-        .service {
-            .black-bar {
-                width: 40%;
-                height: 120%;
-                padding: 10px;
-
-                & > .w-100 {
-                    height: 90%;
-                }
-
-                .name {
-                    display: block;
-
-                    span {
-                        position: relative !important;
-                        right: unset !important;
-                        left: unset !important;
-                        top: unset !important;
-                        bottom: unset !important;
-                        font-size: 36px;
-                    }
-                }
-
-                .price {
-                    .price-number {
-                        font-size: 40px;
-                    }
-
-                    .price-text {
-                        span {
-                            font-size: 16px;
-                        }
-                    }
-                }
-
-                .buttons {
-                    .analyse {
-                        font-size: 16px;
-                    }
-
-                    .details {
-                        font-size: 18px;
-                    }
-                }
-            }
-        }
-    }
-
-    #advantages {
-        background: none;
-        margin: 50px 0;
-
-        .advantage-heading {
-            font-size: 40px;
-        }
-
-        .advantage-description {
-            font-size: 18px;
         }
     }
 
     #feedback {
         padding: 100px 0;
-    }
-
-    #clients {
-        .clients-heading {
-            padding: 40px 0;
-        }
-
-        .clients-services {
-            background: none;
-            flex-direction: column;
-
-            .clients-service {
-                flex-direction: row;
-                justify-content: center;
-                align-content: center;
-
-                img {
-                    width: 50%;
-                    border-radius: unset;
-                    margin: 0;
-                }
-
-                .service-description {
-                    width: 50%;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-
-                    .description-heading {
-                        font-size: 24px;
-                    }
-
-                    .description-subheading {
-                        font-size: 18px;
-                    }
-
-                    .description-price {
-                        font-size: 16px;
-
-                        span {
-                            font-size: 40px;
-                        }
-                    }
-                }
-            }
-
-            .clients-service-2 {
-                flex-direction: row-reverse;
-            }
-        }
     }
 
     #portfolio {
@@ -1295,96 +544,6 @@
             font-size: 16px;
         }
     }
-
-
-    /* Services */
-
-    #page-header {
-        height: 300px;
-        .page-title {
-            font-size: 80px;
-            .pink-line {
-                top: 45px;
-                height: 15px;
-            }
-        }
-    }
-
-    #service-cards {
-        .cards {
-            .card {
-                .image {
-                    margin-bottom: 10px;
-                }
-                .title {
-                    font-size: 35px;
-                    margin: 20px 0;
-                }
-                .key-points {
-                    margin: 30px 0;
-                    li {
-                        font-size: 20px;
-                    }
-                }
-
-                .advantages {
-                    ul {
-                        padding-left: 70px;
-                    }
-                }
-
-                .footer {
-                    margin: 30px 0;
-                    button.btn {
-                        max-width: 45%;
-                        font-size: 18px;
-                    }
-                }
-            }
-        }
-    }
-
-    #banners .banner {
-        .description {
-            font-size: 20px;
-        }
-        &-4 .description {
-            top: 25%;
-        }
-    }
-
-    #offers {
-        margin-top: 50px;
-        .offers-subheading {
-            font-size: 40px;
-            max-width: 85%;
-            margin: 50px auto;
-        }
-        .offer .offer-title {
-            font-size: 50px;
-        }
-        .offers-footer {
-            margin: 50px 0;
-        }
-    }
-
-    #stages {
-        .path {
-            background-size: 100% 73%;
-            .row {
-                margin-bottom: 50px;
-            }
-            .stage {
-                font-size: 16px;
-                .stage-description {
-                    margin: 30px 0;
-                }
-                &-1 .stage-description{
-                    max-width: unset;
-                }
-            }
-        }
-    }
 }
 
 @media (max-width: 1200px) {
@@ -1399,12 +558,6 @@
         max-width: 275px;
         max-height: 60px;
         width: 100%;
-    }
-
-    #advantages {
-        #dots {
-            display: none;
-        }
     }
 
     footer {
@@ -1493,129 +646,14 @@
         }
     }
 
-    #first-screen {
-        .best-solutions {
-            .title {
-                font-size: 11rem;
+    #page-header {
+        height: 350px;
+        .page-title {
+            font-size: 100px;
+            .pink-line {
+                top: 60px;
             }
         }
-
-        .bottom-plank {
-            width: 80%;
-
-            .text {
-                font-size: 36px;
-            }
-        }
-    }
-
-    #first-screen .best-solutions .pink-line {
-        top: 20%;
-        width: 69%;
-    }
-
-    #first-screen .best-solutions .white-line {
-        width: 69%;
-        bottom: 25%;
-    }
-
-    #services {
-        margin: 20px 0;
-
-        .service {
-            max-width: calc(50% - 20px);
-            margin: 50px 20px;
-
-            .black-bar {
-                width: 25%;
-                height: 120%;
-                padding: 5px;
-
-                & > .w-100 {
-                    height: 90%;
-                }
-
-                .name {
-                    margin-top: 75%;
-                    margin-left: -15%;
-
-                    span {
-                        font-size: 60px;
-                    }
-                }
-
-                .price {
-                    .price-number {
-                        font-size: 40px;
-                    }
-
-                    .price-text {
-                        span {
-                            font-size: 20px;
-                        }
-                    }
-                }
-
-                .buttons {
-                    margin-top: 25%;
-
-                    .analyse {
-                        font-size: 18px;
-                    }
-
-                    .details {
-                        font-size: 16px;
-                    }
-                }
-            }
-        }
-
-        #service-landing {
-            .name {
-                span {
-                    &:nth-child(2) {
-                        position: relative;
-                        right: unset;
-                        left: unset;
-                        margin-left: 10px;
-                    }
-                }
-            }
-        }
-
-        #service-corporate {
-            .name {
-                span {
-                    &:nth-child(2) {
-                        right: -160%;
-                        top: 50%;
-                    }
-                }
-            }
-        }
-
-        #service-shop {
-            .name {
-                span {
-                    &:nth-child(2) {
-                        right: -160%;
-                        top: 50%;
-                    }
-                }
-            }
-        }
-
-        #service-individualSolutions {
-            .name {
-                span {
-                    &:nth-child(2) {
-                        right: -175%;
-                        top: 50%;
-                    }
-                }
-            }
-        }
-
     }
 
     #about {
@@ -1649,58 +687,12 @@
         }
     }
 
-    #advantages {
-        background: url(../assets/img/lines.png) no-repeat 0 35%;
-        background-size: 25%;
-        margin: 50px 0;
-
-        .advantage-heading {
-            font-size: 40px;
-        }
-
-        .advantage-description {
-            font-size: 18px;
-        }
-
-        #dots {
-            width: 180px;
-            transform: rotate(30deg) translate(10%, 0%);
-        }
-    }
-
     #feedback {
         padding: 80px 0;
 
         .feedback-heading {
             .gold-line {
                 height: 10px;
-            }
-        }
-    }
-
-    #clients .clients-services .clients-service {
-        margin-bottom: 20px;
-        background: none;
-
-        img {
-            width: 100%;
-        }
-
-        .service-description {
-            .description-heading {
-                font-size: 34px;
-            }
-
-            .description-subheading {
-                font-size: 18px;
-            }
-
-            .description-price {
-                font-size: 16px;
-
-                span {
-                    font-size: 36px;
-                }
             }
         }
     }
@@ -1758,100 +750,8 @@
         }
     }
 
-    /* Services */
-
-    #page-header {
-        height: 350px;
-        .page-title {
-            font-size: 100px;
-            .pink-line {
-                top: 60px;
-            }
-        }
-    }
-
-    #service-cards {
-        .cards {
-            .card {
-                .title {
-                    font-size: 50px;
-                }
-                .footer {
-                    button.btn {
-                        max-width: 40%;
-                        font-size: 18px;
-                    }
-                }
-            }
-        }
-    }
-
-    #banners {
-        .heading-wrap {
-            .banners-heading {
-                .gold-line {
-                    top: 43%;
-                }
-            }
-        }
-
-        .banner {
-            .description {
-                font-size: 24px;
-            }
-
-            &-2 {
-                .description {
-                    top: 25%;
-                }
-            }
-            
-            &-4 {
-                .description {
-                    top: 20%;
-                }
-            }
-        }
-    }
-
-    #offers {
-        .offers-subheading {
-            margin: 50px auto;
-            max-width: 60%;
-            font-size: 36px;
-        }
-        .offer {
-            .offer-title {
-                font-size: 60px;
-            }
-        }
-    }
-
-    #stages {
-        .path {
-            background-size: 100% 75%;
-            .row {
-                margin-bottom: 40px;
-            }
-
-            .stage {
-                font-size: 17px;
-                .stage-description {
-                    margin: 20px auto;
-                }
-            }
-        }
-    }
-
 }
 
 @media (max-width: 1560px) {
 
-    #first-screen {
-        .bottom-plank {
-            .text {
-                max-width: 100%;
-            }
-        }
-    }
 }

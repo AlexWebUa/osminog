@@ -640,3 +640,706 @@
 }
 
 @import "media";
+
+@media all and (max-width: 767px) {
+    #first-screen {
+        max-height: 100vh;
+        max-height: calc(var(--vh, 1vh) * 100);
+        padding: 0;
+
+        & > .container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: flex-end;
+        }
+
+        .best-solutions {
+            .title {
+                font-size: 3.5rem;
+
+                .best-copy {
+                    top: -5px;
+                    left: -5px;
+                }
+
+                .solutions-copy {
+                    bottom: 5px;
+                    right: 5px;
+                }
+            }
+
+            .pink-line, .white-line {
+                height: 15px !important;
+            }
+
+            .pink-line {
+                right: -15px;
+                width: 58%;
+            }
+
+            .white-line {
+                left: -15px;
+                bottom: 25%;
+                width: 48%;
+            }
+        }
+
+        .bottom-plank {
+            padding: 0;
+
+            .text {
+                font-size: 18px;
+                margin: 30px auto;
+            }
+
+            button {
+                display: block;
+                margin: auto;
+            }
+        }
+    }
+
+    #services {
+        flex-direction: column;
+        margin: 10px 0;
+
+        .service {
+            margin: 1px 0;
+            max-width: 100%;
+            width: 100%;
+            height: 100%;
+
+            img {
+                position: unset;
+            }
+
+            .black-bar {
+                width: 100%;
+                max-height: unset;
+                height: auto;
+                position: unset;
+                display: block;
+                transform: unset;
+                padding: 20px;
+
+                .name {
+                    display: block;
+                    width: 50%;
+                    margin: 0;
+                    line-height: 180%;
+
+                    span {
+                        position: relative !important;
+                        right: unset !important;
+                        left: unset !important;
+                        top: unset !important;
+                        bottom: unset !important;
+                        margin: 0 !important;
+                        font-size: 30px;
+                    }
+                }
+
+                .price {
+                    display: none;
+                }
+
+                .buttons {
+                    transform: unset;
+                    display: flex;
+                    flex-direction: row-reverse;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: 0;
+                    padding: 10px 0;
+
+                    .analyse {
+                        margin-top: -10px;
+                        font-size: 16px;
+                        transform: rotate(-45deg) translate(-10%, -50%);
+                        width: min-content;
+                    }
+
+                    .details {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    #advantages {
+        margin: 30px 0;
+    }
+
+    #clients {
+        .clients-heading {
+            padding: 30px 0;
+        }
+
+        & > .container {
+            padding: 0;
+        }
+
+        .clients-services {
+            width: 100%;
+            flex-direction: column;
+
+            .clients-service-2 {
+                flex-direction: column;
+            }
+
+            .clients-service {
+                padding: 0;
+                align-items: center;
+                background: none;
+                display: block;
+
+                img {
+                    width: 100%;
+                    margin: 0;
+                    border-radius: 0;
+                }
+
+                .service-description {
+                    .description-heading {
+                        font-size: 25px;
+                        margin: 25px 0;
+                    }
+
+                    .description-subheading {
+                        font-size: 18px;
+                    }
+
+                    .description-price {
+                        display: none;
+                    }
+
+                    button {
+                        margin: 40px 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 767px) and (max-width: 991px) {
+    #first-screen {
+        .best-solutions {
+            .title {
+                font-size: 8rem;
+            }
+
+            .pink-line, .white-line {
+                height: 15px;
+            }
+
+            .pink-line {
+                width: 45%;
+            }
+
+            .white-line {
+                width: 39%;
+            }
+        }
+
+        .bottom-plank {
+            .text {
+                font-size: 25px;
+            }
+
+            button {
+                display: block;
+            }
+        }
+    }
+
+    #services {
+        flex-direction: column;
+        margin: 10px 0 50px 0;
+
+        .service {
+            margin: 1px 0;
+            max-width: 100%;
+            width: 100%;
+            height: 100%;
+
+            img {
+                position: unset;
+            }
+
+            .black-bar {
+                width: 100%;
+                max-height: unset;
+                height: auto;
+                position: unset;
+                display: block;
+                transform: unset;
+                padding: 20px;
+
+                & > .w-100 {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+
+                    .name {
+                        display: block;
+                        width: 50%;
+                        margin: 0;
+
+                        span {
+                            position: relative !important;
+                            right: unset !important;
+                            left: unset !important;
+                            top: unset !important;
+                            bottom: unset !important;
+                            font-size: 50px;
+                        }
+                    }
+
+                    .price {
+                        max-width: 50%;
+                        transform: none;
+                        margin: 0;
+                        justify-content: flex-end;
+                    }
+
+                    .buttons {
+                        transform: unset;
+                        display: flex;
+                        width: 100%;
+                        flex-direction: row;
+                        justify-content: flex-end;
+                        align-items: center;
+                        margin: 0;
+                        padding: 10px 0;
+
+                        & > div {
+                            margin: 0 10px;
+                        }
+
+                        .analyse {
+                            font-size: 16px;
+                        }
+
+                        .details {
+                            font-size: 18px;
+                        }
+                    }
+                }
+
+
+            }
+        }
+    }
+
+    #clients {
+        .clients-heading {
+            padding: 40px 0;
+        }
+
+        .clients-services {
+            flex-direction: column;
+
+            .clients-service {
+                flex-direction: row;
+                justify-content: center;
+                align-content: center;
+                background: none;
+
+                img {
+                    width: 50%;
+                    border-radius: unset;
+                    margin: 0;
+                }
+
+                .service-description {
+                    width: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    .description-heading {
+                        font-size: 24px;
+                    }
+
+                    .description-subheading {
+                        font-size: 18px;
+                    }
+
+                    .description-price {
+                        font-size: 16px;
+
+                        span {
+                            font-size: 40px;
+                        }
+                    }
+                }
+            }
+
+            .clients-service-2 {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    #advantages {
+        margin: 0;
+        background: none;
+        padding-top: 0;
+
+        .advantages-heading {
+            margin-bottom: 10px;
+        }
+
+        #advantagesSlider {
+            .advantage {
+                .image-wrap {
+                    img {
+                        max-height: 200px;
+                    }
+                }
+
+                .advantage-heading {
+                    font-size: 25px;
+                    text-align: center;
+                }
+
+                .advantage-description {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .sliderControls {
+            margin: 30px auto;
+            text-align: center;
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    #first-screen {
+        .best-solutions {
+            .title {
+                font-size: 10rem;
+            }
+        }
+
+        .bottom-plank {
+            .text {
+                font-size: 38px;
+            }
+        }
+    }
+
+    #services {
+        margin: 20px 0;
+
+        .service {
+            .black-bar {
+                width: 40%;
+                height: 120%;
+                padding: 10px;
+
+                & > .w-100 {
+                    height: 90%;
+                }
+
+                .name {
+                    display: block;
+
+                    span {
+                        position: relative !important;
+                        right: unset !important;
+                        left: unset !important;
+                        top: unset !important;
+                        bottom: unset !important;
+                        font-size: 36px;
+                    }
+                }
+
+                .price {
+                    .price-number {
+                        font-size: 40px;
+                    }
+
+                    .price-text {
+                        span {
+                            font-size: 16px;
+                        }
+                    }
+                }
+
+                .buttons {
+                    .analyse {
+                        font-size: 16px;
+                    }
+
+                    .details {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    #advantages {
+        background: none;
+        margin: 50px 0;
+
+        .advantage-heading {
+            font-size: 40px;
+        }
+
+        .advantage-description {
+            font-size: 18px;
+        }
+    }
+
+    #clients {
+        .clients-heading {
+            padding: 40px 0;
+        }
+
+        .clients-services {
+            background: none;
+            flex-direction: column;
+
+            .clients-service {
+                flex-direction: row;
+                justify-content: center;
+                align-content: center;
+
+                img {
+                    width: 50%;
+                    border-radius: unset;
+                    margin: 0;
+                }
+
+                .service-description {
+                    width: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    .description-heading {
+                        font-size: 24px;
+                    }
+
+                    .description-subheading {
+                        font-size: 18px;
+                    }
+
+                    .description-price {
+                        font-size: 16px;
+
+                        span {
+                            font-size: 40px;
+                        }
+                    }
+                }
+            }
+
+            .clients-service-2 {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    #advantages {
+        #dots {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1560px) {
+    #first-screen {
+        .best-solutions {
+            .title {
+                font-size: 11rem;
+            }
+        }
+
+        .bottom-plank {
+            width: 80%;
+
+            .text {
+                font-size: 36px;
+            }
+        }
+    }
+
+    #first-screen .best-solutions .pink-line {
+        top: 20%;
+        width: 69%;
+    }
+
+    #first-screen .best-solutions .white-line {
+        width: 69%;
+        bottom: 25%;
+    }
+
+    #services {
+        margin: 20px 0;
+
+        .service {
+            max-width: calc(50% - 20px);
+            margin: 50px 20px;
+
+            .black-bar {
+                width: 25%;
+                height: 120%;
+                padding: 5px;
+
+                & > .w-100 {
+                    height: 90%;
+                }
+
+                .name {
+                    margin-top: 75%;
+                    margin-left: -15%;
+
+                    span {
+                        font-size: 60px;
+                    }
+                }
+
+                .price {
+                    .price-number {
+                        font-size: 40px;
+                    }
+
+                    .price-text {
+                        span {
+                            font-size: 20px;
+                        }
+                    }
+                }
+
+                .buttons {
+                    margin-top: 25%;
+
+                    .analyse {
+                        font-size: 18px;
+                    }
+
+                    .details {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        #service-landing {
+            .name {
+                span {
+                    &:nth-child(2) {
+                        position: relative;
+                        right: unset;
+                        left: unset;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+
+        #service-corporate {
+            .name {
+                span {
+                    &:nth-child(2) {
+                        right: -160%;
+                        top: 50%;
+                    }
+                }
+            }
+        }
+
+        #service-shop {
+            .name {
+                span {
+                    &:nth-child(2) {
+                        right: -160%;
+                        top: 50%;
+                    }
+                }
+            }
+        }
+
+        #service-individualSolutions {
+            .name {
+                span {
+                    &:nth-child(2) {
+                        right: -175%;
+                        top: 50%;
+                    }
+                }
+            }
+        }
+
+    }
+
+    #advantages {
+        background: url(../assets/img/lines.png) no-repeat 0 35%;
+        background-size: 25%;
+        margin: 50px 0;
+
+        .advantage-heading {
+            font-size: 40px;
+        }
+
+        .advantage-description {
+            font-size: 18px;
+        }
+
+        #dots {
+            width: 180px;
+            transform: rotate(30deg) translate(10%, 0%);
+        }
+    }
+
+    #clients .clients-services .clients-service {
+        margin-bottom: 20px;
+        background: none;
+
+        img {
+            width: 100%;
+        }
+
+        .service-description {
+            .description-heading {
+                font-size: 34px;
+            }
+
+            .description-subheading {
+                font-size: 18px;
+            }
+
+            .description-price {
+                font-size: 16px;
+
+                span {
+                    font-size: 36px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1560px) {
+    #first-screen {
+        .bottom-plank {
+            .text {
+                max-width: 100%;
+            }
+        }
+    }
+}

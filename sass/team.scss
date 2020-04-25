@@ -119,3 +119,104 @@
 }
 
 @import "media";
+
+@media (max-width: 767px) {
+    #page-header {
+        height: 300px;
+        .page-title {
+            top: 45%;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    #team {
+        #teamSlider {
+            justify-content: center;
+            .member .member-card {
+                .description {
+                    padding: 0 20px;
+                    .title h3 {
+                        font-size: 30px;
+                    }
+
+                    .skills {
+                        margin: 15px 0;
+                        padding-left: 20px;
+                        li {
+                            font-size: 16px;
+                            margin: 5px 0;
+                        }
+                    }
+
+                    .footer {
+                        text-align: center;
+                        margin-bottom: 10px;
+                        a {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+
+        #teamControls {
+            width: 100%;
+            text-align: right;
+        }
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1560px) {
+    #team {
+        #teamSlider {
+            .member {
+                margin-bottom: 35px;
+
+                .member-card {
+                    .description {
+                        .title {
+                            .gold-line {
+                                top: 35%;
+                                width: 50%;
+                                height: 10px;
+                            }
+                            h3 {
+                                font-size: 35px;
+                            }
+                        }
+
+                        .skills {
+                            li {
+                                font-size: 18px;
+                                &:before {
+                                    content: "\2022";
+                                    color: $main-pink;
+                                    font-weight: bold;
+                                    display: inline-block;
+                                    width: 1em;
+                                    margin-left: -1em;
+                                    text-shadow: 0 0 20px;
+                                }
+                            }
+                        }
+
+                        .footer {
+                            a {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+
+                &:nth-child(even) {
+                    .member-card .description .title .gold-line {
+                        top: unset;
+                        bottom: 10%;
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
