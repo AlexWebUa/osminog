@@ -116,8 +116,6 @@ $(document).on('click', (e) => {
         $('#dropdown-menu').css('display', 'none');
 });
 
-
-
 $(document).ready(() => {
     /* Mobile only sliders */
     if ($(window).width() < 768) {
@@ -154,4 +152,19 @@ $(document).ready(() => {
             $('#forClientsCollapse').collapse('toggle');
         });
     }
+});
+
+$('#aboutSlide1').on('wowStart', ()=>{
+    let animateAbout = function() {
+        animateCSS('#aboutSlide2', 'fadeIn', clearStyles, () => {
+            animateCSS('#aboutSlide3', 'fadeIn', clearStyles, () => {
+                animateCSS('#aboutSlide4', 'fadeIn', clearStyles, () => {
+                    animateCSS('#aboutSlide5', 'fadeIn', clearStyles, () => {
+                        animateCSS('#aboutSlide6', 'fadeIn', clearStyles);
+                    });
+                });
+            });
+        })
+    }
+    setTimeout(animateAbout, 1000);
 });

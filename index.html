@@ -385,32 +385,32 @@
         <div class="slider-wrapper">
             <div class="about-slider" id="aboutSlider">
 
-                <div class="slider-item wow fadeIn">
+                <div id="aboutSlide1" class="slider-item wow fadeIn">
                     <img alt="20" src="assets/img/20.png">
                     <div class="slider-description">Занимаемся разработкой сайтов с 1997 года</div>
                 </div>
 
-                <div class="slider-item wow fadeIn" data-wow-delay="1s">
+                <div id="aboutSlide2" class="slider-item" style="visibility: hidden">
                     <img alt="700" src="assets/img/700.png">
                     <div class="slider-description">Наши офисы находятся в разных городах и странах</div>
                 </div>
 
-                <div class="slider-item wow fadeIn" data-wow-delay="2s">
+                <div id="aboutSlide3" class="slider-item" style="visibility: hidden">
                     <img alt="120" src="assets/img/120.png">
                     <div class="slider-description">Высокая квалификация персонала</div>
                 </div>
 
-                <div class="slider-item wow fadeIn" data-wow-delay="2s">
+                <div id="aboutSlide4" class="slider-item" style="visibility: hidden">
                     <img alt="20" src="assets/img/20.png">
                     <div class="slider-description">Занимаемся разработкой сайтов с 1997 года</div>
                 </div>
 
-                <div class="slider-item wow fadeIn" data-wow-delay="3s">
+                <div id="aboutSlide5" class="slider-item" style="visibility: hidden">
                     <img alt="700" src="assets/img/700.png">
                     <div class="slider-description">Наши офисы находятся в разных городах и странах</div>
                 </div>
 
-                <div class="slider-item wow fadeIn" data-wow-delay="4s">
+                <div id="aboutSlide6" class="slider-item" style="visibility: hidden">
                     <img alt="120" src="assets/img/120.png">
                     <div class="slider-description">Высокая квалификация персонала</div>
                 </div>
@@ -979,6 +979,7 @@
     new WOW({
         offset: 15,
         callback: (box) => {
+            box.dispatchEvent(new Event('wowStart'));
             console.log(box);
         }
     }).init();

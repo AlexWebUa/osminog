@@ -252,69 +252,6 @@
 
 }
 
-#about {
-    background: url("../assets/img/tentacles-top_1.jpg") 0 0 no-repeat,
-    url("../assets/img/tentacles-bottom_1.jpg") 100% 100% no-repeat,
-    #2d2d2d;
-    background-size: contain;
-    text-align: center;
-    color: white;
-    padding: 100px 0 175px 0;
-
-    .about-heading {
-        max-width: 1000px;
-
-        .heading-heading {
-            position: relative;
-            width: 80%;
-            margin: auto;
-
-            .gold-line {
-                position: absolute;
-                height: 15px;
-                width: 56%;
-                background-color: $gold;
-                right: 0;
-                top: 50%;
-            }
-
-            h2 {
-                position: relative;
-                margin: 40px 0;
-                z-index: 2;
-            }
-        }
-
-        .heading-description {
-            font-family: "Gilroy SemiBold", sans-serif;
-            font-size: 20px;
-            margin-bottom: 20px;
-        }
-    }
-
-    .about-slider {
-        display: flex;
-        width: 80%;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        margin: auto;
-
-        .slider-item {
-            max-width: 325px;
-            margin-bottom: 50px;
-
-            img {
-                margin: 80px 0;
-            }
-
-            .slider-description {
-                font-family: "Gilroy Black", sans-serif;
-                font-size: 25px;
-            }
-        }
-    }
-}
-
 #advantages {
     padding-top: 80px;
     background: url("../assets/img/lines.png") no-repeat 0 0;
