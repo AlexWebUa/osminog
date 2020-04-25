@@ -313,11 +313,9 @@
         }
     }
 
-    #feedback {
-        .feedback-form {
-            .select-wrap {
-                display: block;
-            }
+    .feedback-form {
+        .select-wrap {
+            display: block;
         }
     }
 
@@ -453,6 +451,188 @@
             }
         }
     }
+
+    /* Services */
+
+    #page-header {
+        height: 250px;
+        .page-title {
+            font-size: 50px;
+            top: 60%;
+            .pink-line {
+                top: 30px;
+                height: 8px;
+            }
+            .outline {
+                top: -5px;
+                left: -5px;
+            }
+        }
+    }
+
+    #service-cards {
+        .tabs {
+            justify-content: center;
+            button.btn {
+                margin: 10px 0;
+            }
+        }
+        .cards {
+            &>.row {
+                justify-content: center;
+            }
+            .card {
+                margin-bottom: 20px;
+                .image {
+                    margin-bottom: 10px;
+                }
+                .title {
+                    font-size: 24px;
+                    margin: 20px 0;
+                }
+                .key-points {
+                    margin: 30px 0;
+                    padding-right: 30px;
+                    li {
+                        font-size: 19px;
+                    }
+                }
+
+                .advantages {
+                    padding: 0 5px;
+                    ul {
+                        list-style-image: url("../assets/img/card-advanteges-bullet_small.png");
+                        padding-left: 40px;
+                        li {
+                            margin: 75px 0;
+                        }
+                    }
+                }
+
+                .footer {
+                    display: flex;
+                    width: 80%;
+                    flex-direction: column;
+                    margin: 15px auto;
+                    button.btn {
+                        font-size: 18px;
+                        max-width: unset;
+                        margin: 10px 0;
+                    }
+                }
+            }
+        }
+    }
+
+    #banners {
+        .heading-wrap {
+            margin: 30px 0;
+            .banners-heading .gold-line {
+                top: 40%;
+                height: 8px;
+            }
+        }
+        &>.row {
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+
+        .banner {
+            img {
+                width: 100%;
+                height: auto;
+            }
+            .description {
+                position: relative;
+                color: #333333;
+                text-align: center;
+                font-size: 22px;
+                max-width: 80%;
+                margin: 10px auto 30px;
+                top: unset;
+                bottom: unset;
+                left: unset;
+                right: unset;
+
+            }
+        }
+    }
+
+    #offers {
+        margin-top: 50px;
+        .heading-wrap {
+            .offers-heading .gold-line {
+                height: 8px;
+                width: 60%;
+            }
+        }
+        .offers-subheading {
+            font-size: 18px;
+            max-width: 90%;
+            margin: 25px auto;
+        }
+        .offer {
+            margin-bottom: 20px;
+            .offer-title {
+                font-size: 52px;
+                padding: 0 30px;
+            }
+        }
+        .offers-footer {
+            margin: 30px 0;
+        }
+    }
+
+    #stages {
+        margin-bottom: 40px;
+        .path {
+            background: none;
+            margin: 0;
+
+            .row {
+                margin: 0;
+            }
+
+            .stage {
+                .stage-description {
+                    margin: 15px auto;
+                }
+                &-1 {
+                    .stage-description {
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    #stillHere {
+        padding: 150px 0 50px;
+        background-size: auto;
+
+        .feedback-heading {
+            margin-bottom: 20px;
+            .gold-line {
+                height: 7px;
+                left: -15px;
+                width: 45%;
+            }
+        }
+        .feedback-form {
+            .row {
+                flex-direction: column;
+            }
+
+            .col {
+                padding: 0;
+                margin: 15px 0;
+            }
+
+            button {
+                margin: 40px 0;
+            }
+        }
+    }
 }
 
 @media (min-width: 767px) and (max-width: 991px) {
@@ -506,6 +686,10 @@
                 margin: 0 !important;
             }
         }
+    }
+
+    h2 {
+        font-size: 50px;
     }
 
     #first-screen {
@@ -739,6 +923,108 @@
 
         .bottom-section {
             font-size: 12px;
+        }
+    }
+
+
+    /* Services */
+
+    #page-header {
+        height: 270px;
+        .page-title {
+            font-size: 72px;
+            .pink-line {
+                top: 40px;
+                height: 15px;
+            }
+        }
+    }
+
+    #service-cards {
+        .tabs {
+            justify-content: center;
+            button.btn {
+                margin: 10px 0;
+            }
+        }
+        .cards {
+            &>.row {
+                justify-content: center;
+            }
+            .card {
+                margin-bottom: 20px;
+                .image {
+                    margin-bottom: 10px;
+                }
+                .title {
+                    font-size: 35px;
+                    margin: 20px 0;
+                }
+                .key-points {
+                    margin: 30px 0;
+                    li {
+                        font-size: 20px;
+                    }
+                }
+
+                .advantages {
+                    ul {
+                        padding-left: 70px;
+                    }
+                }
+
+                .footer {
+                    margin: 30px 0;
+                    button.btn {
+                        max-width: 45%;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    #banners {
+        .banner {
+            &-4 .description {
+                top: 0;
+            }
+        }
+        .heading-wrap {
+            margin: 30px 0;
+            .banners-heading .gold-line {
+                top: 45%;
+                height: 8px;
+            }
+        }
+        &>.row {
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+    }
+
+    #offers {
+        margin-top: 50px;
+        .heading-wrap {
+            .offers-heading .gold-line {
+                height: 8px;
+                width: 60%;
+            }
+        }
+        .offers-subheading {
+            font-size: 32px;
+            max-width: 90%;
+            margin: 35px auto;
+        }
+        .offer {
+            margin-bottom: 20px;
+            .offer-title {
+                font-size: 125px;
+                padding: 0 30px;
+            }
+        }
+        .offers-footer {
+            margin: 50px 0;
         }
     }
 }
@@ -1007,6 +1293,96 @@
 
         .bottom-section {
             font-size: 16px;
+        }
+    }
+
+
+    /* Services */
+
+    #page-header {
+        height: 300px;
+        .page-title {
+            font-size: 80px;
+            .pink-line {
+                top: 45px;
+                height: 15px;
+            }
+        }
+    }
+
+    #service-cards {
+        .cards {
+            .card {
+                .image {
+                    margin-bottom: 10px;
+                }
+                .title {
+                    font-size: 35px;
+                    margin: 20px 0;
+                }
+                .key-points {
+                    margin: 30px 0;
+                    li {
+                        font-size: 20px;
+                    }
+                }
+
+                .advantages {
+                    ul {
+                        padding-left: 70px;
+                    }
+                }
+
+                .footer {
+                    margin: 30px 0;
+                    button.btn {
+                        max-width: 45%;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    #banners .banner {
+        .description {
+            font-size: 20px;
+        }
+        &-4 .description {
+            top: 25%;
+        }
+    }
+
+    #offers {
+        margin-top: 50px;
+        .offers-subheading {
+            font-size: 40px;
+            max-width: 85%;
+            margin: 50px auto;
+        }
+        .offer .offer-title {
+            font-size: 50px;
+        }
+        .offers-footer {
+            margin: 50px 0;
+        }
+    }
+
+    #stages {
+        .path {
+            background-size: 100% 73%;
+            .row {
+                margin-bottom: 50px;
+            }
+            .stage {
+                font-size: 16px;
+                .stage-description {
+                    margin: 30px 0;
+                }
+                &-1 .stage-description{
+                    max-width: unset;
+                }
+            }
         }
     }
 }
@@ -1333,7 +1709,7 @@
         .portfolio-works {
             .work {
                 .description-heading {
-                    font-size: 40px;
+                    font-size: 35px;
                 }
 
                 .description-description {
@@ -1381,6 +1757,92 @@
             font-size: 14px;
         }
     }
+
+    /* Services */
+
+    #page-header {
+        height: 350px;
+        .page-title {
+            font-size: 100px;
+            .pink-line {
+                top: 60px;
+            }
+        }
+    }
+
+    #service-cards {
+        .cards {
+            .card {
+                .title {
+                    font-size: 50px;
+                }
+                .footer {
+                    button.btn {
+                        max-width: 40%;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    #banners {
+        .heading-wrap {
+            .banners-heading {
+                .gold-line {
+                    top: 43%;
+                }
+            }
+        }
+
+        .banner {
+            .description {
+                font-size: 24px;
+            }
+
+            &-2 {
+                .description {
+                    top: 25%;
+                }
+            }
+            
+            &-4 {
+                .description {
+                    top: 20%;
+                }
+            }
+        }
+    }
+
+    #offers {
+        .offers-subheading {
+            margin: 50px auto;
+            max-width: 60%;
+            font-size: 36px;
+        }
+        .offer {
+            .offer-title {
+                font-size: 60px;
+            }
+        }
+    }
+
+    #stages {
+        .path {
+            background-size: 100% 75%;
+            .row {
+                margin-bottom: 40px;
+            }
+
+            .stage {
+                font-size: 17px;
+                .stage-description {
+                    margin: 20px auto;
+                }
+            }
+        }
+    }
+
 }
 
 @media (max-width: 1560px) {

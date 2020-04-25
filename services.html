@@ -49,7 +49,7 @@
                 <li class="nav-item">
                     <a href="team.html">Команда</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <i class="far fa-caret-down"></i>
 
                     <span id="dropdown-link">Услуги</span>
@@ -254,9 +254,394 @@
         </div>
 
         <div class="page-title">
-            <div class="pink-line"></div>
-            <div class="fill">Услуги</div>
-            <div class="outline">Услуги</div>
+            <div class="pink-line" style="visibility: hidden"></div>
+            <div class="fill" style="visibility: hidden">Услуги</div>
+            <div class="outline" style="visibility: hidden">Услуги</div>
+        </div>
+    </div>
+</div>
+
+<div id="service-cards">
+    <div class="container">
+        <div class="row tabs">
+            <div class="col-md-6 col-lg-4">
+                <button class="btn btn-outline active" id="landing">Landing page</button>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <button class="btn btn-outline" id="corporate">Корпоративные сайты</button>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <button class="btn btn-outline" id="internetShop">Интернет-магазины</button>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="row active" id="card-landing" >
+                <div class="col-md-8 col-lg-6">
+                    <div class="col-lg-12 card">
+                        <div class="image">
+                            <img src="assets/img/card-image-2.png" alt="Landing page">
+                        </div>
+                        <div class="title">
+                            Landing page
+                            <br>
+                            &laquo;Максимум продаж&raquo;
+                        </div>
+                        <div class="price">От <span class="price-number">10 000</span> Руб. </div>
+                        <ul class="key-points">
+                            <li><b>10-14 дней</b></li>
+                            <li>Продающие блоки</li>
+                            <li>СТА, форма заявки</li>
+                            <li>Ваши тексты и изображения</li>
+                        </ul>
+                        <div class="advantages">
+                            <ul>
+                                <li><span>Анализируем сайты конкурентов и делаем лучшем чем у них</span></li>
+                                <li><span>В разработке участвуют только профессиональные маркетологи</span></li>
+                                <li><span>Всё делается строго индивидуально под товар и ожидания заказчика</span></li>
+                                <li><span>Создаём уникальную графику для сайта</span></li>
+                                <li><span>Лендинг, заточенныый под дальнейшее SEO продвижение</span></li>
+                            </ul>
+                        </div>
+                        <div class="footer">
+                            <button class="btn btn-outline">Что входит в цену?</button>
+                            <button class="btn btn-fill">Выбрать</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-8 col-lg-6">
+                    <div class="col-lg-12 card">
+                        <div class="image">
+                            <img src="assets/img/card-image-1.png" alt="Landing page">
+                        </div>
+                        <div class="title">
+                            Landing page
+                            <br>
+                            &laquo;Быстро и недорого&raquo;
+                        </div>
+                        <div class="price">От <span class="price-number">10 000</span> Руб. </div>
+                        <ul class="key-points">
+                            <li><b>От 14 дней</b></li>
+                            <li>Продающие блоки</li>
+                            <li>СТА, форма заявки</li>
+                            <li>Ваши тексты и изображения</li>
+                        </ul>
+                        <div class="advantages">
+                            <ul>
+                                <li><span>Срок разработки - менее 2 недель</span></li>
+                                <li><span>Создадим сайт с Вашим наполнением</span></li>
+                                <li><span>Проверенные, отработанные шаблоны</span></li>
+                                <li><span>Подходит для любых товаров и услуг</span></li>
+                                <li><span>Низкая цена</span></li>
+                            </ul>
+                        </div>
+                        <div class="footer">
+                            <button class="btn btn-outline">Что входит в цену?</button>
+                            <button class="btn btn-fill">Выбрать</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row" id="card-corporate" style="display: none">
+                <div class="col-md-8 col-lg-6">
+                    <div class="col-lg-12 card">
+                        <div class="image">
+                            <img src="assets/img/card-image-2.png" alt="Корпоративный сайт">
+                        </div>
+                        <div class="title">
+                            Корпоративный сайт
+                            <br>
+                            &laquo;Максимум продаж&raquo;
+                        </div>
+                        <div class="price">От <span class="price-number">10 000</span> Руб. </div>
+                        <ul class="key-points">
+                            <li><b>10-14 дней</b></li>
+                            <li>Продающие блоки</li>
+                            <li>СТА, форма заявки</li>
+                            <li>Ваши тексты и изображения</li>
+                        </ul>
+                        <div class="advantages">
+                            <ul>
+                                <li><span>Анализируем сайты конкурентов и делаем лучшем чем у них</span></li>
+                                <li><span>В разработке участвуют только профессиональные маркетологи</span></li>
+                                <li><span>Всё делается строго индивидуально под товар и ожидания заказчика</span></li>
+                                <li><span>Создаём уникальную графику для сайта</span></li>
+                                <li><span>Лендинг, заточенныый под дальнейшее SEO продвижение</span></li>
+                            </ul>
+                        </div>
+                        <div class="footer">
+                            <button class="btn btn-outline">Что входит в цену?</button>
+                            <button class="btn btn-fill">Выбрать</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-8 col-lg-6">
+                    <div class="col-lg-12 card">
+                        <div class="image">
+                            <img src="assets/img/card-image-1.png" alt="Корпоративный сайт">
+                        </div>
+                        <div class="title">
+                            Корпоративный сайт
+                            <br>
+                            &laquo;Быстро и недорого&raquo;
+                        </div>
+                        <div class="price">От <span class="price-number">10 000</span> Руб. </div>
+                        <ul class="key-points">
+                            <li><b>От 14 дней</b></li>
+                            <li>Продающие блоки</li>
+                            <li>СТА, форма заявки</li>
+                            <li>Ваши тексты и изображения</li>
+                        </ul>
+                        <div class="advantages">
+                            <ul>
+                                <li><span>Срок разработки - менее 2 недель</span></li>
+                                <li><span>Создадим сайт с Вашим наполнением</span></li>
+                                <li><span>Проверенные, отработанные шаблоны</span></li>
+                                <li><span>Подходит для любых товаров и услуг</span></li>
+                                <li><span>Низкая цена</span></li>
+                            </ul>
+                        </div>
+                        <div class="footer">
+                            <button class="btn btn-outline">Что входит в цену?</button>
+                            <button class="btn btn-fill">Выбрать</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row" id="card-internetShop" style="display: none">
+                <div class="col-md-8 col-lg-6">
+                    <div class="col-lg-12 card">
+                        <div class="image">
+                            <img src="assets/img/card-image-2.png" alt="Интернет-магазин">
+                        </div>
+                        <div class="title">
+                            Интернет-магазин
+                            <br>
+                            &laquo;Максимум продаж&raquo;
+                        </div>
+                        <div class="price">От <span class="price-number">10 000</span> Руб. </div>
+                        <ul class="key-points">
+                            <li><b>10-14 дней</b></li>
+                            <li>Продающие блоки</li>
+                            <li>СТА, форма заявки</li>
+                            <li>Ваши тексты и изображения</li>
+                        </ul>
+                        <div class="advantages">
+                            <ul>
+                                <li><span>Анализируем сайты конкурентов и делаем лучшем чем у них</span></li>
+                                <li><span>В разработке участвуют только профессиональные маркетологи</span></li>
+                                <li><span>Всё делается строго индивидуально под товар и ожидания заказчика</span></li>
+                                <li><span>Создаём уникальную графику для сайта</span></li>
+                                <li><span>Лендинг, заточенныый под дальнейшее SEO продвижение</span></li>
+                            </ul>
+                        </div>
+                        <div class="footer">
+                            <button class="btn btn-outline">Что входит в цену?</button>
+                            <button class="btn btn-fill">Выбрать</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-8 col-lg-6">
+                    <div class="col-lg-12 card">
+                        <div class="image">
+                            <img src="assets/img/card-image-1.png" alt="Интернет-магазин">
+                        </div>
+                        <div class="title">
+                            Интернет-магазин
+                            <br>
+                            &laquo;Быстро и недорого&raquo;
+                        </div>
+                        <div class="price">От <span class="price-number">10 000</span> Руб. </div>
+                        <ul class="key-points">
+                            <li><b>От 14 дней</b></li>
+                            <li>Продающие блоки</li>
+                            <li>СТА, форма заявки</li>
+                            <li>Ваши тексты и изображения</li>
+                        </ul>
+                        <div class="advantages">
+                            <ul>
+                                <li><span>Срок разработки - менее 2 недель</span></li>
+                                <li><span>Создадим сайт с Вашим наполнением</span></li>
+                                <li><span>Проверенные, отработанные шаблоны</span></li>
+                                <li><span>Подходит для любых товаров и услуг</span></li>
+                                <li><span>Низкая цена</span></li>
+                            </ul>
+                        </div>
+                        <div class="footer">
+                            <button class="btn btn-outline">Что входит в цену?</button>
+                            <button class="btn btn-fill">Выбрать</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div id="banners">
+    <div class="heading-wrap">
+        <div class="banners-heading">
+            <div class="gold-line"></div>
+            <h2>Что вы получите?</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="banner banner-1 col">
+                <img src="assets/img/banner-1.jpg" alt="">
+                <div class="description">Мощный инструмент привлечения клиентов</div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="banner banner-2 col">
+                <img src="assets/img/banner-2.jpg" alt="">
+                <div class="description">Повышение имиджа компании и формирование дополнительного доверия, подкрепленного отзывами и пр.</div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="banner banner-3 col">
+                <img src="assets/img/banner-3.jpg" alt="">
+                <div class="description">Только "теплые" клиенты</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="banner banner-4 col">
+                <img src="assets/img/banner-4.jpg" alt="">
+                <div class="description">Все лиды в одном месте - Вы всегда сможет легко интегрировать в свою црм систему и анализировать эффективность того или иного канала продаж</div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="banner banner-5 col">
+                <img src="assets/img/banner-5.jpg" alt="">
+                <div class="description">В среднем лендинг отбивается за 1,5 месяца</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="offers">
+    <div class="container">
+        <div class="heading-wrap">
+            <div class="offers-heading">
+                <div class="gold-line"></div>
+                <h2>Мы можем предложить</h2>
+            </div>
+        </div>
+
+        <div class="row offers-subheading">Не тип рекламы делается под лендинг, а лендинг делается под директ.</div>
+
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="col offer wow fadeIn" data-wow-duration="1s" id="smmOffer">
+                    <img src="assets/img/offer-1.jpg" alt="">
+                    <div class="offer-title">SMM</div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="col offer" id="directOffer" style="visibility: hidden">
+                    <img src="assets/img/offer-2.jpg" alt="">
+                    <div class="offer-title">Директ</div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="col offer" id="gaOffer" style="visibility: hidden">
+                    <img src="assets/img/offer-3.jpg" alt="">
+                    <div class="offer-title">Google Adwords</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row offers-footer">
+            <button class="btn btn-fill">Получить клиентов</button>
+        </div>
+    </div>
+</div>
+
+<div id="stages">
+    <div class="container">
+        <div class="heading-wrap">
+            <div class="stages-heading">
+                <div class="gold-line"></div>
+                <h2>Этапы работы</h2>
+            </div>
+        </div>
+    </div>
+    <div class="path">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="col stage stage-1">
+                        <img src="assets/img/stage-1.png" alt="stage 1">
+                        <div class="stage-description">
+                            <b>От вас требуется:</b>
+                            <ul>
+                                <li>Пожелания относительно текстов и графики</li>
+                                <li>Рассказать об особенности Вашего бизнеса</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="col stage stage-2">
+                        <img src="assets/img/stage-2.png" alt="stage 2">
+                        <div class="stage-description">
+                            Мы анализируем Ваш товар, подбираем наиболее выгодные и прибыльные маркетинговые стратегии, а на основе них - составляем дизайн проект вашего сайта
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="col stage stage-3">
+                        <img src="assets/img/stage-3.png" alt="stage 3">
+                        <div class="stage-description">
+                            Наши дизайнеры составляют 3 варианта уникального и впечатляющего дизайна вашего сайта, а вы утверждаете подходящий
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="col stage stage-4">
+                        <img src="assets/img/stage-4.png" alt="stage 4">
+                        <div class="stage-description">
+                            Наши специалисты пишут продающие текста, а так же создаем графику для «Вау-эффекта»
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="col stage stage-5">
+                        <img src="assets/img/stage-5.png" alt="stage 5">
+                        <div class="stage-description">
+                            Мы самостоятельно тестируем и запускаем сайт. А вам остается лишь начать продавать!
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="col stage stage-6">
+                        <img src="assets/img/stage-6.png" alt="stage 6">
+                        <div class="stage-description">
+                            также вы получите подарок скидку 50% на яндекс директ или гугл эдвордс
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -342,7 +727,7 @@
     </div>
 </div>
 
-<!--<footer>
+<footer>
     <div class="container">
         <div class="content row">
             <div class="col-12 col-xl-3 footer-logo">
@@ -399,7 +784,7 @@
             <div class="privacy"><a href="privacy.html">Политика конфиденциальности</a></div>
         </div>
     </div>
-</footer>-->
+</footer>
 
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="assets/libs/bootstrap/bootstrap.min.js"></script>
@@ -411,6 +796,7 @@
     new WOW({
         offset: 15,
         callback: (box) => {
+            box.dispatchEvent(new Event('wowStart'));
             console.log(box);
         }
     }).init();
@@ -422,5 +808,19 @@
     $(".input-phone").mask("+7(999) 999-99-99");
 </script>
 <script src="js/main.js"></script>
+<script src="js/services.js"></script>
+<script>
+    $('#smmOffer').on('wowStart', ()=> {
+        let fn = function() {
+            animateCSS('#directOffer', 'fadeIn', clearStyles, ()=>{
+                animateCSS('#gaOffer', 'fadeIn', clearStyles)
+            })
+        }
+        setTimeout(fn, 1000);
+    })
+</script>
 </body>
 </html>
+
+<!--TODO: change tentacles in #service-cards-->
+<!--TODO: fix active menu items if .fixed-menu-->

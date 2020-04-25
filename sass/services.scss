@@ -21,6 +21,346 @@
     }
 }
 
+#service-cards {
+    .tabs {
+        margin: 50px 0;
+        button.btn {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+
+    .cards {
+        .card {
+            padding: 0;
+            border: 4px solid $main-pink;
+            border-radius: 40px;
+            overflow: hidden;
+
+            .image {
+                width: 100%;
+                margin-bottom: 50px;
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            
+            .title {
+                font-family: "Gilroy Light", sans-serif;
+                font-size: 55px;
+                text-align: center;
+                margin: 50px 0;
+            }
+
+            .price {
+                font-family: "Gilroy Medium", sans-serif;
+                font-size: 18px;
+                color: #3e3e3e;
+                text-align: center;
+
+                .price-number {
+                    font-family: "Bebas Neue", sans-serif;
+                    font-size: 60px;
+                    font-weight: bold;
+                    color: $main-pink;
+                }
+            }
+
+            .key-points {
+                list-style: none;
+                margin: 50px 0;
+
+                li {
+                    font-family: "Gilroy Medium", sans-serif;
+                    margin: 10px 0;
+                    font-size: 22px;
+                    &:before {
+                        content: "\2022";
+                        color: $main-pink;
+                        font-weight: bold;
+                        display: inline-block;
+                        width: 1em;
+                        margin-left: -1em;
+                        text-shadow: 0 0 20px;
+                    }
+                }
+            }
+
+            .advantages {
+                position: relative;
+                background: url("../assets/img/card-tentacles-top-white_1.jpg") 0 0 no-repeat, #f4f8fb;
+                background-size: contain;
+                padding-top: 70px;
+
+                &:after {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    content: "";
+                    background-color: white;
+                    height: 20px;
+                    border-radius: 100% 100% 0 0;
+                }
+
+                ul {
+                    list-style-image: url("../assets/img/card-advanteges-bullet.png");
+                    padding-left: 100px;
+                    font-family: "Gilroy", sans-serif;
+                    color: #333333;
+                    font-size: 18px;
+
+                    li {
+                        padding-left: 15px;
+                        position: relative;
+                        margin: 15px 0;
+
+                        span {
+                            position: absolute;
+                            top: 50%;
+                            transform: translate(0, -55%);
+                        }
+                    }
+                }
+            }
+
+            .footer {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin: 60px 0;
+
+                button.btn {
+                    max-width: 35%;
+                }
+            }
+        }
+    }
+}
+
+#banners {
+    .heading-wrap {
+        text-align: center;
+        margin: 80px 0;
+        .banners-heading {
+            display: inline-block;
+            position: relative;
+
+            h2 {
+                position: relative;
+            }
+
+            .gold-line {
+                position: absolute;
+                top: 50%;
+                left: -15%;
+                width: 70%;
+                height: 15px;
+            }
+        }
+    }
+
+    .banner {
+        position: relative;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .description {
+            font-family: "Gilroy", sans-serif;
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 40px;
+            color: white;
+        }
+
+        &-1 .description {
+            max-width: 40%;
+            top: 25%;
+            right: 25%;
+            left: unset;
+        }
+
+        &-2 .description {
+            max-width: 90%;
+            top: 5%;
+            right: 0;
+            left: 0;
+            margin: auto;
+            text-align: center;
+        }
+
+        &-3 .description {
+            max-width: 50%;
+            top: 35%;
+            left: 15%;
+        }
+
+        &-4 .description {
+            max-width: 75%;
+            top: 5%;
+            right: 5%;
+            left: unset;
+        }
+
+        &-5 .description {
+            max-width: 30%;
+            top: 25%;
+            left: 10%;
+        }
+    }
+
+    .row {
+        margin: 20px -15px;
+    }
+}
+
+#offers {
+    margin-top: 140px;
+
+    .heading-wrap {
+        text-align: center;
+        .offers-heading {
+            position: relative;
+            display: inline-block;
+            .gold-line {
+                height: 15px;
+                position: absolute;
+                top: 45%;
+                width: 55%;
+            }
+
+            h2 {
+                position: relative;
+            }
+        }
+    }
+
+    .offers-subheading {
+        font-family: "Gilroy Heavy", sans-serif;
+        font-size: 45px;
+        color: $main-pink;
+        text-align: center;
+        max-width: 55%;
+        margin: 80px auto;
+    }
+
+    .offer {
+        position: relative;
+        border: 4px solid $main-pink;
+        border-radius: 40px;
+        overflow: hidden;
+        padding: 0;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        .offer-title {
+            font-family: "Gilroy Heavy", sans-serif;
+            font-size: 95px;
+            color: white;
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            left: 0;
+            right: 0;
+            text-align: center;
+            padding: 0 40px;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 2px white;
+            line-height: 100%;
+        }
+    }
+
+    .offers-footer {
+        margin: 80px 0;
+
+        button {
+            margin: auto;
+        }
+    }
+}
+
+#stages {
+    .heading-wrap {
+        text-align: center;
+        margin: 60px auto;
+        .stages-heading {
+            position: relative;
+            display: inline-block;
+            .gold-line {
+                height: 15px;
+                position: absolute;
+                top: 45%;
+                width: 90%;
+                left: -33%;
+            }
+
+            h2 {
+                position: relative;
+            }
+        }
+    }
+
+    .path {
+        background: url("../assets/img/dotted-path.png") no-repeat 0 0;
+        background-size: 100% 80%;
+        margin: 0 50px;
+
+        .row {
+            margin-bottom: 80px;
+        }
+
+        .stage {
+            font-family: "Gilroy", sans-serif;
+            font-size: 18px;
+            color: #333333;
+            text-align: center;
+            img {
+                max-width: 50%;
+                margin: auto;
+            }
+
+            .stage-description {
+                margin: 40px auto;
+            }
+
+            &-1 {
+                .stage-description {
+                    max-width: 80%;
+                    b {
+                        font-family: "Gilroy Heavy", sans-serif;
+                        display: block;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                    }
+                    ul {
+                        padding: 0;
+                        display: inline-block;
+                        list-style: "-";
+                    }
+                }
+            }
+
+            &-6 {
+                .stage-description {
+                    font-family: "Gilroy Heavy", sans-serif;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    color: $main-pink;
+                }
+            }
+        }
+    }
+}
+
 #stillHere {
     background: url("../assets/img/tentacles-top-white_1.jpg") 0 0 no-repeat,
     url("../assets/img/tentacles-bottom-white_1.jpg") 100% 100% no-repeat,
