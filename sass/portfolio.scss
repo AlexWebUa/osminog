@@ -1,0 +1,159 @@
+@import "common";
+
+.gold-line {
+    background-color: #efd9b3!important;
+}
+
+#page-header {
+    background: url("../assets/img/page-header-portfolio.jpg") 0 0 no-repeat;
+
+    .page-title {
+        .pink-line {
+            position: absolute;
+            height: 25px;
+            width: 33.5%;
+            top: 65px;
+            right: 0;
+            background-color: $main-pink;
+        }
+    }
+}
+
+#portfolio-portfolio {
+    .tabs {
+        margin: 50px 0;
+        button.btn {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+
+    .catalog {
+        padding: 50px 30px 20px 30px;
+        background: white;
+        border-radius: 40px;
+        margin-bottom: 40px;
+        .heading {
+            position: relative;
+            width: 100%;
+            margin-bottom: 50px;
+            .gold-line {
+                position: absolute;
+                height: 13px;
+                width: 65%;
+                bottom: 15%;
+                right: 10%;
+            }
+            h3 {
+                position: relative;
+                font-family: "Gilroy Light", sans-serif;
+                font-size: 45px;
+            }
+        }
+
+        .catalog-list {
+            padding: 0;
+            width: 100%;
+            list-style: none;
+            font-family: "Gilroy Medium", sans-serif;
+            font-size: 18px;
+            li {
+                width: 100%;
+                margin: 15px 0;
+                display: flex;
+                justify-content: space-between;
+                cursor: pointer;
+                .list-title {
+                    color: #242424;
+                }
+
+                .list-quantity {
+                    color: #b7b7b7;
+                }
+
+                &.active {
+                    .list-title, .list-quantity {
+                        color: $main-pink;
+                    }
+                }
+            }
+        }
+    }
+
+    .feedback {
+        font-family: "Gilroy Light", sans-serif;
+        background-color: $main-pink;
+        color: white;
+        border: 7px solid #a75e71;
+        border-radius: 40px;
+        padding: 50px 7px;
+        text-align: center;
+
+        .heading {
+            width: 100%;
+            position: relative;
+            .gold-line {
+                position: absolute;
+                height: 13px;
+                background-color: #f79196;
+                &.line-top {
+                    top: 14%;
+                    right: 0;
+                    width: 65%;
+                }
+
+                &.line-bottom {
+                    left: 0;
+                    bottom: 9%;
+                    width: 68%;
+                }
+            }
+            h3 {
+                position: relative;
+                font-size: 35px;
+                letter-spacing: -1px;
+            }
+        }
+
+        .subheading {
+            font-size: 25px;
+            margin: 40px 0;
+        }
+
+        button.btn-outline {
+            border-color: white;
+            color: white;
+            max-width: 70%;
+        }
+    }
+
+    .works {
+        .work {
+            border-radius: 40px;
+            overflow: hidden;
+            padding: 0;
+            background-color: white;
+            position: relative;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+            .description {
+                width: 100%;
+                position: absolute;
+                top: calc(100% - 49px);
+                background: url("../assets/img/portfolio-work-top.png") 0 0 no-repeat;
+                background-size: contain;
+                color: #242424;
+                .title {
+                    font-size: 25px;
+                }
+                .footer {
+                }
+            }
+        }
+    }
+}
+
+@import "media";

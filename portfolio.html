@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Осьминожка</title>
+
+    <link href="assets/img/favicon/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+    <link href="assets/img/favicon/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+    <link href="assets/img/favicon/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="assets/img/favicon/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+    <link href="assets/img/favicon/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+    <link href="assets/img/favicon/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+    <link href="assets/img/favicon/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+    <link href="assets/img/favicon/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+    <link href="assets/img/favicon/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="assets/img/favicon/android-icon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+    <link href="assets/img/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+    <link href="assets/img/favicon/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+    <link href="assets/img/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+    <link href="manifest.json" rel="manifest">
+    <meta content="#ff4878" name="msapplication-TileColor">
+    <meta content="assets/img/favicon/ms-icon-144x144.png" name="msapplication-TileImage">
+    <meta content="#ff4878" name="theme-color">
+
+    <link href="css/portfolio.min.css?v=0.0.1" rel="stylesheet">
+    <link href="assets/libs/wow/animate.css" rel="stylesheet">
+    <link href="assets/libs/nSelect/jquery.nselect.css" rel="stylesheet">
+</head>
+<body>
+<header class="fixed-top">
+    <nav class="navbar navbar-expand-md container">
+        <a class="navbar-brand" href="index.html">
+            <img alt="osminojek logo" src="assets/img/logo.png">
+        </a>
+        <div class="mobile-only phone-icon">
+            <a href="tel:88005557778"><i class="fal fa-phone-alt" title="Call phone"></i></a>
+        </div>
+        <button aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler"
+                data-target="#navbarCollapse" data-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon" id="navbarTogglerIcon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <span aria-controls="navbarCollapse" class="navbar-toggler close" data-target="#navbarCollapse" data-toggle="collapse">&times;</span>
+            <ul class="pages navbar-nav justify-content-between">
+                <li class="nav-item">
+                    <a href="team.html">Команда</a>
+                </li>
+                <li class="nav-item">
+                    <i class="far fa-caret-down"></i>
+
+                    <span id="dropdown-link">Услуги</span>
+                    <div class="dropdown" id="dropdown-menu">
+                        <a href="services.html#landing">Лендинг</a>
+                        <a href="services.html#corporate">Корпоративный сайт</a>
+                        <a href="services.html#internetShop">Интернет-магазин</a>
+                        <a href="services.html#individualSolutions">Индивидуальные решения</a>
+                        <hr>
+                        <a href="services.html#seo">SEO</a>
+                        <a href="services.html#advertising">Реклама</a>
+                        <a href="services.html#smm">SMM</a>
+                        <hr>
+                        <a href="services.html#administrating">Администрирование</a>
+                        <div class="close">+</div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="contacts.html">Контакты</a>
+                </li>
+                <li class="nav-item">
+                    <a href="reviews.html">Отзывы</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="portfolio.html">Портфолио</a>
+                </li>
+            </ul>
+            <ul class="icons navbar-nav  ml-auto">
+                <li class="nav-item instagram-icon">
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram" title="Open in instagram"></i></a>
+                </li>
+                <li class="nav-item phone-icon">
+                    <a href="tel:88005557778"><i class="fal fa-phone-alt" title="Call phone"></i></a>
+                </li>
+                <li class="phones mobile-only">
+                    <div>
+                        <a href="tel:88005557778">8 800 555-77-78</a>
+                    </div>
+                    <div>
+                        <a href="tel:88005557778">8 800 555-77-78</a>
+                    </div>
+                </li>
+                <li class="social-icons mobile-only">
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram" title="Open in instagram"></i></a>
+                    <a href="tel:88005557778"><i class="fal fa-phone-alt" title="Call phone"></i></a>
+                </li>
+            </ul>
+            <button class="btn btn-outline ml-auto" data-target="#quiz1" data-toggle="modal" type="button">
+                Консультация
+            </button>
+        </div>
+    </nav>
+</header>
+
+<div aria-hidden="true" class="modal fade quiz" id="quiz1" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Выберите тип сайта?</h5>
+                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="quiz1Form">
+                    <div class="custom-control custom-radio">
+                        <input class="custom-control-input" id="quiz1CorporateSite" name="customRadio" type="radio">
+                        <label class="custom-control-label" for="quiz1CorporateSite">Корпоративный сайт</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input class="custom-control-input" id="quiz1LandingPage" name="customRadio" type="radio">
+                        <label class="custom-control-label" for="quiz1LandingPage">Landing page</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input class="custom-control-input" id="quiz1InternetShop" name="customRadio" type="radio">
+                        <label class="custom-control-label" for="quiz1InternetShop">Интернет-магазин</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input class="custom-control-input" id="quiz1Other" name="customRadio" type="radio">
+                        <label class="custom-control-label" for="quiz1Other">Другое</label>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-fill" id="quiz1Next" type="button">Далее</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div aria-hidden="true" class="modal fade quiz" id="quiz2" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Когда вы планируете запустить сайт?</h5>
+                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="quiz2Form">
+                    <div class="custom-control custom-radio">
+                        <input class="custom-control-input" id="quiz2ThreeFiveDays" name="customRadio" type="radio">
+                        <label class="custom-control-label" for="quiz2ThreeFiveDays">Через 3-5 дней</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input class="custom-control-input" id="quiz2InMonth" name="customRadio" type="radio">
+                        <label class="custom-control-label" for="quiz2InMonth">В течении месяца</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input class="custom-control-input" id="quiz2OneThreeMonths" name="customRadio" type="radio">
+                        <label class="custom-control-label" for="quiz2OneThreeMonths">Через 1-3 месяца</label>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" id="quiz2Back" type="button">Назад</button>
+                <button class="btn btn-fill" id="quiz2Next" type="button">Далее</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div aria-hidden="true" class="modal fade quiz" id="quiz3" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">У вас есть домен и хостинг?</h5>
+                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="quiz3Form">
+                    <div class="custom-control custom-radio">
+                        <input class="custom-control-input" id="quiz3No" name="customRadio" type="radio">
+                        <label class="custom-control-label" for="quiz3No">Нет, нужно подключить</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input class="custom-control-input" id="quiz3Yes" name="customRadio" type="radio">
+                        <label class="custom-control-label" for="quiz3Yes">Да, уже есть</label>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" id="quiz3Back" type="button">Назад</button>
+                <button class="btn btn-fill" id="quiz3Next" type="button">Далее</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div aria-hidden="true" class="modal fade quiz" id="quiz4" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Заполните форму что бы получить персональное предложение</h5>
+                <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="modal-description">
+                    <p>Мы рассчитаем стоимость создания сайта, подберем под вас тариф и свяжемся с вами в течении
+                        дня</p>
+                </div>
+            </div>
+            <div class="modal-body">
+
+                <form class="feedback-form" id="quiz4Form">
+                    <div class="row">
+                        <div class="col">
+                            <input class="form-control input-name" id="quiz4UserName" placeholder="Меня зовут"
+                                   type="text">
+                        </div>
+                        <div class="col">
+                            <input class="form-control input-select" id="quiz4UserMail" placeholder="Ваша почта"
+                                   type="text">
+                        </div>
+                        <div class="col">
+                            <input class="form-control input-phone" id="quiz4UserPhone" placeholder="Мой телефон"
+                                   type="tel">
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <div class="promo">
+                    <div class="gold-line"></div>
+                    <div>
+                        Получите <span class="percent">20%</span> скидку используя промокод: <span class="promocode">Awesome</span>
+                    </div>
+                </div>
+                <button class="btn btn-fill" id="quiz4Send" type="button">Отправить</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="page-header">
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="index.html" class="breadcrumb-item">Главная</a>
+            <div class="separator">/</div>
+            <a href="#" class="breadcrumb-item breadcrumb-active">Портфолио</a>
+        </div>
+
+        <div class="page-title">
+            <div class="pink-line" style="visibility: hidden"></div>
+            <div class="fill" style="visibility: hidden">Наше портфолио</div>
+            <div class="outline" style="visibility: hidden">Наше портфолио</div>
+        </div>
+    </div>
+</div>
+
+<div id="portfolio-portfolio">
+    <div class="container">
+        <div class="row tabs">
+            <div class="col-md-6 col-lg-4">
+                <button class="btn btn-outline active" id="landing">Landing page</button>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <button class="btn btn-outline" id="corporate">Корпоративные сайты</button>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <button class="btn btn-outline" id="internetShop">Интернет-магазины</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="col-12 catalog">
+                    <div class="heading">
+                        <div class="gold-line"></div>
+                        <h3>Каталог</h3>
+                    </div>
+
+                    <ul class="catalog-list">
+                        <li class="active">
+                            <span class="list-title">Строительство</span>
+                            <span class="list-quantity">2578</span>
+                        </li>
+                        <li>
+                            <span class="list-title">Строительство</span>
+                            <span class="list-quantity">2578</span>
+                        </li>
+                        <li>
+                            <span class="list-title">Строительство</span>
+                            <span class="list-quantity">2578</span>
+                        </li>
+                        <li>
+                            <span class="list-title">Строительство</span>
+                            <span class="list-quantity">2578</span>
+                        </li>
+                        <li>
+                            <span class="list-title">Строительство</span>
+                            <span class="list-quantity">2578</span>
+                        </li>
+                        <li>
+                            <span class="list-title">Строительство</span>
+                            <span class="list-quantity">2578</span>
+                        </li>
+                        <li>
+                            <span class="list-title">Строительство</span>
+                            <span class="list-quantity">2578</span>
+                        </li>
+                        <li>
+                            <span class="list-title">Строительство</span>
+                            <span class="list-quantity">2578</span>
+                        </li>
+                        <li>
+                            <span class="list-title">Строительство</span>
+                            <span class="list-quantity">2578</span>
+                        </li>
+                        <li>
+                            <span class="list-title">Строительство</span>
+                            <span class="list-quantity">2578</span>
+                        </li>
+                        <li>
+                            <span class="list-title">Строительство</span>
+                            <span class="list-quantity">2578</span>
+                        </li>
+                        <li>
+                            <span class="list-title">Строительство</span>
+                            <span class="list-quantity">2578</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 feedback">
+                    <div class="heading">
+                        <div class="gold-line line-top"></div>
+                        <div class="gold-line line-bottom"></div>
+                        <h3>Мы всегда рады помочь Вам выбрать нужный сайт!</h3>
+                    </div>
+                    <div class="subheading">Напишите нам и мы поможем</div>
+                    <button class="btn btn-outline">Написать</button>
+                </div>
+            </div>
+            <div class="col-lg-9 works">
+
+                <div class="col-lg-6 work">
+                    <img src="assets/img/portfolio-work-1.jpg" alt="">
+                    <div class="description">
+                        <div class="title">Грузоподъемное оборудование и техника</div>
+                        <div class="footer">
+                            <button class="btn btn-fill">Подробнее</button>
+                            <button class="btn btn-outline">Демо</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="content row">
+            <div class="col-12 col-xl-3 footer-logo">
+                <a href="index.html">
+                    <img alt="osminojek logo" src="assets/img/logo_contrast.png">
+                </a>
+            </div>
+
+            <div class="col-12 col-xl-6 footer-links">
+                <div class="company">
+                    <div class="heading" id="companyHeading">Компания</div>
+                    <ul class="collapse show" id="companyCollapse">
+                        <li><a href="about.html">Об Осьминожке</a></li>
+                        <li><a href="team.html">Наша команда</a></li>
+                    </ul>
+                </div>
+
+                <div class="site-making">
+                    <div class="heading" id="siteMakingHeading">Разработка сайтов</div>
+                    <ul class="collapse show" id="siteMakingCollapse">
+                        <li><a href="services.html#landing">Лендинг</a></li>
+                        <li><a href="services.html#corporate">Корпоративный сайт</a></li>
+                        <li><a href="services.html#internetShop">Интернет-магазин</a></li>
+                        <li><a href="services.html#individualSolutions">Индивидуальные решения</a></li>
+                    </ul>
+                </div>
+
+                <div class="for-clients">
+                    <div class="heading" id="forClientsHeading">Клиентам</div>
+                    <ul class="collapse show" id="forClientsCollapse">
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <li><a href="portfolio.html">Портфолио</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-12 col-xl-3 footer-contacts">
+                <ul class="icons">
+                    <li class="instagram-icon">
+                        <a href="https://www.instagram.com/"><i class="fab fa-instagram" title="Open in instagram"></i></a>
+                    </li>
+                    <li class="phone-icon">
+                        <a href="tel:88005557778"><i class="fal fa-phone-alt" title="Call phone"></i></a>
+                    </li>
+                </ul>
+                <ul class="phones">
+                    <li><a href="tel:88005557778">8 800 555-77-78</a></li>
+                    <li><a href="tel:88005557778">8 800 555-77-78</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-section row">
+            <div class="copyright">Copyright © 1998-2020 Digital Агентство Осьминожка. All rights reserved.</div>
+            <div class="privacy"><a href="privacy.html">Политика конфиденциальности</a></div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="assets/libs/bootstrap/bootstrap.min.js"></script>
+<script src="assets/libs/slick/slick.min.js"></script>
+<script src="assets/libs/wow/wow.min.js"></script>
+<script src="assets/libs/nSelect/jquery.nselect.min.js"></script>
+<script src="assets/libs/jquery.maskedinput/jquery.maskedinput.min.js"></script>
+<script>
+    new WOW({
+        offset: 15,
+        callback: (box) => {
+            box.dispatchEvent(new Event('wowStart'));
+            console.log(box);
+        }
+    }).init();
+
+    $('.select-wrap select').nSelect({
+        firstTitle: 'Я хочу'
+    });
+
+    $(".input-phone").mask("+7(999) 999-99-99");
+</script>
+<script src="js/main.js"></script>
+<script src="js/portfolio.js"></script>
+</body>
+</html>
