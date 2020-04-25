@@ -1016,9 +1016,12 @@
             max-width: 90%;
             margin: 35px auto;
         }
-        .offer .offer-title {
-            font-size: 32px;
-            padding: 0 30px;
+        .offer {
+            margin-bottom: 20px;
+            .offer-title {
+                font-size: 125px;
+                padding: 0 30px;
+            }
         }
         .offers-footer {
             margin: 50px 0;
@@ -1795,6 +1798,12 @@
         .banner {
             .description {
                 font-size: 24px;
+            }
+
+            &-2 {
+                .description {
+                    top: 25%;
+                }
             }
             
             &-4 {

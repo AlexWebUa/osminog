@@ -48,13 +48,18 @@ function animateCSS(element, animationName, startEvent, endEvent) {
 }
 
 function clearStyles(el) {
-    el.style.visibility = 'visible';
+    el.style = '';
 }
 
 $(window).on('load', () => {
     sticky_header();
     $(window).on("scroll", function () {
         sticky_header();
+    });
+
+    animateCSS('#page-header .fill','fadeInDown', clearStyles);
+    animateCSS('#page-header .outline','fadeInUp', clearStyles,()=>{
+        animateCSS('#page-header .pink-line','fadeInRight', clearStyles);
     });
 });
 
@@ -99,7 +104,6 @@ $('#quiz4Send').on('click', () => {
 
 /* Events */
 
-
 // Header dropdowns
 $(document).on('click', (e) => {
     if (e.target === $('#dropdown-menu .close')[0])
@@ -115,40 +119,6 @@ $(document).on('click', (e) => {
 
 
 $(document).ready(() => {
-
-    /* Advantages */
-    $('#advantagesSlider').slick({
-        infinite: false,
-        slidesToShow: 1,
-        prevArrow: $('#advantagesControls .prev')[0],
-        nextArrow: $('#advantagesControls .next')[0],
-        autoplay: true,
-        autoplaySpeed: 5000,
-        speed: 1000
-    });
-
-    $('#advantagesSlider').on('beforeChange', () => {
-        if ($('#dots').css('display') !== 'none') {
-            let dots = $('#dots');
-            let currentDot = dots.find('.dot.current');
-            let index = currentDot.data('index');
-            if (index < 4) index++;
-            else index = 1;
-            let nextDot = dots.find(`[data-index=${index}]`);
-            currentDot.removeClass('current');
-            nextDot.addClass('current');
-        }
-    });
-
-    $('#reviewsSlider').slick({
-        infinite: false,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        prevArrow: $('#reviewsControls .prev')[0],
-        nextArrow: $('#reviewsControls .next')[0],
-        speed: 1000
-    });
-
     /* Mobile only sliders */
     if ($(window).width() < 768) {
         $('#aboutSlider').slick({
@@ -167,28 +137,6 @@ $(document).ready(() => {
             speed: 1000
         });
 
-        $('#reviewsSlider').slick('unslick');
-
-        $('#textReviewsSlider').slick({
-            infinite: false,
-            prevArrow: $('#textReviewsControls .prev')[0],
-            nextArrow: $('#textReviewsControls .next')[0],
-            speed: 1000,
-        });
-        $('#darkReviewsSlider').slick({
-            infinite: false,
-            prevArrow: $('#darkReviewsControls .prev')[0],
-            nextArrow: $('#darkReviewsControls .next')[0],
-            speed: 1000,
-        });
-        $('#lightReviewsSlider').slick({
-            infinite: false,
-            prevArrow: $('#lightReviewsControls .prev')[0],
-            nextArrow: $('#lightReviewsControls .next')[0],
-            speed: 1000,
-        });
-
-
         /* Footer */
         $('#companyCollapse').collapse('hide');
         $('#siteMakingCollapse').collapse('hide');
@@ -206,58 +154,4 @@ $(document).ready(() => {
             $('#forClientsCollapse').collapse('toggle');
         });
     }
-
-    /* Services page */
-    let tabs = $('.tabs button');
-    let cards = $('.cards .row');
-
-    $('#landing').on('click', (e)=>{
-
-        $(tabs).each((i, el)=>{
-            $(el).removeClass('active');
-        });
-
-        $(cards).each((i, el)=>{
-            el.style.display = "none";
-        })
-
-        $(e.target).addClass('active');
-        document.getElementById('card-landing').style = '';
-    });
-
-    $('#corporate').on('click', (e)=>{
-
-        $(tabs).each((i, el)=>{
-            $(el).removeClass('active');
-        });
-
-        $(cards).each((i, el)=>{
-            el.style.display = "none";
-        })
-
-        $(e.target).addClass('active');
-        document.getElementById('card-corporate').style = '';
-    });
-
-    $('#internetShop').on('click', (e)=>{
-
-        $(tabs).each((i, el)=>{
-            $(el).removeClass('active');
-        });
-
-        $(cards).each((i, el)=>{
-            el.style.display = "none";
-        })
-
-        $(e.target).addClass('active');
-        document.getElementById('card-internetShop').style = '';
-    });
 });
-
-$(window).on('load', ()=>{
-    animateCSS('#page-header .fill','fadeInDown', clearStyles);
-    animateCSS('#page-header .outline','fadeInUp', clearStyles,()=>{
-        animateCSS('#page-header .pink-line','fadeInRight', clearStyles);
-    });
-})
-

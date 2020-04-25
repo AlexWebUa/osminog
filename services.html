@@ -276,7 +276,7 @@
         </div>
 
         <div class="cards">
-            <div class="row" id="card-landing" >
+            <div class="row active" id="card-landing" >
                 <div class="col-md-8 col-lg-6">
                     <div class="col-lg-12 card">
                         <div class="image">
@@ -545,17 +545,20 @@
 
         <div class="row">
             <div class="col-lg-4">
-                <div class="col offer"><img src="assets/img/offer-1.jpg" alt="">
+                <div class="col offer wow fadeIn" data-wow-duration="1s" id="smmOffer">
+                    <img src="assets/img/offer-1.jpg" alt="">
                     <div class="offer-title">SMM</div>
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="col offer"><img src="assets/img/offer-2.jpg" alt="">
+                <div class="col offer" id="directOffer" style="visibility: hidden">
+                    <img src="assets/img/offer-2.jpg" alt="">
                     <div class="offer-title">Директ</div>
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="col offer"><img src="assets/img/offer-3.jpg" alt="">
+                <div class="col offer" id="gaOffer" style="visibility: hidden">
+                    <img src="assets/img/offer-3.jpg" alt="">
                     <div class="offer-title">Google Adwords</div>
                 </div>
             </div>
@@ -793,6 +796,7 @@
     new WOW({
         offset: 15,
         callback: (box) => {
+            box.dispatchEvent(new Event('wowStart'));
             console.log(box);
         }
     }).init();
@@ -804,7 +808,19 @@
     $(".input-phone").mask("+7(999) 999-99-99");
 </script>
 <script src="js/main.js"></script>
+<script src="js/services.js"></script>
+<script>
+    $('#smmOffer').on('wowStart', ()=> {
+        let fn = function() {
+            animateCSS('#directOffer', 'fadeIn', clearStyles, ()=>{
+                animateCSS('#gaOffer', 'fadeIn', clearStyles)
+            })
+        }
+        setTimeout(fn, 1000);
+    })
+</script>
 </body>
 </html>
 
 <!--TODO: change tentacles in #service-cards-->
+<!--TODO: fix active menu items if .fixed-menu-->
