@@ -128,28 +128,65 @@
     }
 
     .works {
+        /*display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;*/
         .work {
-            border-radius: 40px;
-            overflow: hidden;
+            /*border-radius: 40px;
+            overflow: hidden;*/
             padding: 0;
-            background-color: white;
             position: relative;
-
-            img {
-                width: 100%;
-                height: auto;
+            .image-wrapper {
+                border-radius: 40px 40px 0 0;
+                overflow: hidden;
+                max-width: 540px;
+                max-height: 350px;
+                img {
+                    width: 100%;
+                    height: auto;
+                }
             }
             .description {
+                border-radius: 0 0 40px 40px;
                 width: 100%;
-                position: absolute;
-                top: calc(100% - 49px);
-                background: url("../assets/img/portfolio-work-top.png") 0 0 no-repeat;
-                background-size: contain;
                 color: #242424;
+                position: absolute;
+                bottom: -30%;
+                padding: 40px 0;
+                background: white;
+                //transition: 0.7s all;
+
+                &:before {
+                    position: absolute;
+                    top: -40px;
+                    content: "";
+                    width: 100%;
+                    background: url(../assets/img/portfolio-work-top.png) 0 0 no-repeat;
+                    background-size: cover;
+                    height: 70px;
+                }
                 .title {
                     font-size: 25px;
+                    //margin-bottom: 40px;
+                    padding: 0 20px;
                 }
                 .footer {
+                    transition: 0.35s all;
+                    max-width: 80%;
+                    justify-content: space-between;
+                    margin: 0px auto 0 auto;
+
+                    &.show {
+                        display: flex;
+                    }
+
+                    &.collapsing, &.show {
+                        margin: 40px auto 0 auto;
+                    }
+
+                    button.btn {
+                        max-width: 45%;
+                    }
                 }
             }
         }
