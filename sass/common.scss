@@ -511,6 +511,9 @@ header.header-fixed {
                         background-color: rgba(white, 0.4);
                     }
                 }
+                &.active>a, &.active>span  {
+                    background-color: darkgray;
+                }
             }
         }
 
@@ -528,6 +531,8 @@ header.header-fixed {
     .navbar-toggler-icon {
         background: url("../assets/img/menu.png") center center no-repeat;
     }
+
+
 }
 
 .modal {
