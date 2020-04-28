@@ -56,9 +56,14 @@ $(document).ready(()=>{
         speed: 1000
     });
 
-    /*$('#video-reviews span').on('click', ev=>{
-        let videoElement = '<iframe src="https://youtu.be/wu3V6ai38Mo"></iframe>'
-        $('#video-reviews').append(videoElement);
-        $(ev.target).remove();
-    });*/
+    $('#video-reviews .video').on('click', ev=> {
+        let tag = ev.currentTarget;
+        let preview = $(tag).find('.preview');
+        let previewHeight = $(preview).height();
+        let previewWidth = $(preview).width();
+        let videoElement = `<iframe width="${previewWidth}" height="${previewHeight}" src="https://youtu.be/wu3V6ai38Mo"></iframe>`;
+
+        $(tag).empty();
+        $(tag).append(videoElement);
+    });
 });
