@@ -75,4 +75,141 @@
     }
 }
 
+#video-reviews {
+    .review {
+        border-radius: 40px;
+        overflow: hidden;
+        padding: 0;
+
+        .video {
+            position: relative;
+            width: 100%;
+            .play-icon {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 10%;
+                transform: translate(-50%,-50%);
+                cursor: pointer;
+            }
+        }
+
+        .review-description {
+            background-color: white;
+            padding: 40px 130px;
+
+            .title {
+                font-family: "Gilroy", sans-serif;
+                font-weight: 900;
+                font-size: 30px;
+            }
+            .body {
+                font-family: "Gilroy", sans-serif;
+                font-style: italic;
+                font-size: 18px;
+                padding: 30px 0;
+            }
+
+            .footer {
+                display: flex;
+                align-items: center;
+                margin-bottom: 15px;
+
+                .review-link {
+                    font-family: "Gilroy Medium", sans-serif;
+                    font-size: 18px;
+                    color: #999999;
+                    text-decoration: underline;
+                    transition: color 0.3s;
+
+                    &:hover {
+                        color: $main-pink;
+                    }
+                }
+
+                .review-video {
+                    margin: 0 15px;
+
+                    a {
+                        content: url("../assets/img/video-icon.png");
+                        vertical-align: middle;
+                    }
+                }
+
+                .review-icon {
+                    margin-left: auto;
+
+                    a {
+                        content: url("../assets/img/lion-icon.png");
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+#light-reviews {
+    margin-bottom: 100px;
+
+    .review {
+        position: relative;
+        border: 27px solid #97a3ac;
+        border-radius: 40px;
+        width: 100%;
+        padding: 0;
+
+        img {
+            width: 100%;
+        }
+        .review-link {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 45px;
+            text-align: center;
+            font-family: "Gilroy Medium", sans-serif;
+            font-size: 18px;
+            color: #999999;
+            text-decoration: underline;
+            transition: color 0.3s;
+
+            &:hover {
+                color: $main-pink;
+            }
+        }
+    }
+}
+
+#video-reviews, #light-reviews {
+    .footer > button {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin: 60px auto;
+        padding: 15px 0;
+        max-width: 400px;
+
+        .text {
+            margin-left: auto;
+        }
+
+        .line {
+            height: 35px;
+            max-height: 100%;
+            width: 1px;
+            background: #f67496;
+            margin: auto;
+        }
+
+        .arrow {
+            font-size: 24px;
+            margin-right: auto;
+        }
+    }
+}
+
 @import "media";

@@ -56,21 +56,9 @@ $(document).ready(()=>{
         speed: 1000
     });
 
-    /*$('#card-google').slick({
-        infinite: false,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        prevArrow: $('#googleControls .prev')[0],
-        nextArrow: $('#googleControls .next')[0],
-        speed: 1000
-    });
-
-    $('#card-twogis').slick({
-        infinite: false,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        prevArrow: $('#twogisControls .prev')[0],
-        nextArrow: $('#twogisControls .next')[0],
-        speed: 1000
+    /*$('#video-reviews span').on('click', ev=>{
+        let videoElement = '<iframe src="https://youtu.be/wu3V6ai38Mo"></iframe>'
+        $('#video-reviews').append(videoElement);
+        $(ev.target).remove();
     });*/
 });
