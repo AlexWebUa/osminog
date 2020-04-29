@@ -361,41 +361,6 @@
     }
 }
 
-#stillHere {
-    background: url("../assets/img/tentacles-top-white_1.jpg") 0 0 no-repeat,
-    url("../assets/img/tentacles-bottom-white_1.jpg") 100% 100% no-repeat,
-    white;
-    background-size: contain;
-    padding: 150px 0 100px 0;
-    text-align: center;
-
-    .feedback-heading {
-        margin-bottom: 75px;
-        position: relative;
-
-        .gold-line {
-            position: absolute;
-            height: 15px;
-            width: 56%;
-            top: 45%;
-            left: -15%;
-
-        }
-
-        h2 {
-            position: relative;
-        }
-    }
-
-    .form-control, .nselect._checked .nselect__head {
-        color: black;
-    }
-
-    .feedback-form button {
-        margin: 75px 0 0 0;
-    }
-}
-
 @import "media";
 
 @media (max-width: 767px) {
@@ -535,33 +500,7 @@
         }
     }
 
-    #stillHere {
-        padding: 150px 0 50px;
-        background-size: auto;
 
-        .feedback-heading {
-            margin-bottom: 20px;
-            .gold-line {
-                height: 7px;
-                left: -15px;
-                width: 45%;
-            }
-        }
-        .feedback-form {
-            .row {
-                flex-direction: column;
-            }
-
-            .col {
-                padding: 0;
-                margin: 15px 0;
-            }
-
-            button {
-                margin: 40px 0;
-            }
-        }
-    }
 }
 
 @media (min-width: 767px) and (max-width: 991px) {

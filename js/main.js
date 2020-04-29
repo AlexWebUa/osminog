@@ -60,6 +60,7 @@ $(window).on('load', () => {
     animateCSS('#page-header .fill','fadeInDown', clearStyles);
     animateCSS('#page-header .outline','fadeInUp', clearStyles,()=>{
         animateCSS('#page-header .pink-line','fadeInRight', clearStyles);
+        if($('#page-header .white-line').length) animateCSS('#page-header .white-line','fadeInLeft', clearStyles);
     });
 });
 

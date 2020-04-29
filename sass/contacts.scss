@@ -1,0 +1,236 @@
+@import "common";
+
+#page-header {
+    background: url("../assets/img/page-header-contacts.jpg") 0 0 no-repeat;
+    max-height: 550px;
+    height: 550px;
+
+    .page-title {
+        top: 45%;
+        .pink-line {
+            position: absolute;
+            height: 25px;
+            width: 39%;
+            top: 40px;
+            right: 0;
+            background-color: $main-pink;
+        }
+        .white-line {
+            position: absolute;
+            height: 25px;
+            width: 39.5%;
+            top: 150px;
+            opacity: 0.85;
+            left: 0;
+            background-color: white;
+        }
+        .fill, .outline {
+            width: fit-content;
+            text-align: left;
+            margin: auto;
+            line-height: 100%;
+        }
+    }
+}
+
+#prescription {
+    padding: 50px 0 100px 0;
+    background: url("../assets/img/curve-bottom-white.jpg") 100% 100% no-repeat, #ffffff;
+    .col {
+        font-family: "Gilroy SemiBold", sans-serif;
+        font-style: italic;
+        font-weight: 400;
+        font-size: 22px;
+        text-align: center;
+        margin: auto;
+    }
+}
+
+#advantages {
+    padding: 50px 0;
+    background: url("../assets/img/lines.png")0 50% no-repeat;
+    .heading {
+        text-align: center;
+        margin-bottom: 50px;
+        h2 {
+            margin: auto;
+        }
+    }
+    
+    .advantages {
+        .item {
+            text-align: center;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+            
+            .description {
+                font-family: "Gilroy", sans-serif;
+                font-size: 20px;
+            }
+        }
+    }
+    
+    .footer {
+        padding: 80px 0;
+        .col {
+            font-family: "Gilroy", sans-serif;
+            color: #1e1e1e;
+            font-size: 22px;
+            font-weight: 600;
+            text-align: center;
+            margin: auto;
+        }
+    }
+}
+
+#about {
+    background: url("../assets/img/tentacles-top-white_2.jpg") 0 0 no-repeat,
+    url("../assets/img/tentacles-bottom-white_2.jpg") 100% 100% no-repeat,
+    white;
+    color: black;
+    .about-heading {
+        max-width: 100%;
+        width: 100%;
+        .heading-heading {
+            .gold-line {
+                right: unset;
+                width: 37%;
+                background: #ebdcc1;
+            }
+        }
+    }
+}
+
+#team {
+    margin: 80px 0;
+    .heading {
+        margin: 50px 0;
+    }
+    .heading h2, .footer button {
+        margin: auto;
+    }
+    .members {
+        .member {
+            margin-bottom: 35px;
+
+            .member-card {
+                padding: 0;
+                border-radius: 40px;
+                overflow: hidden;
+                background-color: white;
+
+                .image {
+                    width: 100%;
+                    margin-bottom: 15px;
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+
+                .description {
+                    padding: 0 40px;
+
+                    .title {
+                        position: relative;
+                        text-align: center;
+                        margin: 15px 0;
+                        padding: 0 10px;
+                        .gold-line {
+                            position: absolute;
+                            top: 35%;
+                            width: 50%;
+                            height: 13px;
+                            background-color: #efd9b3;
+                        }
+                        h3 {
+                            position: relative;
+                            font-family: "Gilroy Light", sans-serif;
+                            font-size: 45px;
+                            color: #1b1b1b;
+                        }
+                    }
+
+                    .skills {
+                        list-style: none;
+                        margin: 35px 0;
+
+                        li {
+                            font-family: "Gilroy Medium", sans-serif;
+                            margin: 10px 0;
+                            font-size: 22px;
+                            &:before {
+                                content: "\2022";
+                                color: $main-pink;
+                                font-weight: bold;
+                                display: inline-block;
+                                width: 1em;
+                                margin-left: -1em;
+                                text-shadow: 0 0 20px;
+                            }
+
+                            &.inactive:before {
+                                color: #3e3e3e;
+                            }
+                        }
+                    }
+
+                    .footer {
+                        margin-bottom: 35px;
+                        a {
+                            font-family: "Gilroy", sans-serif;
+                            font-size: 22px;
+                            font-weight: 900;
+                            color: $main-pink;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+
+            &:nth-child(even) {
+                .member-card .description .title .gold-line {
+                    top: unset;
+                    bottom: 10%;
+                    right: 0;
+                }
+            }
+        }
+    }
+}
+
+#reviews-cards {
+    .heading {
+        margin: 80px 0;
+    }
+    .heading h2 {
+        margin: auto;
+    }
+
+    .cards {
+
+        .card {
+            padding: 0;
+            border: 24px solid #97a3ac;
+            border-radius: 40px;
+            position: relative;
+        }
+    }
+
+    .footer {
+        margin-top: 70px;
+        .sliderControls {
+            margin-left: auto;
+        }
+    }
+}
+
+#reviews {
+    margin-top: 80px;
+}
+
+@import "media";

@@ -147,6 +147,34 @@
         }
     }
 
+    #stillHere {
+        padding: 150px 0 50px;
+        background-size: auto;
+
+        .feedback-heading {
+            margin-bottom: 20px;
+            .gold-line {
+                height: 7px;
+                left: -15px;
+                width: 45%;
+            }
+        }
+        .feedback-form {
+            .row {
+                flex-direction: column;
+            }
+
+            .col {
+                padding: 0;
+                margin: 15px 0;
+            }
+
+            button {
+                margin: 40px 0;
+            }
+        }
+    }
+
     #about {
         background-size: auto;
         padding: 50px 0 150px 0;
