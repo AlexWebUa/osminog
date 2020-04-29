@@ -169,3 +169,21 @@ $('#aboutSlide1').on('wowStart', ()=>{
     }
     setTimeout(animateAbout, 1000);
 });
+
+$('#portfolio .work-1 img').on('wowStart', ()=>{
+    let animatePortfolio;
+    if ($(window).width() < 768) {
+        animatePortfolio = function () {
+            $('#portfolio .work-2 img').css('visibility', '');
+            $('#portfolio .work-2 .work-description-wrap').css('visibility', '');
+        }
+    } else {
+        animatePortfolio = function() {
+            animateCSS('#portfolio .work-2 img', 'fadeInRight', ()=>{
+                $('#portfolio .work-2 img').css('visibility', '');
+                animateCSS('#portfolio .work-2 .work-description-wrap', 'fadeInLeft', clearStyles);
+            } )
+        }
+    }
+   setTimeout(animatePortfolio, 1000);
+});

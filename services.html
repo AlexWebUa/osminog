@@ -264,14 +264,20 @@
 <div id="service-cards">
     <div class="container">
         <div class="row tabs">
-            <div class="col-md-6 col-lg-4">
-                <button class="btn btn-outline active" id="landing">Landing page</button>
+            <div class="col-md-6 col-lg-4 desktop-only">
+                <button class="btn tab btn-outline active" id="landing">Landing page</button>
             </div>
-            <div class="col-md-6 col-lg-4">
-                <button class="btn btn-outline" id="corporate">Корпоративные сайты</button>
+            <div class="col-md-6 col-lg-4 desktop-only">
+                <button class="btn tab btn-outline" id="corporate">Корпоративные сайты</button>
             </div>
-            <div class="col-md-6 col-lg-4">
-                <button class="btn btn-outline" id="internetShop">Интернет-магазины</button>
+            <div class="col-md-6 col-lg-4 desktop-only">
+                <button class="btn tab btn-outline" id="internetShop">Интернет-магазины</button>
+            </div>
+
+            <div class="mobile-only">
+                <div class="tab active" id="landing">Landing page</div>
+                <div class="tab" id="corporate">Корпоративные сайты</div>
+                <div class="tab" id="internetShop">Интернет-магазины</div>
             </div>
         </div>
 
@@ -497,19 +503,19 @@
 
     <div class="row">
         <div class="col-lg-4">
-            <div class="banner banner-1 col">
+            <div class="banner banner-1 col wow fadeInLeft">
                 <img src="assets/img/banner-1.jpg" alt="">
                 <div class="description">Мощный инструмент привлечения клиентов</div>
             </div>
         </div>
         <div class="col-lg-4">
-            <div class="banner banner-2 col">
+            <div class="banner banner-2 col" style="visibility: hidden">
                 <img src="assets/img/banner-2.jpg" alt="">
                 <div class="description">Повышение имиджа компании и формирование дополнительного доверия, подкрепленного отзывами и пр.</div>
             </div>
         </div>
         <div class="col-lg-4">
-            <div class="banner banner-3 col">
+            <div class="banner banner-3 col" style="visibility: hidden">
                 <img src="assets/img/banner-3.jpg" alt="">
                 <div class="description">Только "теплые" клиенты</div>
             </div>
@@ -518,13 +524,13 @@
 
     <div class="row">
         <div class="col-lg-6">
-            <div class="banner banner-4 col">
+            <div class="banner banner-4 col" style="visibility: hidden">
                 <img src="assets/img/banner-4.jpg" alt="">
                 <div class="description">Все лиды в одном месте - Вы всегда сможет легко интегрировать в свою црм систему и анализировать эффективность того или иного канала продаж</div>
             </div>
         </div>
         <div class="col-lg-6">
-            <div class="banner banner-5 col">
+            <div class="banner banner-5 col" style="visibility: hidden">
                 <img src="assets/img/banner-5.jpg" alt="">
                 <div class="description">В среднем лендинг отбивается за 1,5 месяца</div>
             </div>
@@ -702,8 +708,8 @@
                 </div>
             </div>
             <div class="work work-2">
-                <img alt="portfolio-1.jpg" class="wow fadeInRight" data-wow-delay="1s" src="assets/img/portfolio-1.jpg">
-                <div class="work-description-wrap wow fadeInLeft" data-wow-delay="1s">
+                <img alt="portfolio-1.jpg" style="visibility: hidden" src="assets/img/portfolio-1.jpg">
+                <div class="work-description-wrap" style="visibility: hidden">
                     <div class="work-description">
                         <div class="description-heading">Сайт для компании Лев <span class="lion-icon"></span></div>
                         <div class="description-description">Давно выяснено, что при оценке дизайна и композиции

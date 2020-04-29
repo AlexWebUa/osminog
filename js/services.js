@@ -1,5 +1,6 @@
 $(document).ready(() => {
-    let tabs = $('.tabs button');
+    let tabs = $('.tabs .tab');
+    if ($(window).width() < 767) tabs = $('.tabs .mobile-only .tab');
     let cards = $('.cards .row');
 
     $(tabs).on('click', (e)=>{
@@ -19,5 +20,18 @@ $(document).ready(() => {
             targetCard.style = '';
         })
 
-    })
+    });
+
+    $('#banners .banner-1').on('wowStart', ()=>{
+        let fn = function() {
+            animateCSS('#banners .banner-2', 'fadeIn', clearStyles, ()=>{
+                animateCSS('#banners .banner-3', 'fadeInRight', clearStyles, ()=>{
+                    animateCSS('#banners .banner-4', 'fadeInLeft', clearStyles, ()=>{
+                        animateCSS('#banners .banner-5', 'fadeInRight', clearStyles);
+                    });
+                });
+            });
+        }
+        setTimeout(fn, 1000);
+    });
 })

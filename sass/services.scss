@@ -366,9 +366,26 @@
 @media (max-width: 767px) {
     #service-cards {
         .tabs {
+            margin: 50px -15px;
             justify-content: center;
             button.btn {
                 margin: 10px 0;
+            }
+            .mobile-only {
+                width: 100%;
+                .tab {
+                    font-family: "Gilroy", sans-serif;
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: black;
+                    padding: 10px;
+                    background-color: white;
+                    transition: 0.35s all;
+                    &.active {
+                        background-color: $main-pink;
+                        color: white;
+                    }
+                }
             }
         }
         .cards {
@@ -381,14 +398,15 @@
                     margin-bottom: 10px;
                 }
                 .title {
-                    font-size: 24px;
-                    margin: 20px 0;
+                    margin: 10px 0;
+                    font-size: 26px;
                 }
                 .key-points {
-                    margin: 30px 0;
-                    padding-right: 30px;
+                    margin: 15px 0;
+                    padding-right: 10px;
+                    padding-left: 30px;
                     li {
-                        font-size: 19px;
+                        font-size: 18px;
                     }
                 }
 
@@ -396,11 +414,13 @@
                     padding: 0 5px;
                     ul {
                         list-style-image: url("../assets/img/card-advanteges-bullet_small.png");
-                        padding-left: 40px;
+                        padding-left: 35px;
                         li {
-                            margin: 75px 0;
+                            font-size: 14px;
+                            margin: 45px 0;
                         }
                     }
+
                 }
 
                 .footer {
@@ -432,22 +452,21 @@
         }
 
         .banner {
+            margin-bottom: 15px;
             img {
                 width: 100%;
                 height: auto;
             }
             .description {
-                position: relative;
-                color: #333333;
+                font-size: 20px;
+                max-width: 90%;
+                margin: auto;
                 text-align: center;
-                font-size: 22px;
-                max-width: 80%;
-                margin: 10px auto 30px;
-                top: unset;
-                bottom: unset;
-                left: unset;
-                right: unset;
-
+                left: 0;
+                right: 0;
+            }
+            &-4 .description {
+                font-size: 16px;
             }
         }
     }
@@ -488,6 +507,7 @@
             }
 
             .stage {
+                font-size: 16px;
                 .stage-description {
                     margin: 15px auto;
                 }
@@ -521,19 +541,27 @@
                     margin-bottom: 10px;
                 }
                 .title {
-                    font-size: 35px;
+                    font-size: 32px;
                     margin: 20px 0;
                 }
+                .price .price-number {
+                    font-size: 35px;
+                }
                 .key-points {
-                    margin: 30px 0;
+                    margin: 20px 0;
                     li {
-                        font-size: 20px;
+                        font-size: 18px;
                     }
                 }
 
                 .advantages {
+                    padding: 30px 0 15px 0;
                     ul {
-                        padding-left: 70px;
+                        list-style-image: url(../assets/img/card-advanteges-bullet_small.png);
+                        padding-left: 50px;
+                        li {
+                            margin: 30px 0;
+                        }
                     }
                 }
 
@@ -549,6 +577,9 @@
     }
 
     #banners {
+        .col-lg-6, .col-lg-4, .col {
+            padding: 0;
+        }
         .banner {
             &-4 .description {
                 top: 0;
@@ -564,6 +595,12 @@
         &>.row {
             margin-bottom: 0;
             margin-top: 0;
+        }
+    }
+
+    #stages {
+        .path {
+            background: none;
         }
     }
 
@@ -601,19 +638,27 @@
                     margin-bottom: 10px;
                 }
                 .title {
-                    font-size: 35px;
+                    font-size: 32px;
                     margin: 20px 0;
                 }
+                .price .price-number {
+                    font-size: 35px;
+                }
                 .key-points {
-                    margin: 30px 0;
+                    margin: 20px 0;
                     li {
-                        font-size: 20px;
+                        font-size: 18px;
                     }
                 }
 
                 .advantages {
+                    padding: 30px 0 15px 0;
                     ul {
+                        list-style-image: url(../assets/img/card-advanteges-bullet_small.png);
                         padding-left: 70px;
+                        li {
+                            margin: 30px 0;
+                        }
                     }
                 }
 
@@ -632,6 +677,9 @@
         .description {
             font-size: 20px;
         }
+        &-2 .description {
+            top: 10%;
+        }
         &-4 .description {
             top: 25%;
         }
@@ -640,9 +688,9 @@
     #offers {
         margin-top: 50px;
         .offers-subheading {
-            font-size: 40px;
-            max-width: 85%;
-            margin: 50px auto;
+            font-size: 25px;
+            max-width: 75%;
+            margin: 30px auto;
         }
         .offer .offer-title {
             font-size: 50px;
@@ -675,10 +723,30 @@
     #service-cards {
         .cards {
             .card {
+                .image {
+                    margin-bottom: 25px;
+                }
                 .title {
-                    font-size: 50px;
+                    font-size: 40px;
+                    margin: 25px 0;
+                }
+                .price .price-number {
+                    font-size: 40px;
+                }
+                .key-points {
+                    margin: 20px 0;
+                    li {
+                        font-size: 20px;
+                    }
+                }
+                .advantages {
+                    padding-top: 50px;
+                    ul {
+                        margin-bottom: 30px;
+                    }
                 }
                 .footer {
+                    margin: 30px 0;
                     button.btn {
                         max-width: 40%;
                         font-size: 18px;
@@ -720,7 +788,7 @@
         .offers-subheading {
             margin: 50px auto;
             max-width: 60%;
-            font-size: 36px;
+            font-size: 32px;
         }
         .offer {
             .offer-title {
@@ -731,13 +799,17 @@
 
     #stages {
         .path {
-            background-size: 100% 75%;
+            //background-size: 100% 75%;
+            background-size: 97% 80%;
             .row {
                 margin-bottom: 40px;
             }
 
             .stage {
                 font-size: 17px;
+                img {
+                    max-width: 45%;
+                }
                 .stage-description {
                     margin: 20px auto;
                 }
