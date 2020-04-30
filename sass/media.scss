@@ -532,6 +532,11 @@
     }
 
     #portfolio {
+        .portfolio-heading {
+            h2 {
+                text-align: center;
+            }
+        }
         .portfolio-works {
             .work {
                 flex-direction: column;

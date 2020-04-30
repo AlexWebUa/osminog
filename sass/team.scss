@@ -127,6 +127,9 @@
             top: 45%;
         }
     }
+    #team #teamSlider .member .member-card .description .title h3 {
+        font-size: 25px;
+    }
 }
 
 @media (max-width: 991px) {
@@ -136,9 +139,6 @@
             .member .member-card {
                 .description {
                     padding: 0 20px;
-                    .title h3 {
-                        font-size: 30px;
-                    }
 
                     .skills {
                         margin: 15px 0;
@@ -150,8 +150,9 @@
                     }
 
                     .footer {
-                        text-align: center;
-                        margin-bottom: 10px;
+                        text-align: left;
+                        margin-bottom: 25px;
+                        padding-left: 10px;
                         a {
                             font-size: 16px;
                         }
@@ -162,12 +163,26 @@
 
         #teamControls {
             width: 100%;
-            text-align: right;
+            text-align: center;
         }
     }
 }
 
-@media (min-width: 1201px) and (max-width: 1560px) {
+@media (min-width: 767px) and (max-width: 991px) {
+    #team #teamSlider .member .member-card .description .title h3 {
+        font-size: 32px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    #team {
+        #teamSlider {
+            justify-content: space-around;
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1560px) {
     #team {
         #teamSlider {
             .member {
@@ -175,6 +190,7 @@
 
                 .member-card {
                     .description {
+                        padding: 0 30px;
                         .title {
                             .gold-line {
                                 top: 35%;
@@ -187,6 +203,8 @@
                         }
 
                         .skills {
+                            margin: 25px 0;
+                            padding-left: 30px;
                             li {
                                 font-size: 18px;
                                 &:before {
