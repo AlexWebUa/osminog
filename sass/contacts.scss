@@ -58,6 +58,7 @@
     }
     
     .advantages {
+        justify-content: center;
         .item {
             text-align: center;
             height: auto;
@@ -105,8 +106,128 @@
     }
 }
 
-#team {
+#form {
     margin: 80px 0;
+    .form-wrapper {
+        border: 4px solid $main-pink;
+        background: white;
+        border-radius: 40px;
+        padding: 60px;
+        .heading {
+            width: 100%;
+            text-align: center;
+            h3 {
+                font-family: "Gilroy Medium", sans-serif;
+                font-size: 33px;
+                margin: auto;
+            }
+        }
+        .body {
+            width: 100%;
+            form {
+                width: 100%;
+                margin: 50px 0;
+                font-family: "Gilroy", sans-serif;
+                font-size: 18px;
+                color: #333333;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                text-align: center;
+
+                .custom-control-label::before {
+                    border: $main-pink solid 1px;
+                }
+
+                .custom-control-input:checked ~ .custom-control-label::before {
+                    border-color: $main-pink;
+                    background-color: transparent;
+                }
+
+                .custom-radio .custom-control-input:checked ~ .custom-control-label::after {
+                    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23ff4878'/%3e%3c/svg%3e");
+                }
+
+            }
+            .controls {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                button {
+                    box-shadow: 0 10px 20px $main-pink;
+                }
+            }
+        }
+        .footer {
+            position: relative;
+            margin-top: 80px;
+            .form-indicator {
+                display: flex;
+                align-items: center;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                li {
+                    transition: 0.35s all;
+                    margin: 0 10px;
+                    text-align: center;
+                    display: inline-block;
+                    color: white;
+                    font-family: "Gilroy Medium", sans-serif;
+                    font-size: 33px;
+                    background-color: #e8e8e8;
+                    border-radius: 50%;
+                    height: 50px;
+                    width: 50px;
+                    &.active {
+                        background-color: $main-pink;
+                    }
+                }
+            }
+            .promo {
+                position: relative;
+                display: block;
+                text-align: center;
+                font-size: 20px;
+                margin: auto;
+
+                .percent {
+                    font-family: "Bebas Neue Bold", sans-serif;
+                    font-weight: 900;
+                    color: $main-pink;
+                    font-size: 22px;
+                }
+
+                .promocode {
+                    position: relative;
+                    font-family: "Gilroy Medium", sans-serif;
+                    font-size: 33px;
+                }
+
+                & > div {
+                    position: relative;
+                }
+
+                .gold-line {
+                    position: absolute;
+                    height: 8px;
+                    width: 46%;
+                    background-color: #efd9b3;
+                    right: -10%;
+                    top: 50%;
+                }
+            }
+        }
+    }
+}
+
+#team {
+    margin-bottom: 50px;
     .heading {
         margin: 50px 0;
     }
@@ -114,7 +235,9 @@
         margin: auto;
     }
     .members {
-        .member {
+        justify-content: space-around;
+    }
+    .member {
             margin-bottom: 35px;
 
             .member-card {
@@ -200,7 +323,6 @@
                 }
             }
         }
-    }
 }
 
 #reviews-cards {
@@ -218,6 +340,10 @@
             border: 24px solid #97a3ac;
             border-radius: 40px;
             position: relative;
+            img {
+                height: 100%;
+                width: 100%;
+            }
         }
     }
 
@@ -234,3 +360,397 @@
 }
 
 @import "media";
+
+@media (max-width: 767px) {
+    #page-header {
+        height: 250px;
+        .page-title {
+            font-size: 30px;
+            .pink-line {
+                height: 7px;
+                top: 10px;
+            }
+            .white-line {
+                height: 7px;
+                top: 40px;
+            }
+        }
+    }
+
+    #prescription {
+        background-size: contain;
+        padding: 20px 0 30px 0;
+        .col {
+            font-size: 16px;
+        }
+    }
+
+    #advantages {
+        background: none;
+        padding: 20px 0;
+        .advantages {
+            .item {
+                margin: 0;
+                img {
+                    max-width: 80%;
+                }
+                .description {
+                    width: 100%;
+                    margin-top: 10px;
+                }
+            }
+        }
+        .footer {
+            padding: 20px 0;
+            .sliderControls {
+                width: 100%;
+                text-align: center;
+                margin: 30px;
+            }
+            .col {
+                font-size: 16px;
+            }
+        }
+    }
+
+    #about {
+        padding: 100px 0 150px 0;
+    }
+
+    #form {
+        width: 100%;
+        margin: 80px 0;
+        padding: 0;
+        .form-wrapper {
+            border: none;
+            border-radius: unset;
+            border-top: 4px solid $main-pink;
+            border-bottom: 4px solid $main-pink;
+            padding: 20px;
+            .heading {
+                margin: 0;
+                h3 {
+                    font-size: 25px;
+                }
+            }
+            .body {
+                form {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding-left: 10px;
+                    margin: 30px 0;
+                    .custom-control {
+                        margin: 5px 0;
+                    }
+                }
+            }
+            .footer {
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+                margin-top: 40px;
+                .form-indicator {
+                    position: relative;
+                    margin-top: 20px;
+                    li {
+                        font-size: 25px;
+                        height: 35px;
+                        width: 35px;
+                        margin: 0 8px;
+                    }
+                }
+                .promo {
+                    .gold-line {
+                        top: 80%;
+                        width: 50%;
+                    }
+                    .promocode {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+    #team .member .member-card .description .title h3 {
+        font-size: 25px;
+    }
+
+    #team {
+        .members .member {
+            margin-bottom: 0;
+        }
+        .sliderControls {
+            margin: 50px 0;
+        }
+    }
+
+    #reviews-cards {
+        .heading h2 {
+            text-align: center;
+        }
+        .footer .sliderControls {
+            margin: auto;
+        }
+        .cards .card {
+            border: 15px solid #97a3ac;
+        }
+    }
+
+}
+
+@media (min-width: 767px) and (max-width: 991px) {
+    #page-header {
+        height: 330px;
+        .page-title {
+            .white-line {
+                height: 15px;
+                top: 90px;
+            }
+        }
+    }
+
+    #prescription {
+        padding: 30px 0 70px 0;
+        .col {
+            font-size: 16px;
+        }
+    }
+
+    #advantages {
+        background: none;
+        padding: 30px 0;
+        .advantages {
+            .item {
+                .description {
+                    width: 100%;
+                    margin-top: 10px;
+                }
+            }
+        }
+        .footer {
+            padding: 30px 0;
+            .col {
+                font-size: 18px;
+            }
+        }
+    }
+
+    #about .slider-item .slider-description {
+        font-size: 20px;
+    }
+
+    #form {
+        .form-wrapper {
+            padding: 35px;
+            .footer {
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+                margin-top: 40px;
+                .form-indicator {
+                    position: relative;
+                    margin-top: 20px;
+                    li {
+                        font-size: 25px;
+                        height: 35px;
+                        width: 35px;
+                        margin: 0 8px;
+                    }
+                }
+            }
+        }
+    }
+
+    #team .member .member-card .description .title h3 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 991px) {
+    #team {
+        .members {
+            justify-content: center;
+            .member .member-card {
+                .description {
+                    padding: 0 20px;
+
+                    .skills {
+                        margin: 15px 0;
+                        padding-left: 20px;
+                        li {
+                            font-size: 16px;
+                            margin: 5px 0;
+                        }
+                    }
+
+                    .footer {
+                        text-align: left;
+                        margin-bottom: 25px;
+                        padding-left: 10px;
+                        a {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+
+        #teamControls {
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    #page-header {
+        height: 380px;
+        .page-title {
+            .white-line {
+                height: 15px;
+                top: 110px;
+            }
+        }
+    }
+
+    #prescription {
+        padding: 30px 0 70px 0;
+        .col {
+            font-size: 16px;
+        }
+    }
+
+    #advantages {
+        background: none;
+        padding: 30px 0;
+        .advantages {
+            .item {
+                .description {
+                    width: 100%;
+                    margin-top: 10px;
+                }
+            }
+        }
+        .footer {
+            padding: 50px 0;
+            .col {
+                font-size: 20px;
+            }
+        }
+    }
+
+    #form {
+        .form-wrapper {
+            padding: 35px;
+            .footer {
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+                margin-top: 40px;
+                .form-indicator {
+                    position: relative;
+                    margin-top: 20px;
+                    li {
+                        font-size: 25px;
+                        height: 35px;
+                        width: 35px;
+                        margin: 0 8px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (min-width: 992px) and (max-width: 1560px) {
+    #team {
+
+        .member {
+            margin-bottom: 35px;
+
+            .member-card {
+                .description {
+                    padding: 0 30px;
+                    .title {
+                        .gold-line {
+                            top: 35%;
+                            width: 50%;
+                            height: 10px;
+                        }
+                        h3 {
+                            font-size: 35px;
+                        }
+                    }
+
+                    .skills {
+                        margin: 25px 0;
+                        padding-left: 30px;
+                        li {
+                            font-size: 18px;
+                            &:before {
+                                content: "\2022";
+                                color: $main-pink;
+                                font-weight: bold;
+                                display: inline-block;
+                                width: 1em;
+                                margin-left: -1em;
+                                text-shadow: 0 0 20px;
+                            }
+                        }
+                    }
+
+                    .footer {
+                        a {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+
+            &:nth-child(even) {
+                .member-card .description .title .gold-line {
+                    top: unset;
+                    bottom: 10%;
+                    right: 0;
+                }
+            }
+        }
+
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1560px) {
+    #page-header {
+        height: 430px;
+    }
+    #prescription .col {
+        font-size: 18px;
+    }
+
+    #advantages {
+        padding: 30px 0;
+        .footer {
+            padding: 50px 0;
+            .col {
+                font-size: 20px;
+            }
+        }
+    }
+
+    #form {
+        .form-wrapper {
+            .footer {
+                .form-indicator {
+                    li {
+                        font-size: 25px;
+                        height: 35px;
+                        width: 35px;
+                        margin: 0 8px;
+                    }
+                }
+            }
+        }
+    }
+}

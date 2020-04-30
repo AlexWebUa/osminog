@@ -266,7 +266,7 @@
     <div class="container">
         <div class="row">
             <div class="col col-10">
-                Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много
+                Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона <span class="desktop-only">, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много</span>
             </div>
         </div>
     </div>
@@ -278,49 +278,53 @@
             <h2>Преимущества</h2>
         </div>
         <div class="row advantages">
-            <div class="col-3 item">
+            <div class="col-8 col-sm-6 col-xl-4 col-xxl-3 item">
                 <img src="assets/img/advantages-icon_9.png" alt="">
                 <div class="description">Не держим клиента на крючке</div>
             </div>
 
-            <div class="col-3 item">
+            <div class="col-8 col-sm-6 col-xl-4 col-xxl-3 item">
                 <img src="assets/img/advantages-icon_2.png" alt="">
                 <div class="description">Не держим клиента на крючке</div>
             </div>
 
-            <div class="col-3 item">
+            <div class="col-8 col-sm-6 col-xl-4 col-xxl-3 item">
                 <img src="assets/img/advantages-icon_3.png" alt="">
                 <div class="description">Не держим клиента на крючке</div>
             </div>
 
-            <div class="col-3 item">
+            <div class="col-8 col-sm-6 col-xl-4 col-xxl-3 item">
                 <img src="assets/img/advantages-icon_4.png" alt="">
                 <div class="description">Не держим клиента на крючке</div>
             </div>
 
-            <div class="col-3 item">
+            <div class="col-8 col-sm-6 col-xl-4 col-xxl-3 item">
                 <img src="assets/img/advantages-icon_5.png" alt="">
                 <div class="description">Не держим клиента на крючке</div>
             </div>
 
-            <div class="col-3 item">
+            <div class="col-8 col-sm-6 col-xl-4 col-xxl-3 item">
                 <img src="assets/img/advantages-icon_6.png" alt="">
                 <div class="description">Не держим клиента на крючке</div>
             </div>
 
-            <div class="col-3 item">
+            <div class="col-8 col-sm-6 col-xl-4 col-xxl-3 item">
                 <img src="assets/img/advantages-icon_7.png" alt="">
                 <div class="description">Не держим клиента на крючке</div>
             </div>
 
-            <div class="col-3 item">
+            <div class="col-8 col-sm-6 col-xl-4 col-xxl-3 item">
                 <img src="assets/img/advantages-icon_8.png" alt="">
                 <div class="description">Не держим клиента на крючке</div>
             </div>
         </div>
         <div class="row footer">
+            <div class="sliderControls mobile-only" id="advantagesControls">
+                <div class="prev"></div>
+                <div class="next"></div>
+            </div>
             <div class="col col-10">
-                Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь
+                Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. <span class="desktop-only">Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь</span>
             </div>
         </div>
     </div>
@@ -378,7 +382,112 @@
     </div>
 </div>
 
-<!--TODO: Feedback form here-->
+<div id="form">
+    <div class="container form-wrapper">
+        <div class="row heading">
+            <h3>Выберите тип сайта</h3>
+        </div>
+        <div class="row body form-1">
+            <form id="_quiz1Form">
+                <div class="custom-control custom-radio">
+                    <input class="custom-control-input" id="_quiz1CorporateSite" name="customRadio" type="radio">
+                    <label class="custom-control-label" for="_quiz1CorporateSite">Корпоративный сайт</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input class="custom-control-input" id="_quiz1LandingPage" name="customRadio" type="radio">
+                    <label class="custom-control-label" for="_quiz1LandingPage">Landing page</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input class="custom-control-input" id="_quiz1InternetShop" name="customRadio" type="radio">
+                    <label class="custom-control-label" for="_quiz1InternetShop">Интернет-магазин</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input class="custom-control-input" id="_quiz1Other" name="customRadio" type="radio">
+                    <label class="custom-control-label" for="_quiz1Other">Другое</label>
+                </div>
+            </form>
+            <div class="col-12 controls">
+                <button class="btn btn-fill" id="_quiz1Next" type="button">Далее</button>
+            </div>
+        </div>
+
+        <div class="row body form-2" style="display: none">
+            <form id="_quiz2Form">
+                <div class="custom-control custom-radio">
+                    <input class="custom-control-input" id="_quiz2ThreeFiveDays" name="customRadio" type="radio">
+                    <label class="custom-control-label" for="_quiz2ThreeFiveDays">Через 3-5 дней</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input class="custom-control-input" id="_quiz2InMonth" name="customRadio" type="radio">
+                    <label class="custom-control-label" for="_quiz2InMonth">В течении месяца</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input class="custom-control-input" id="_quiz2OneThreeMonths" name="customRadio" type="radio">
+                    <label class="custom-control-label" for="_quiz2OneThreeMonths">Через 1-3 месяца</label>
+                </div>
+            </form>
+            <div class="col-12 controls">
+                <button class="btn btn-outline" id="_quiz2Back" type="button">Назад</button>
+                <button class="btn btn-fill" id="_quiz2Next" type="button">Далее</button>
+            </div>
+        </div>
+
+        <div class="row body form-3" style="display: none">
+            <form id="_quiz3Form">
+                <div class="custom-control custom-radio">
+                    <input class="custom-control-input" id="_quiz3No" name="customRadio" type="radio">
+                    <label class="custom-control-label" for="_quiz3No">Нет, нужно подключить</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input class="custom-control-input" id="_quiz3Yes" name="customRadio" type="radio">
+                    <label class="custom-control-label" for="_quiz3Yes">Да, уже есть</label>
+                </div>
+            </form>
+            <div class="col-12 controls">
+                <button class="btn btn-outline" id="_quiz3Back" type="button">Назад</button>
+                <button class="btn btn-fill" id="_quiz3Next" type="button">Далее</button>
+            </div>
+        </div>
+
+        <div class="row body form-4" style="display: none">
+            <form class="feedback-form" id="_quiz4Form">
+                <div class="row">
+                    <div class="col">
+                        <input class="form-control input-name" id="_quiz4UserName" placeholder="Меня зовут"
+                               type="text">
+                    </div>
+                    <div class="col">
+                        <input class="form-control input-select" id="_quiz4UserMail" placeholder="Ваша почта"
+                               type="text">
+                    </div>
+                    <div class="col">
+                        <input class="form-control input-phone" id="_quiz4UserPhone" placeholder="Мой телефон"
+                               type="tel">
+                    </div>
+                </div>
+            </form>
+            <div class="col-12 controls">
+                <button class="btn btn-outline" id="_quiz4Back" type="button">Назад</button>
+                <button class="btn btn-fill" id="_quiz4Send" type="button">Отправить</button>
+            </div>
+        </div>
+
+        <div class="row footer">
+            <ul class="form-indicator">
+                <li class="active">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+            <div class="promo">
+                <div class="gold-line"></div>
+                <div>
+                    Получите <span class="percent">20%</span> скидку используя промокод: <span class="promocode">Awesome</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div id="team">
     <div class="container">
@@ -387,7 +496,7 @@
         </div>
 
         <div class="row members">
-            <div class="col-8 col-lg-6 col-xl-4 member">
+            <div class="col-8 col-lg-5 col-xl-4 member">
                 <div class="col-12 member-card">
                     <div class="image">
                         <img src="assets/img/team-member-1.png" alt="">
@@ -410,7 +519,7 @@
                 </div>
             </div>
 
-            <div class="col-8 col-lg-6 col-xl-4 member">
+            <div class="col-8 col-lg-5 col-xl-4 member">
                 <div class="col-12 member-card">
                     <div class="image">
                         <img src="assets/img/team-member-1.png" alt="">
@@ -433,7 +542,7 @@
                 </div>
             </div>
 
-            <div class="col-8 col-lg-6 col-xl-4 member">
+            <div class="col-8 col-lg-5 col-xl-4 member">
                 <div class="col-12 member-card">
                     <div class="image">
                         <img src="assets/img/team-member-1.png" alt="">
@@ -458,6 +567,10 @@
         </div>
 
         <div class="row footer">
+            <div class="sliderControls mobile-only" id="teamControls">
+                <div class="prev"></div>
+                <div class="next"></div>
+            </div>
             <button class="btn btn-outline">Больше о команде</button>
         </div>
     </div>
