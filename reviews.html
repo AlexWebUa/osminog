@@ -264,21 +264,26 @@
 <div id="reviews-cards">
     <div class="container">
         <div class="row tabs">
-            <div class="col-md-6 col-lg-4">
-                <button class="btn btn-outline active" id="yandex">Яндекс Отзывы</button>
+            <div class="col-md-6 col-lg-4 desktop-only">
+                <button class="btn btn-outline tab active" id="yandex">Яндекс Отзывы</button>
             </div>
-            <div class="col-md-6 col-lg-4">
-                <button class="btn btn-outline" id="google">Google Отзывы</button>
+            <div class="col-md-6 col-lg-4 desktop-only">
+                <button class="btn btn-outline tab" id="google">Google Отзывы</button>
             </div>
-            <div class="col-md-6 col-lg-4">
-                <button class="btn btn-outline" id="twogis">2Gis Отзывы</button>
+            <div class="col-md-6 col-lg-4 desktop-only">
+                <button class="btn btn-outline tab" id="twogis">2Gis Отзывы</button>
+            </div>
+            <div class="mobile-only">
+                <div class="tab active" id="yandex">Яндекс Отзывы</div>
+                <div class="tab" id="google">Google Отзывы</div>
+                <div class="tab" id="twogis">2Gis Отзывы</div>
             </div>
         </div>
 
         <div class="cards">
             <div class="row active" id="card-yandex">
 
-                <div class="card-wrapper col-md-8 col-lg-6">
+                <div class="card-wrapper col-10 col-md-8 col-xl-6">
                     <div class="col card">
                         <div class="content-wrap">
                             <img src="assets/img/reviews-review-1.jpg" alt="">
@@ -287,7 +292,7 @@
                     </div>
                 </div>
 
-                <div class="card-wrapper col-md-8 col-lg-6">
+                <div class="card-wrapper col-10 col-md-8 col-xl-6">
                     <div class="col card">
                         <div class="content-wrap">
                             <img src="assets/img/reviews-review-1.jpg" alt="">
@@ -296,7 +301,7 @@
                     </div>
                 </div>
 
-                <div class="card-wrapper col-md-8 col-lg-6">
+                <div class="card-wrapper col-10 col-md-8 col-xl-6">
                     <div class="col card">
                         <div class="content-wrap">
                             <img src="assets/img/reviews-review-1.jpg" alt="">
@@ -309,7 +314,7 @@
 
             <div class="row" id="card-google" style="display: none">
 
-                <div class="card-wrapper col-md-8 col-lg-6">
+                <div class="card-wrapper col-10 col-md-8 col-xl-6">
                     <div class="col card">
                         <div class="content-wrap">
                             <img src="assets/img/reviews-review-1.jpg" alt="">
@@ -318,7 +323,7 @@
                     </div>
                 </div>
 
-                <div class="card-wrapper col-md-8 col-lg-6">
+                <div class="card-wrapper col-10 col-md-8 col-xl-6">
                     <div class="col card">
                         <div class="content-wrap">
                             <img src="assets/img/reviews-review-1.jpg" alt="">
@@ -327,7 +332,7 @@
                     </div>
                 </div>
 
-                <div class="card-wrapper col-md-8 col-lg-6">
+                <div class="card-wrapper col-10 col-md-8 col-xl-6">
                     <div class="col card">
                         <div class="content-wrap">
                             <img src="assets/img/reviews-review-1.jpg" alt="">
@@ -340,7 +345,7 @@
 
             <div class="row" id="card-twogis" style="display: none">
 
-                <div class="card-wrapper col-md-8 col-lg-6">
+                <div class="card-wrapper col-10 col-md-8 col-xl-6">
                     <div class="col card">
                         <div class="content-wrap">
                             <img src="assets/img/reviews-review-1.jpg" alt="">
@@ -349,7 +354,7 @@
                     </div>
                 </div>
 
-                <div class="card-wrapper col-md-8 col-lg-6">
+                <div class="card-wrapper col-10 col-md-8 col-xl-6">
                     <div class="col card">
                         <div class="content-wrap">
                             <img src="assets/img/reviews-review-1.jpg" alt="">
@@ -358,7 +363,7 @@
                     </div>
                 </div>
 
-                <div class="card-wrapper col-md-8 col-lg-6">
+                <div class="card-wrapper col-10 col-md-8 col-xl-6">
                     <div class="col card">
                         <div class="content-wrap">
                             <img src="assets/img/reviews-review-1.jpg" alt="">
@@ -400,15 +405,15 @@
 
 <div id="video-reviews">
     <div class="container">
-        <div class="row video-reviews">
-            <div class="col-12 review">
+        <div class="row justify-content-center video-reviews">
+            <div class="col-10 col-xl-12 review">
                 <div class="video">
                     <img src="assets/img/video-preview.jpg" class="preview" alt="preview">
                     <img src="assets/img/play-icon.png" class="play-icon" alt="play">
                 </div>
                 <div class="review-description">
                     <div class="title">Александр Иванов</div>
-                    <div class="body">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной </div>
+                    <div class="body">Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. <span class="desktop-only">Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации "Здесь ваш текст.. Здесь ваш текст.. Здесь ваш текст.." Многие программы электронной</span></div>
                     <div class="footer">
                         <a class="review-link" href="#">Смотреть оригинал</a>
                         <div class="review-video">
@@ -431,23 +436,30 @@
 
 <div id="light-reviews">
     <div class="container">
-        <div class="row light-reviews">
+        <div class="row justify-content-center light-reviews">
 
-            <div class="col-lg-4 review-wrapper">
+            <div class="col-10 col-lg-4 review-wrapper">
                 <div class="col-12 review">
                     <img alt="" src="assets/img/review-example_2.png">
                     <a class="review-link" href="#">Смотреть оригинал</a>
                 </div>
             </div>
 
-            <div class="col-lg-4 review-wrapper">
+            <div class="col-10 col-lg-4 review-wrapper">
                 <div class="col-12 review">
                     <img alt="" src="assets/img/review-example_2.png">
                     <a class="review-link" href="#">Смотреть оригинал</a>
                 </div>
             </div>
 
-            <div class="col-lg-4 review-wrapper">
+            <div class="col-10 col-lg-4 review-wrapper">
+                <div class="col-12 review">
+                    <img alt="" src="assets/img/review-example_2.png">
+                    <a class="review-link" href="#">Смотреть оригинал</a>
+                </div>
+            </div>
+
+            <div class="col-10 col-lg-4 review-wrapper">
                 <div class="col-12 review">
                     <img alt="" src="assets/img/review-example_2.png">
                     <a class="review-link" href="#">Смотреть оригинал</a>
@@ -455,7 +467,12 @@
             </div>
         </div>
 
-        <div class="row footer">
+        <div class="row footer justify-content-center">
+
+            <div class="sliderControls" id="lightReviewsControls">
+                <div class="prev"></div>
+                <div class="next"></div>
+            </div>
             <button class="btn btn-fill"><span class="text">Больше писем</span> <span class="vertical-line"></span> <span
                     class="line"></span><i class="fal fa-long-arrow-right arrow"></i></button>
         </div>

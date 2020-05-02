@@ -1,5 +1,6 @@
 $(document).ready(()=>{
-    let tabs = $('.tabs button');
+    let tabs = $('.tabs .tab');
+    if ($(window).width() < 767) tabs = $('.tabs .mobile-only .tab');
     let cards = $('.cards .row');
     let footers = $('.footer .row');
 
@@ -10,11 +11,6 @@ $(document).ready(()=>{
         let targetTab = e.target;
         let targetCard = $(`#card-${targetTab.id}`)[0];
         let targetFooter = $(`#footer-${targetTab.id}`)[0];
-
-        console.log(`activeTab - ${activeTab.id}, activeCard - ${activeCard.id}, activeFooter - ${activeFooter.id}`);
-        console.log(`targetTab - ${targetTab.id}, targetCard - ${targetCard.id}, targetFooter - ${targetFooter.id}`);
-
-
         if (activeTab === targetTab) return;
         activeTab.classList.remove('active');
         targetTab.classList.add('active');
@@ -33,7 +29,15 @@ $(document).ready(()=>{
                 slidesToScroll: 1,
                 prevArrow: $(`#${targetTab.id}Controls .prev`)[0],
                 nextArrow: $(`#${targetTab.id}Controls .next`)[0],
-                speed: 1000
+                speed: 1000,
+                responsive: [
+                    {
+                        breakpoint: 1200,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
             })
         });
 
@@ -53,7 +57,15 @@ $(document).ready(()=>{
         slidesToScroll: 1,
         prevArrow: $('#yandexControls .prev')[0],
         nextArrow: $('#yandexControls .next')[0],
-        speed: 1000
+        speed: 1000,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
 
     $('#video-reviews .video').on('click', ev=> {
@@ -66,4 +78,29 @@ $(document).ready(()=>{
         $(tag).empty();
         $(tag).append(videoElement);
     });
+
+    $('#light-reviews .light-reviews').slick({
+        infinite: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        prevArrow: $('#lightReviewsControls .prev')[0],
+        nextArrow: $('#lightReviewsControls .next')[0],
+        speed: 1000,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    })
+
+
 });
