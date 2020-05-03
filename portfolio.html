@@ -264,23 +264,30 @@
 <div id="portfolio-portfolio">
     <div class="container">
         <div class="row tabs">
-            <div class="col-md-6 col-lg-4">
-                <button class="btn btn-outline active" id="landing">Landing page</button>
+            <div class="col-md-6 col-lg-4 desktop-only">
+                <button class="btn btn-outline tab active" id="landing">Landing page</button>
             </div>
-            <div class="col-md-6 col-lg-4">
-                <button class="btn btn-outline" id="corporate">Корпоративные сайты</button>
+            <div class="col-md-6 col-lg-4 desktop-only">
+                <button class="btn btn-outline tab" id="corporate">Корпоративные сайты</button>
             </div>
-            <div class="col-md-6 col-lg-4">
-                <button class="btn btn-outline" id="internetShop">Интернет-магазины</button>
+            <div class="col-md-6 col-lg-4 desktop-only">
+                <button class="btn btn-outline tab" id="internetShop">Интернет-магазины</button>
+            </div>
+
+            <div class="mobile-only">
+                <div class="tab active" id="landing">Landing page</div>
+                <div class="tab" id="corporate">Корпоративные сайты</div>
+                <div class="tab" id="internetShop">Интернет-магазины</div>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-lg-3">
+            <div class="col-lg-5 col-xl-3">
                 <div class="col-12 catalog">
                     <div class="heading">
                         <div class="gold-line"></div>
                         <h3>Каталог</h3>
+                        <i class="far fa-arrow-down"></i>
                     </div>
 
                     <ul class="catalog-list">
@@ -334,7 +341,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-12 feedback">
+                <div class="col-12 feedback" id="feedback1">
                     <div class="heading">
                         <div class="gold-line line-top"></div>
                         <div class="gold-line line-bottom"></div>
@@ -344,9 +351,9 @@
                     <button class="btn btn-outline">Написать</button>
                 </div>
             </div>
-            <div class="col-lg-9 works">
+            <div class="col-lg-7 col-xl-9 works">
                 <div class="row active" id="works-landing">
-                    <div class="col-lg-6">
+                    <div class="col-lg-10 col-xl-6">
                         <div class="col work">
                             <div class="image-wrapper">
                                 <img src="assets/img/portfolio-work-1.jpg" alt="">
@@ -361,7 +368,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-6">
+                    <div class="col-lg-10 col-xl-6">
                         <div class="col work">
                             <div class="image-wrapper">
                                 <img src="assets/img/portfolio-work-2.jpg" alt="">
@@ -376,7 +383,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-6">
+                    <div class="col-lg-10 col-xl-6">
                         <div class="col work">
                             <div class="image-wrapper">
                                 <img src="assets/img/portfolio-work-1.jpg" alt="">
@@ -391,7 +398,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-6">
+                    <div class="col-lg-10 col-xl-6">
                         <div class="col work">
                             <div class="image-wrapper">
                                 <img src="assets/img/portfolio-work-2.jpg" alt="">
@@ -406,7 +413,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-6">
+                    <div class="col-lg-10 col-xl-6">
                         <div class="col work">
                             <div class="image-wrapper">
                                 <img src="assets/img/portfolio-work-1.jpg" alt="">
@@ -421,7 +428,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-6">
+                    <div class="col-lg-10 col-xl-6">
                         <div class="col work">
                             <div class="image-wrapper">
                                 <img src="assets/img/portfolio-work-2.jpg" alt="">
@@ -436,7 +443,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-6">
+                    <div class="col-lg-10 col-xl-6">
                         <div class="col work">
                             <div class="image-wrapper">
                                 <img src="assets/img/portfolio-work-1.jpg" alt="">
@@ -451,7 +458,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-6">
+                    <div class="col-lg-10 col-xl-6">
                         <div class="col work">
                             <div class="image-wrapper">
                                 <img src="assets/img/portfolio-work-2.jpg" alt="">
@@ -468,7 +475,7 @@
                 </div>
 
                 <div class="row" id="works-corporate" style="display: none">
-                    <div class="col-lg-6">
+                    <div class="col-lg-10 col-xl-6">
                         <div class="col work">
                             <div class="image-wrapper">
                                 <img src="assets/img/portfolio-work-1.jpg" alt="">
@@ -483,7 +490,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-6">
+                    <div class="col-lg-10 col-xl-6">
                         <div class="col work">
                             <div class="image-wrapper">
                                 <img src="assets/img/portfolio-work-2.jpg" alt="">
@@ -498,7 +505,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-6">
+                    <div class="col-lg-10 col-xl-6">
                         <div class="col work">
                             <div class="image-wrapper">
                                 <img src="assets/img/portfolio-work-1.jpg" alt="">
@@ -513,7 +520,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-6">
+                    <div class="col-lg-10 col-xl-6">
                         <div class="col work">
                             <div class="image-wrapper">
                                 <img src="assets/img/portfolio-work-2.jpg" alt="">
@@ -528,7 +535,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-6">
+                    <div class="col-lg-10 col-xl-6">
                         <div class="col work">
                             <div class="image-wrapper">
                                 <img src="assets/img/portfolio-work-1.jpg" alt="">
@@ -543,7 +550,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-6">
+                    <div class="col-lg-10 col-xl-6">
                         <div class="col work">
                             <div class="image-wrapper">
                                 <img src="assets/img/portfolio-work-2.jpg" alt="">
@@ -560,7 +567,7 @@
                 </div>
 
                 <div class="row" id="works-internetShop" style="display: none">
-                    <div class="col-lg-6">
+                    <div class="col-lg-10 col-xl-6">
                         <div class="col work">
                             <div class="image-wrapper">
                                 <img src="assets/img/portfolio-work-1.jpg" alt="">
@@ -575,7 +582,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-6">
+                    <div class="col-lg-10 col-xl-6">
                         <div class="col work">
                             <div class="image-wrapper">
                                 <img src="assets/img/portfolio-work-2.jpg" alt="">
@@ -591,9 +598,30 @@
                     </div>
                 </div>
 
+                <div class="sliderControls" id="works-landingControls">
+                    <div class="prev"></div>
+                    <div class="next"></div>
+                </div>
+                <div class="sliderControls" id="works-corporateControls" style="display: none">
+                    <div class="prev"></div>
+                    <div class="next"></div>
+                </div>
+                <div class="sliderControls" id="works-internetShopControls" style="display: none">
+                    <div class="prev"></div>
+                    <div class="next"></div>
+                </div>
                 <button class="btn btn-fill"><span class="text">Больше работ</span> <span class="vertical-line"></span> <span
                         class="line"></span><i class="fal fa-long-arrow-right arrow"></i></button>
 
+            </div>
+            <div class="col-12 feedback" id="feedback2">
+                <div class="heading">
+                    <div class="gold-line line-top"></div>
+                    <div class="gold-line line-bottom"></div>
+                    <h3>Мы всегда рады помочь Вам выбрать нужный сайт!</h3>
+                </div>
+                <div class="subheading">Напишите нам и мы поможем</div>
+                <button class="btn btn-outline">Написать</button>
             </div>
         </div>
     </div>

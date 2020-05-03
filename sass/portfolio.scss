@@ -37,6 +37,10 @@
             position: relative;
             width: 100%;
             margin-bottom: 50px;
+            .fa-arrow-down {
+                display: none;
+                transition: all 0.35s;
+            }
             .gold-line {
                 position: absolute;
                 height: 13px;
@@ -80,6 +84,9 @@
         }
     }
 
+    #feedback2 {
+        display: none;
+    }
     .feedback {
         font-family: "Gilroy Light", sans-serif;
         background-color: $main-pink;
@@ -153,7 +160,7 @@
 
                 &:before {
                     position: absolute;
-                    top: -70px;
+                    top: -68px;
                     height: 70px;
                     content: "";
                     width: 100%;
@@ -162,7 +169,7 @@
                 }
                 .title {
                     font-size: 25px;
-                    margin: 40px 0;
+                    margin: 30px 0 50px 0;
                     padding: 0 20px;
                 }
                 .footer {
@@ -208,3 +215,238 @@
 }
 
 @import "media";
+
+@media all and (max-width: 767px) {
+    #page-header {
+        .page-title {
+            font-size: 36px;
+            .pink-line {
+                top: 22px;
+                width: 50%;
+            }
+        }
+    }
+    #portfolio-portfolio {
+        .tabs {
+            margin: 50px -15px;
+            justify-content: center;
+            button.btn {
+                margin: 10px 0;
+            }
+            .mobile-only {
+                width: 100%;
+                .tab {
+                    font-family: "Gilroy", sans-serif;
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: black;
+                    padding: 10px;
+                    background-color: white;
+                    transition: 0.35s all;
+                    &.active {
+                        background-color: $main-pink;
+                        color: white;
+                    }
+                }
+            }
+        }
+        .catalog {
+            padding: 20px;
+            .heading {
+                margin: 0;
+                padding: 0;
+                h3 {
+                    font-size: 30px;
+                }
+                .gold-line {
+                    left: 0;
+                    height: 13px!important;
+                }
+                .fa-arrow-down {
+                    font-size: 18px;
+                }
+            }
+            .catalog-list {
+                font-size: 16px;
+            }
+        }
+        .works {
+            .sliderControls {
+                margin: auto;
+            }
+            &>button {
+                margin: 30px auto 50px auto;
+            }
+        }
+        #feedback2 {
+            margin-bottom: 50px;
+            padding: 20px 7px;
+            .heading {
+                h3 {
+                    .gold-line {
+                        opacity: .7;
+                    }
+                    font-size: 25px;
+                }
+            }
+            .subheading {
+                margin: 20px 0;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media (min-width: 767px) and (max-width: 991px) {
+    #portfolio-portfolio{
+        .tabs {
+            justify-content: center;
+            margin: 30px 0;
+            button.btn {
+                margin: 10px 0;
+            }
+        }
+        .catalog {
+            padding: 30px 20px;
+            .heading {
+                margin-bottom: 0;
+                .gold-line {
+                    height: 13px;
+                    width: 90%;
+                    bottom: 15%;
+                    right: 10%;
+                }
+                h3 {
+                    font-size: 36px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    #portfolio-portfolio {
+        .catalog {
+            .heading {
+                display: flex;
+                align-items: center;
+                .gold-line {
+                    bottom: 25%;
+                }
+                h3 {
+                    display: inline-block;
+                }
+                .fa-arrow-down {
+                    display: inline-block;
+                    margin-left: auto;
+                    font-size: 22px;
+                }
+            }
+            &.showed {
+                .heading .fa-arrow-down {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        #feedback1 {
+            display: none;
+        }
+        #feedback2 {
+            display: block;
+        }
+        .works {
+            .sliderControls {
+                margin: 30px auto;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    #portfolio-portfolio {
+        .tabs {
+            margin: 40px 0;
+        }
+        .catalog {
+            padding: 40px 20px 10px 20px;
+            .heading {
+                margin-bottom: 40px;
+                .gold-line {
+                    height: 13px;
+                    width: 90%;
+                    bottom: 15%;
+                    right: 10%;
+                }
+                h3 {
+                    font-size: 40px;
+                }
+            }
+        }
+        .works {
+            .sliderControls {
+                margin: 30px auto;
+                text-align: center;
+            }
+            &>button {
+                margin: auto;
+            }
+        }
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1560px) {
+    #portfolio-portfolio {
+        .catalog {
+            padding: 40px 20px 10px 20px;
+            .heading {
+                margin-bottom: 40px;
+                .gold-line {
+                    height: 13px;
+                    width: 90%;
+                    bottom: 15%;
+                    right: 10%;
+                }
+                h3 {
+                    font-size: 40px;
+                }
+            }
+            .catalog-list {
+                li {
+                    margin: 13px 0;
+                }
+            }
+        }
+        .feedback {
+            padding: 40px 7px;
+            .heading {
+                h3 {
+                    font-size: 32px;
+                }
+                .subheding {
+                    font-size: 22px;
+                    margin: 30px 0;
+                }
+            }
+        }
+        .works {
+            .work {
+                .description {
+                    padding-bottom: 40px;
+                    .title {
+                        font-size: 22px;
+                        margin: 20px 0 30px 0;
+                        padding: 0 15px;
+                    }
+                    .footer {
+                        max-width: 80%;
+
+                        button.btn {
+                            max-width: 45%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
