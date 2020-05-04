@@ -441,6 +441,22 @@
                         margin: 5px 0;
                     }
                 }
+                .controls button {
+                    margin: 10px 0;
+                }
+            }
+            #_quiz4Form {
+                .row {
+                    flex-direction: column;
+                    width: 100%;
+                    .col {
+                        display: block;
+                        margin: 10px 0;
+                        input {
+                            display: block;
+                        }
+                    }
+                }
             }
             .footer {
                 display: flex;
