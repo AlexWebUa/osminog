@@ -18,15 +18,6 @@ $(document).ready(() => {
         ]
     });
 
-    $('#reviewsSlider').slick({
-        infinite: false,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        prevArrow: $('#reviewsControls .prev')[0],
-        nextArrow: $('#reviewsControls .next')[0],
-        speed: 1000
-    });
-
     if ($(window).width() < 768) {
         $('#reviewsSlider').slick('unslick');
 

@@ -348,7 +348,10 @@ header {
                     position: relative;
                     width: fit-content;
                     padding: 0 5px;
-                    margin: 0 5%;
+                    margin: 15px 10%;
+                    border-radius: 0;
+                    border-top: 1px solid #eee;
+                    border-bottom: 1px solid #eee;
                     top: 0;
                     font-size: 0.9em;
 
@@ -595,6 +598,7 @@ header.header-fixed {
                     display: flex;
                     flex-direction: row;
                     flex-wrap: wrap;
+                    justify-content: space-around;
                     justify-content: space-evenly;
                     text-align: center;
 

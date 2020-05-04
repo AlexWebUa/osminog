@@ -23,22 +23,28 @@ $(document).ready(() => {
         activeTab.classList.remove('active');
         targetTab.classList.add('active');
 
+        console.log(activeCard.id);
+
         animateCSS(`#${activeCard.id}`, 'fadeOut', clearStyles, (el) => {
             el.style.display = 'none';
             activeCard.classList.remove('active');
-            $(`#${activeCard.id}`).slick('unslick');
+            if ($(window).width() < 1200) {
+                $(`#${activeCard.id}`).slick('unslick');
+            }
             targetCard.classList.add('active');
             $(`#${activeCard.id}Controls`).css('display', 'none');
             $(`#${targetCard.id}Controls`).css('display', '');
             if ($(window).width() < 1200) {
-                $(`#${targetCard.id}`).slick({
-                    infinite: false,
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    prevArrow: $(`#${targetCard.id}Controls .prev`)[0],
-                    nextArrow: $(`#${targetCard.id}Controls .next`)[0],
-                    speed: 1000,
-                });
+                if ($(window).width() < 1200) {
+                    $(`#${targetCard.id}`).slick({
+                        infinite: false,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        prevArrow: $(`#${targetCard.id}Controls .prev`)[0],
+                        nextArrow: $(`#${targetCard.id}Controls .next`)[0],
+                        speed: 1000,
+                    });
+                }
             }
             animateCSS(`#${targetCard.id}`, 'fadeIn');
             targetCard.style = '';
@@ -82,11 +88,8 @@ $(document).ready(() => {
     if ($(window).width() < 992) {
         $('.catalog-list').addClass('collapse');
         $('.catalog .heading').on('click', ev=>{
-            console.log(ev);
-            // if (!$(ev.target).hasClass('catalog-list')) {
-                $('.catalog-list').collapse('toggle');
-                $('.catalog').toggleClass('showed');
-            // }
+            $('.catalog-list').collapse('toggle');
+            $('.catalog').toggleClass('showed');
         })
     }
 });

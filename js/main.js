@@ -121,6 +121,23 @@ $('#headerIcons .phone-icon').on('click', ()=>{
     $('#headerIcons .dropdown').toggleClass('show');
 });
 
+$('#reviewsSlider').slick({
+    infinite: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    prevArrow: $('#reviewsControls .prev')[0],
+    nextArrow: $('#reviewsControls .next')[0],
+    speed: 1000,
+    responsive: [
+        {
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 2
+            }
+        }
+    ]
+});
+
 $(document).ready(() => {
     /* Mobile only sliders */
     if ($(window).width() < 768) {
