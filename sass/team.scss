@@ -92,7 +92,6 @@
                     .footer {
                         margin-bottom: 35px;
                         a {
-                            font-family: "Gilroy", sans-serif;
                             font-size: 22px;
                             font-weight: 900;
                             color: $main-pink;
@@ -127,13 +126,20 @@
             top: 45%;
         }
     }
-    #team #teamSlider .member .member-card .description .title h3 {
+    /*#team #teamSlider .member .member-card .description .title h3 {
         font-size: 25px;
+    }*/
+    #about {
+        .slider-item {
+            width: 100%;
+            margin: auto;
+        }
     }
 }
 
 @media (max-width: 991px) {
     #team {
+        margin-bottom: 50px;
         #teamSlider {
             justify-content: center;
             .member .member-card {
@@ -197,9 +203,9 @@
                                 width: 50%;
                                 height: 10px;
                             }
-                            h3 {
+                            /*h3 {
                                 font-size: 35px;
-                            }
+                            }*/
                         }
 
                         .skills {

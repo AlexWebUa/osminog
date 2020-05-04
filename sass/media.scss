@@ -19,6 +19,10 @@
         font-weight: 400;
     }
 
+    h3 {
+        font-size: 26px!important;
+    }
+
     .modal {
         .modal-dialog {
             margin: auto;
@@ -111,7 +115,9 @@
 
     header {
         .navbar-brand {
-            max-width: 60%;
+            max-width: 40%;
+            margin: 0;
+            padding: 0;
 
             img {
                 width: 100%;
@@ -441,6 +447,22 @@
         }
     }
 
+    #stillHere {
+        padding: 80px 0;
+
+        .feedback-heading {
+            margin-bottom: 50px;
+            .gold-line {
+                height: 7px;
+                left: -15px;
+                width: 45%;
+            }
+        }
+        .feedback-form button {
+            margin-top: 50px;
+        }
+    }
+
     footer {
         font-size: 19px;
 
@@ -562,6 +584,29 @@
         }
     }
 
+    #reviews #reviewsSlider {
+        .review > .wrapper, .review > img {
+            border-width: 20px;
+            border-radius: 20px;
+        }
+    }
+
+    #stillHere {
+        padding: 100px 0;
+
+        .feedback-heading {
+            margin-bottom: 50px;
+            .gold-line {
+                height: 7px;
+                left: -15px;
+                width: 45%;
+            }
+        }
+        .feedback-form button {
+            margin-top: 50px;
+        }
+    }
+
     footer {
         font-size: 19px;
 
@@ -635,7 +680,11 @@
 @media (min-width: 1201px) and (max-width: 1560px) {
 
     h2 {
-        font-size: 62px;
+        font-size: 62px!important;
+    }
+
+    h3 {
+        font-size: 40px!important;
     }
 
     button.btn {
@@ -764,6 +813,22 @@
         margin: 80px 0;
     }
 
+    #stillHere {
+        padding: 100px 0;
+
+        .feedback-heading {
+            margin-bottom: 50px;
+            .gold-line {
+                height: 7px;
+                left: -15px;
+                width: 45%;
+            }
+        }
+        .feedback-form button {
+            margin-top: 50px;
+        }
+    }
+
     .modal .modal-dialog .modal-content .modal-header .modal-title {
         max-width: 85%;
         text-align: center;
@@ -782,9 +847,5 @@
             font-size: 14px;
         }
     }
-
-}
-
-@media (max-width: 1560px) {
 
 }

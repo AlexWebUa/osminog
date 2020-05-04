@@ -1,7 +1,6 @@
 $(document).ready(() => {
     /* Mobile only sliders */
     if ($(window).width() < 768) {
-        console.log('slickkckckk');
         $('#teamSlider').slick({
             infinite: false,
             prevArrow: $('#teamControls .prev')[0],

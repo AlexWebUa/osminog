@@ -1,4 +1,8 @@
 $(document).ready(() => {
+    let headerHeight = $('header').outerHeight(true);
+    let bestSolutionsHeight = $('#first-screen .best-solutions').outerHeight(true);
+    let bottomPlankHeight = $('#first-screen .bottom-plank').outerHeight(true);
+    $('#first-screen').css('min-height', `${headerHeight + bestSolutionsHeight + bottomPlankHeight + 100}px`);
     /* Advantages */
     $('#advantagesSlider').slick({
         infinite: false,

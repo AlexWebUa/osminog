@@ -44,6 +44,7 @@ $gold: #95763f;
 body {
     background-color: #f4f8fb;
     overflow-x: hidden;
+    font-family: "Gilroy", sans-serif;
 }
 
 a {
@@ -58,6 +59,7 @@ a {
 h2 {
     font-family: "Gilroy Light", sans-serif;
     font-size: 75px;
+    text-align: center;
 }
 
 button.btn {
@@ -199,6 +201,18 @@ header {
     font-family: "Gilroy Medium", sans-serif;
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
 
+    .dropdown {
+        background: white;
+        border-radius: 23px;
+        position: absolute;
+        top: 45px;
+        width: auto;
+        padding: 30px;
+        display: none;
+        flex-direction: column;
+        color: black;
+    }
+
     .navbar > .phone-icon {
         font-size: 22px;
         transition: all 0.3s;
@@ -237,14 +251,8 @@ header {
                 }
 
                 .dropdown {
-                    background: white;
-                    border-radius: 23px;
-                    position: absolute;
-                    top: 45px;
                     width: 400px;
-                    padding: 30px;
                     display: none;
-                    flex-direction: column;
 
                     &:before {
                         content: "";
@@ -305,19 +313,28 @@ header {
             li {
                 padding: 10px;
 
-                a {
+                i {
+                    font-size: 28px;
+                    vertical-align: middle;
                     transition: all 0.3s;
 
+                    &:hover {
+                        cursor: pointer;
+                        color: $main-pink;
+                    }
+                }
+            }
+            .dropdown {
+                top: 50px;
+                a {
+                    margin: 10px 0;
+                    transition: .35s all;
                     &:hover {
                         color: $main-pink;
                     }
                 }
-
-                i {
-                    font-size: 28px;
-                    vertical-align: middle;
-
-
+                &.show {
+                    display: flex;
                 }
             }
         }
@@ -364,7 +381,7 @@ header {
             cursor: pointer;
             right: 15px;
             top: 8px;
-            font-size: 22px;
+            font-size: 30px;
         }
 
         .pages {
@@ -650,7 +667,7 @@ header.header-fixed {
             content: " ";
             background-color: $main-pink;
             border-radius: 50%;
-            width: 50pex;
+            width: 50px;
             height: 50px;
             text-align: center;
             color: white;

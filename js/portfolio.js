@@ -1,4 +1,5 @@
 $(document).ready(() => {
+    let catalogList = $('.catalog-list li');
     let tabs = $('.tabs .tab');
     if ($(window).width() < 767) tabs = $('.tabs .mobile-only .tab');
     let works = $('.works .row');
@@ -9,6 +10,9 @@ $(document).ready(() => {
     let titleMarginTop = parseInt($('.work .description .title').css('margin-top'));
     let descriptionOffset = descriptionHeight - titleHeight + titleMarginTop;
     let workHeight = $('.work .image-wrapper').height() + titleHeight;
+
+    $(description).css('transform', `translateY(-${descriptionOffset}px)`);
+    $(description).addClass('expanded');
 
     $(tabs).on('click', (e) => {
         let activeTab = tabs.closest('.active')[0];
@@ -55,6 +59,14 @@ $(document).ready(() => {
             $(description).css('transform', `translateY(-${descriptionOffset}px)`);
             $(description).addClass('expanded');
         }
+    })
+
+    $(catalogList).on('click', ev=>{
+        let activeCategory = catalogList.closest('.active')[0];
+        let targetCategory = ev.currentTarget;
+        if (activeCategory === targetCategory) return;
+        $(activeCategory).removeClass('active');
+        $(targetCategory).addClass('active');
     })
 
     if ($(window).width() < 1200) {

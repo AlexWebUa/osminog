@@ -102,12 +102,10 @@
             padding: 40px 130px;
 
             .title {
-                font-family: "Gilroy", sans-serif;
                 font-weight: 900;
                 font-size: 30px;
             }
             .body {
-                font-family: "Gilroy", sans-serif;
                 font-style: italic;
                 font-size: 18px;
                 padding: 30px 0;
@@ -182,6 +180,16 @@
             }
         }
     }
+    .footer {
+        .sliderControls {
+            width: 100%;
+            margin: 30px 0;
+            text-align: center;
+        }
+        &>button {
+            margin-top: 0;
+        }
+    }
 }
 
 #video-reviews, #light-reviews {
@@ -243,7 +251,6 @@
             .mobile-only {
                 width: 100%;
                 .tab {
-                    font-family: "Gilroy", sans-serif;
                     font-size: 18px;
                     font-weight: 700;
                     color: black;

@@ -65,7 +65,6 @@ $(document).ready(() => {
         })
     }
 
-
     $('#_quiz1Next').on('click', () => {
         let form = document.getElementById('_quiz1Form');
         collectFormData(form);

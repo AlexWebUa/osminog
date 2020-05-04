@@ -117,6 +117,10 @@ $(document).on('click', (e) => {
         $('#dropdown-menu').css('display', 'none');
 });
 
+$('#headerIcons .phone-icon').on('click', ()=>{
+    $('#headerIcons .dropdown').toggleClass('show');
+});
+
 $(document).ready(() => {
     /* Mobile only sliders */
     if ($(window).width() < 768) {
@@ -162,6 +166,25 @@ $('#aboutSlide1').on('wowStart', ()=>{
                 animateCSS('#aboutSlide4', 'fadeIn', clearStyles, () => {
                     animateCSS('#aboutSlide5', 'fadeIn', clearStyles, () => {
                         animateCSS('#aboutSlide6', 'fadeIn', clearStyles);
+                    });
+                });
+            });
+        })
+    }
+    setTimeout(animateAbout, 1000);
+});
+
+$('#advantage1').on('wowStart', ()=>{
+    let animateAbout = function() {
+        animateCSS('#advantage2', 'fadeIn', clearStyles, () => {
+            animateCSS('#advantage3', 'fadeIn', clearStyles, () => {
+                animateCSS('#advantage4', 'fadeIn', clearStyles, () => {
+                    animateCSS('#advantage5', 'fadeIn', clearStyles, () => {
+                        animateCSS('#advantage6', 'fadeIn', clearStyles, () => {
+                            animateCSS('#advantage7', 'fadeIn', clearStyles, () => {
+                                animateCSS('#advantage8', 'fadeIn', clearStyles);
+                            });
+                        });
                     });
                 });
             });

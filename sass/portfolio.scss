@@ -67,6 +67,12 @@
                 display: flex;
                 justify-content: space-between;
                 cursor: pointer;
+                transition: .35s all;
+                &:hover {
+                    .list-title, .list-quantity {
+                        color: lighten($main-pink, 15%);
+                    }
+                }
                 .list-title {
                     color: #242424;
                 }
@@ -86,6 +92,7 @@
 
     #feedback2 {
         display: none;
+        margin-bottom: 50px;
     }
     .feedback {
         font-family: "Gilroy Light", sans-serif;
@@ -127,7 +134,7 @@
             margin: 40px 0;
         }
 
-        button.btn-outline {
+        button.btn {
             border-color: white;
             color: white;
             max-width: 70%;
@@ -236,7 +243,6 @@
             .mobile-only {
                 width: 100%;
                 .tab {
-                    font-family: "Gilroy", sans-serif;
                     font-size: 18px;
                     font-weight: 700;
                     color: black;
@@ -255,9 +261,6 @@
             .heading {
                 margin: 0;
                 padding: 0;
-                h3 {
-                    font-size: 30px;
-                }
                 .gold-line {
                     left: 0;
                     height: 13px!important;
@@ -271,6 +274,29 @@
             }
         }
         .works {
+            .work {
+                .description {
+                    padding-bottom: 25px;
+                    &:before {
+                        background: url(../assets/img/portfolio-work-top.png) 50% 0 no-repeat;
+                        background-size: cover;
+                    }
+                    .title {
+                        font-size: 20px;
+                        margin: 20px 0 10px 0;
+                        padding: 0 20px;
+                    }
+                    .footer {
+                        max-width: 100%;
+                        padding: 0 20px;
+                        a {
+                            font-size: 18px;
+                            color: $main-pink;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
             .sliderControls {
                 margin: auto;
             }
@@ -407,9 +433,9 @@
                     bottom: 15%;
                     right: 10%;
                 }
-                h3 {
+                /*h3 {
                     font-size: 40px;
-                }
+                }*/
             }
             .catalog-list {
                 li {
@@ -421,7 +447,7 @@
             padding: 40px 7px;
             .heading {
                 h3 {
-                    font-size: 32px;
+                    font-size: 32px!important;
                 }
                 .subheding {
                     font-size: 22px;
@@ -446,6 +472,9 @@
                         }
                     }
                 }
+            }
+            .sliderControls {
+                display: none;
             }
         }
     }
