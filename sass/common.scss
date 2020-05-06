@@ -788,6 +788,7 @@ header.header-fixed {
                 .lion-icon {
                     content: url("../assets/img/lion-icon.png");
                     vertical-align: middle;
+                    max-width: 40px;
                 }
             }
 
@@ -1200,6 +1201,101 @@ header.header-fixed {
             width: 100%;
             text-align: center;
             margin: 20px 0;
+        }
+    }
+}
+
+#team {
+    margin: 10px 0;
+
+    .team-heading {
+        text-align: center;
+        margin: 50px 0;
+    }
+
+    .member {
+        margin-bottom: 35px;
+
+        .member-card {
+            padding: 0;
+            border-radius: 40px;
+            overflow: hidden;
+            background-color: white;
+
+            .image {
+                width: 100%;
+                margin-bottom: 15px;
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            .description {
+                padding: 0 40px;
+
+                .title {
+                    position: relative;
+                    text-align: center;
+                    margin: 15px 0;
+                    padding: 0 10px;
+                    .gold-line {
+                        position: absolute;
+                        top: 35%;
+                        width: 50%;
+                        height: 13px;
+                        background-color: #efd9b3;
+                    }
+                    h3 {
+                        position: relative;
+                        font-family: "Gilroy Light", sans-serif;
+                        font-size: 45px;
+                        color: #1b1b1b;
+                    }
+                }
+
+                .skills {
+                    list-style: none;
+                    margin: 35px 0;
+
+                    li {
+                        font-family: "Gilroy Medium", sans-serif;
+                        margin: 10px 0;
+                        font-size: 22px;
+                        &:before {
+                            content: "\2022";
+                            color: $main-pink;
+                            font-weight: bold;
+                            display: inline-block;
+                            width: 1em;
+                            margin-left: -1em;
+                            text-shadow: 0 0 20px;
+                        }
+
+                        &.inactive:before {
+                            color: #3e3e3e;
+                        }
+                    }
+                }
+
+                .footer {
+                    margin-bottom: 35px;
+                    a {
+                        font-size: 22px;
+                        font-weight: 900;
+                        color: $main-pink;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        &:nth-child(even) {
+            .member-card .description .title .gold-line {
+                top: unset;
+                bottom: 10%;
+                right: 0;
+            }
         }
     }
 }

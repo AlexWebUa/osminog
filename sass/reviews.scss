@@ -184,7 +184,7 @@
         .sliderControls {
             width: 100%;
             margin: 30px 0;
-            text-align: center;
+            text-align: right;
         }
         &>button {
             margin-top: 0;
@@ -251,7 +251,7 @@
             .mobile-only {
                 width: 100%;
                 .tab {
-                    font-size: 18px;
+                    font-size: 16px;
                     font-weight: 700;
                     color: black;
                     padding: 10px;
@@ -284,11 +284,11 @@
             .review-description {
                 padding: 10px;
                 .title {
-                    font-size: 20px;
+                    font-size: 22px;
                 }
                 .body {
                     padding: 10px 0;
-                    font-size: 14px;
+                    font-size: 16px;
                 }
                 .footer {
                     .review-link {
@@ -307,6 +307,10 @@
     }
 
     #light-reviews {
+        .review .review-link {
+            bottom: 25px;
+            font-size: 16px;
+        }
         .footer {
             #lightReviewsControls {
                 margin: 30px 0;
@@ -413,14 +417,17 @@
 }
 
 @media (min-width: 1201px) and (max-width: 1560px) {
-    #reviews-cards .cards .card .content-wrap {
-        padding: 20px 0;
-        max-width: 80%;
-        img {
-            width: 100%;
-        }
-        .review-link {
-            margin-top: 20px;
+    #reviews-cards .cards .card {
+        border-radius: 24px ;
+        .content-wrap {
+            padding: 20px 0;
+            max-width: 80%;
+            img {
+                width: 100%;
+            }
+            .review-link {
+                margin-top: 20px;
+            }
         }
     }
 

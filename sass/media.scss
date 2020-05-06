@@ -1,4 +1,5 @@
 /* Media queries */
+$main-pink: #ff4878;
 
 @media all and (max-width: 767px) {
     .mobile-only {
@@ -211,7 +212,7 @@
                 }
 
                 .slider-description {
-                    font-size: 18px;
+                    font-size: 16px;
                 }
             }
         }
@@ -222,6 +223,14 @@
 
         .row.mobile-only {
             display: flex;
+            #textReviewsSlider .review .wrapper {
+                .text-review-heading {
+                    font-size: 22px;
+                }
+                .text-review-description {
+                    font-size: 16px;
+                }
+            }
         }
 
         .review-footer {
@@ -265,7 +274,8 @@
                         text-align: left;
 
                         .description-heading {
-                            font-size: 25px;
+                            font-size: 22px;
+                            text-align: center;
 
                             span {
                                 display: none;
@@ -273,7 +283,7 @@
                         }
 
                         .description-description {
-                            font-size: 18px;
+                            font-size: 16px;
                             padding: 15px 0;
                         }
 
@@ -479,6 +489,10 @@
             font-size: 12px;
         }
     }
+
+    #team .member .member-card .description .title h3 {
+        font-size: 32px;
+    }
 }
 
 @media (max-width: 991px) {
@@ -499,7 +513,7 @@
             }
 
             .heading-subheading {
-                font-size: 25px;
+                font-size: 22px;
                 margin: 40px 0;
             }
         }
@@ -518,6 +532,41 @@
             button {
                 margin: 40px 0;
             }
+        }
+    }
+
+    #team {
+        margin-bottom: 50px;
+        #teamSlider {
+            justify-content: center;
+        }
+        .member .member-card {
+            .description {
+                padding: 0 20px;
+
+                .skills {
+                    margin: 15px 0;
+                    padding-left: 20px;
+                    li {
+                        font-size: 16px;
+                        margin: 5px 0;
+                    }
+                }
+
+                .footer {
+                    text-align: left;
+                    margin-bottom: 25px;
+                    padding-left: 10px;
+                    a {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        #teamControls {
+            width: 100%;
+            text-align: center;
         }
     }
 }
@@ -621,6 +670,62 @@
 
         .bottom-section {
             font-size: 16px;
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1560px) {
+    #team {
+        .member {
+            margin-bottom: 35px;
+
+            .member-card {
+                .description {
+                    padding: 0 30px;
+                    .title {
+                        h3 {
+                            font-size: 30px!important;
+                        }
+                        .gold-line {
+                            top: 35%;
+                            width: 50%;
+                            height: 10px;
+                        }
+                    }
+
+                    .skills {
+                        margin: 15px 0;
+                        padding-left: 20px;
+                        li {
+                            font-size: 18px;
+                            &:before {
+                                content: "\2022";
+                                color: $main-pink;
+                                font-weight: bold;
+                                display: inline-block;
+                                width: 1em;
+                                margin-left: -1em;
+                                text-shadow: 0 0 20px;
+                            }
+                        }
+                    }
+
+                    .footer {
+                        margin-bottom: 25px;
+                        a {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+
+            &:nth-child(even) {
+                .member-card .description .title .gold-line {
+                    top: unset;
+                    bottom: 10%;
+                    right: 0;
+                }
+            }
         }
     }
 }
@@ -762,7 +867,7 @@
             }
 
             .heading-description {
-                font-size: 20px;
+                font-size: 18px;
             }
         }
 
@@ -778,7 +883,7 @@
                 }
 
                 .slider-description {
-                    font-size: 20px;
+                    font-size: 18px;
                 }
             }
         }
@@ -802,7 +907,7 @@
                 }
 
                 .description-description {
-                    font-size: 17px;
+                    font-size: 18px;
                 }
 
                 .description-footer {
@@ -813,9 +918,24 @@
                     }
 
                     .site-link {
-                        font-size: 17px;
+                        font-size: 18px;
                     }
                 }
+            }
+        }
+    }
+
+    #reviews #reviewsSlider {
+        .review > .wrapper, .review > img {
+            border-width: 25px;
+            border-radius: 25px;
+        }
+        .text-review-footer {
+            .review-video {
+                margin: 0 0 0 auto;
+            }
+            .review-icon a {
+                max-height: 25px;
             }
         }
     }
