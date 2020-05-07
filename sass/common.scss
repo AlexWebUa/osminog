@@ -205,20 +205,71 @@ header {
         background: white;
         border-radius: 23px;
         position: absolute;
-        top: 45px;
+        top: 50px;
         width: auto;
         padding: 30px;
         display: none;
         flex-direction: column;
         color: black;
+        .close {
+            content: "+";
+            position: absolute;
+            top: 0;
+            right: 15px;
+            transform: rotate(45deg);
+            font-family: "Gilroy UltraLight", sans-serif;
+            font-size: 34px;
+            color: #bcbcbc;
+            opacity: 1;
+            cursor: pointer;
+
+            &:hover {
+                color: black;
+            }
+        }
+        a {
+            display: block;
+            color: black;
+            padding: 10px 20px;
+
+            &:hover {
+                color: $main-pink;
+            }
+        }
+        hr {
+            display: block;
+            width: 100%;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            width: 25px;
+            height: 20px;
+            background: white;
+            border-radius: 50%;
+        }
+        &.show {
+            display: block;
+        }
     }
 
-    .navbar > .phone-icon {
-        font-size: 22px;
-        transition: all 0.3s;
-
-        &:hover {
-            color: $main-pink;
+    .navbar > .icons.mobile-only {
+        display: flex;
+        flex-direction: row;
+        li {
+            margin: 0 10px;
+        }
+        .dropdown {
+            &:before {
+                display: none;
+            }
+            &.show {
+                left: 0;
+                right: 0;
+                top: 95%;
+                border-radius: 0 0 20px 20px;
+            }
         }
     }
 
@@ -252,47 +303,6 @@ header {
 
                 .dropdown {
                     width: 400px;
-                    display: none;
-
-                    &:before {
-                        content: "";
-                        position: absolute;
-                        top: -10px;
-                        width: 25px;
-                        height: 20px;
-                        background: white;
-                        border-radius: 50%;
-                    }
-
-                    .close {
-                        content: "+";
-                        position: absolute;
-                        top: 0;
-                        right: 15px;
-                        transform: rotate(45deg);
-                        font-family: "Gilroy UltraLight", sans-serif;
-                        font-size: 34px;
-                        color: #bcbcbc;
-                        opacity: 1;
-                        cursor: pointer;
-
-                        &:hover {
-                            color: black;
-                        }
-                    }
-
-                    a {
-                        color: black;
-                        padding: 10px 20px;
-
-                        &:hover {
-                            color: $main-pink;
-                        }
-                    }
-
-                    hr {
-                        width: 100%;
-                    }
                 }
 
                 & > a, & > span {
@@ -311,6 +321,7 @@ header {
 
         .icons {
             li {
+                position: relative;
                 padding: 10px;
 
                 i {
@@ -325,16 +336,9 @@ header {
                 }
             }
             .dropdown {
-                top: 50px;
-                a {
-                    margin: 10px 0;
-                    transition: .35s all;
-                    &:hover {
-                        color: $main-pink;
-                    }
-                }
                 &.show {
-                    display: flex;
+                    width: max-content;
+                    left: -50%;
                 }
             }
         }
@@ -344,7 +348,7 @@ header {
         .pages {
             .nav-item {
                 .dropdown {
-                    display: flex;
+                    display: none;
                     position: relative;
                     width: fit-content;
                     padding: 0 5px;
@@ -361,6 +365,10 @@ header {
 
                     &:before {
                         display: none;
+                    }
+                    
+                    &.show {
+                        display: flex;
                     }
                 }
             }

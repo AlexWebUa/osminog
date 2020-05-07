@@ -106,20 +106,25 @@ $('#quiz4Send').on('click', () => {
 /* Events */
 
 // Header dropdowns
-$(document).on('click', (e) => {
-    if (e.target === $('#dropdown-menu .close')[0])
-        $('#dropdown-menu').css('display', 'none');
+$('.with-dropdown').on('click', ev=>{
+   let target = ev.target;
+   let currentTarget = ev.currentTarget;
+   let dropdown = $(currentTarget).find('.dropdown');
 
-    else if (e.target === document.getElementById('dropdown-menu') || (e.target === document.getElementById('dropdown-link') && $('#dropdown-menu').css('display') === 'none'))
-        $('#dropdown-menu').css('display', 'flex');
 
-    else
-        $('#dropdown-menu').css('display', 'none');
+   if(target.tagName === 'LI' || target.tagName === 'A' || target.tagName === 'I') {
+       $(dropdown).toggleClass('show');
+   } else if ($(target).hasClass('close')) dropdown.removeClass('show');
+
 });
 
-$('#headerIcons .phone-icon').on('click', ()=>{
-    $('#headerIcons .dropdown').toggleClass('show');
-});
+$(document).on('click', ev=>{
+    let liWithDropdown = $('.with-dropdown');
+    if (!liWithDropdown.is(ev.target)
+        && liWithDropdown.has(ev.target).length === 0) {
+        liWithDropdown.find('.dropdown').removeClass('show');
+    }
+})
 
 $('#reviewsSlider').slick({
     infinite: false,
